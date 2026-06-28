@@ -305,6 +305,160 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
 .anim.in{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 
+/* ── PAGE SWITCHING ──────────────────────────────────────── */
+#page-home{display:block}
+#page-listing{display:none}
+
+/* ── LISTING HERO ────────────────────────────────────────── */
+.lst-hero{
+  background:linear-gradient(135deg,var(--gd) 0%,var(--g) 100%);
+  padding:7.5rem 0 2.5rem;color:var(--wh);
+}
+.lst-hero-in{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.lst-bc{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.62);margin-bottom:.75rem}
+.lst-bc a{color:rgba(255,255,255,.62);transition:var(--t)}
+.lst-bc a:hover{color:var(--sd)}
+.lst-bc i{font-size:.6rem;color:rgba(255,255,255,.4)}
+.lst-hero h1{font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--wh);margin-bottom:.4rem}
+.lst-hero p{font-size:.92rem;color:rgba(255,255,255,.7)}
+.lst-hero-right{flex-shrink:0}
+.lst-count-bubble{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--rl);padding:.85rem 1.5rem;text-align:center;
+  backdrop-filter:blur(6px);
+}
+.lst-count-bubble strong{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--sd);display:block;line-height:1}
+.lst-count-bubble span{font-size:.72rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.08em}
+
+/* Inline search bar (listing page) */
+.lst-search{background:rgba(0,0,0,.18);border-top:1px solid rgba(255,255,255,.1);padding:1.25rem 0 0;margin-top:1.5rem}
+.lst-srch-row{display:flex;gap:.75rem;padding-bottom:1.25rem;align-items:flex-end;flex-wrap:wrap}
+.lst-srch-row .sf{flex:1;min-width:140px}
+.lst-srch-row .sf label{color:rgba(255,255,255,.7)}
+.lst-srch-row .sf-w select,.lst-srch-row .sf-w input{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:var(--wh)}
+.lst-srch-row .sf-w select option{background:var(--gd);color:var(--wh)}
+.lst-srch-row .sf-w::after{color:rgba(255,255,255,.5)}
+.lst-srch-row .sf-w i.ico{color:rgba(255,255,255,.6)}
+
+/* ── LISTING BODY ────────────────────────────────────────── */
+.lst-body{padding:2rem 0 5rem;background:var(--ow)}
+
+/* Active filter chips */
+.filter-chips{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;padding:.85rem 0;margin-bottom:.5rem;min-height:44px}
+.filter-chips.empty{display:none}
+.fchip-label{font-size:.75rem;color:var(--gray);font-weight:500;margin-right:.25rem;white-space:nowrap}
+.fchip{display:inline-flex;align-items:center;gap:.4rem;background:var(--g);color:var(--wh);font-size:.75rem;font-weight:500;padding:.3rem .75rem;border-radius:50px;transition:var(--t);cursor:pointer}
+.fchip button{background:none;border:none;color:rgba(255,255,255,.75);cursor:pointer;font-size:.7rem;line-height:1;padding:0 0 0 .2rem;transition:var(--t)}
+.fchip:hover{background:var(--gd)}
+.fchip-clear{background:none;border:1.5px solid var(--bd);color:var(--gray);font-size:.75rem;padding:.28rem .75rem;border-radius:50px;cursor:pointer;transition:var(--t)}
+.fchip-clear:hover{border-color:var(--or);color:var(--or)}
+
+/* Mobile filter trigger */
+.mob-filter-trigger{display:none;width:100%;background:var(--wh);border:1.5px solid var(--bd);border-radius:var(--r);padding:.75rem 1rem;font-size:.88rem;font-weight:600;color:var(--ch);align-items:center;gap:.5rem;cursor:pointer;margin-bottom:1rem;transition:var(--t)}
+.mob-filter-trigger:hover{border-color:var(--g);color:var(--g)}
+.mob-filter-trigger .fc-badge{background:var(--or);color:var(--wh);border-radius:50px;font-size:.68rem;padding:.12rem .5rem;margin-left:auto}
+
+/* Layout */
+.lst-layout{display:grid;grid-template-columns:268px 1fr;gap:2rem;align-items:start}
+
+/* Filter Sidebar */
+.filter-sidebar{background:var(--wh);border-radius:var(--rl);overflow:hidden;box-shadow:var(--ss);position:sticky;top:95px}
+.fsb-head{padding:1.25rem 1.4rem .9rem;border-bottom:1px solid var(--glf);display:flex;align-items:center;justify-content:space-between}
+.fsb-head h3{font-size:.95rem;font-weight:700;color:var(--ch)}
+.fsb-clear{font-size:.75rem;color:var(--or);cursor:pointer;font-weight:600;background:none;border:none;transition:var(--t)}
+.fsb-clear:hover{color:#b5682c}
+.fsb-body{padding:.5rem 0}
+
+.fg2{border-bottom:1px solid var(--glf)}
+.fg2-head{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.4rem;cursor:pointer;user-select:none}
+.fg2-head span{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--gray)}
+.fg2-head i{color:var(--gray);font-size:.72rem;transition:transform .25s}
+.fg2.open .fg2-head i{transform:rotate(180deg)}
+.fg2-body{padding:0 1.4rem .85rem;display:none}
+.fg2.open .fg2-body{display:block}
+
+/* Filter controls inside groups */
+.fcheck-list{display:flex;flex-direction:column;gap:.5rem}
+.fcheck{display:flex;align-items:center;gap:.6rem;cursor:pointer;font-size:.84rem;color:var(--ch2)}
+.fcheck input[type=checkbox]{width:15px;height:15px;accent-color:var(--g);flex-shrink:0}
+.fcheck-count{margin-left:auto;font-size:.7rem;color:var(--gray);background:var(--glf);padding:.1rem .45rem;border-radius:50px}
+.fcheck:hover .fcheck-count{background:var(--g);color:var(--wh)}
+
+.fselect{width:100%;padding:.6rem .85rem;border:1.5px solid var(--bd);border-radius:8px;font-size:.83rem;color:var(--ch);background:var(--wh);appearance:none}
+.fselect:focus{border-color:var(--g);outline:none}
+
+/* Budget slider */
+.range-wrap{padding:.25rem 0 .5rem}
+input[type=range]{width:100%;height:4px;border-radius:2px;background:linear-gradient(to right,var(--g) 0%,var(--g) 40%,var(--bd) 40%,var(--bd) 100%);appearance:none;cursor:pointer;border:none;outline:none}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;border-radius:50%;background:var(--g);border:2px solid var(--wh);box-shadow:0 1px 4px rgba(0,0,0,.2);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--g);border:2px solid var(--wh);cursor:pointer}
+.range-labels{display:flex;justify-content:space-between;font-size:.72rem;color:var(--gray);margin-top:.5rem}
+.range-val{font-size:.8rem;font-weight:700;color:var(--g);margin-bottom:.5rem}
+
+/* Radio buttons */
+.fradio-list{display:flex;flex-direction:column;gap:.45rem}
+.fradio{display:flex;align-items:center;gap:.6rem;cursor:pointer;font-size:.84rem;color:var(--ch2)}
+.fradio input{width:15px;height:15px;accent-color:var(--g)}
+
+/* Toggle switch */
+.ftoggle{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.84rem;color:var(--ch2)}
+.toggle-sw{position:relative;width:38px;height:20px;flex-shrink:0}
+.toggle-sw input{opacity:0;width:0;height:0}
+.toggle-track{position:absolute;inset:0;background:var(--bd);border-radius:20px;transition:var(--t);cursor:pointer}
+.toggle-track::after{content:'';position:absolute;width:14px;height:14px;background:var(--wh);border-radius:50%;left:3px;top:3px;transition:var(--t)}
+.toggle-sw input:checked + .toggle-track{background:var(--g)}
+.toggle-sw input:checked + .toggle-track::after{transform:translateX(18px)}
+
+/* Apply filters btn (mobile) */
+.fsb-apply{display:none;margin:1rem 1.4rem 1.25rem;width:calc(100% - 2.8rem)}
+
+/* ── LISTING MAIN ────────────────────────────────────────── */
+.lst-main{}
+.lst-toolbar{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:.75rem;margin-bottom:1.25rem;
+  background:var(--wh);border-radius:var(--r);padding:.85rem 1.25rem;
+  box-shadow:var(--ss);
+}
+.lst-found{font-size:.88rem;color:var(--gray)}
+.lst-found strong{color:var(--ch);font-weight:700}
+.lst-tools{display:flex;align-items:center;gap:1rem}
+.sort-wrap{display:flex;align-items:center;gap:.5rem}
+.sort-wrap label{font-size:.8rem;color:var(--gray);white-space:nowrap}
+.sort-wrap select{padding:.5rem .85rem;border:1.5px solid var(--bd);border-radius:8px;font-size:.82rem;color:var(--ch);background:var(--wh);appearance:none;cursor:pointer;transition:var(--t)}
+.sort-wrap select:focus{border-color:var(--g);outline:none}
+.view-btns{display:flex;gap:.3rem}
+.view-btn{width:34px;height:34px;border-radius:8px;border:1.5px solid var(--bd);background:var(--wh);color:var(--gray);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--t);font-size:.82rem}
+.view-btn.active,.view-btn:hover{background:var(--g);border-color:var(--g);color:var(--wh)}
+
+/* Grid view (default) */
+.lst-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+
+/* List view variant */
+.lst-grid.list-view{grid-template-columns:1fr}
+.lst-grid.list-view .ocard{flex-direction:row}
+.lst-grid.list-view .oci{width:220px;flex-shrink:0;height:auto;min-height:175px}
+.lst-grid.list-view .ocb{display:flex;flex-direction:column;justify-content:center}
+.lst-grid.list-view .ocft{flex-direction:column;padding-top:0;width:180px;flex-shrink:0;justify-content:center;padding-right:1.25rem}
+.lst-grid.list-view .ocft .btn{width:100%;justify-content:center}
+.lst-grid.list-view .ocard{align-items:stretch}
+
+/* Empty state */
+.lst-empty{text-align:center;padding:4rem 2rem;background:var(--wh);border-radius:var(--rl);box-shadow:var(--ss);display:none}
+.lst-empty i{font-size:3rem;color:var(--bd);margin-bottom:1rem}
+.lst-empty h3{font-size:1.2rem;color:var(--ch);margin-bottom:.5rem}
+.lst-empty p{font-size:.88rem;color:var(--gray)}
+
+/* Pagination */
+.pagination{display:flex;justify-content:center;align-items:center;gap:.4rem;margin-top:2.5rem;flex-wrap:wrap}
+.pgbtn{width:38px;height:38px;border-radius:8px;border:1.5px solid var(--bd);background:var(--wh);color:var(--ch);font-size:.85rem;cursor:pointer;transition:var(--t);display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif}
+.pgbtn:hover,.pgbtn.active{background:var(--g);border-color:var(--g);color:var(--wh)}
+.pgbtn.prev,.pgbtn.next{width:auto;padding:0 1rem;gap:.4rem;font-size:.82rem;font-weight:500}
+.pgbtn:disabled{opacity:.4;cursor:not-allowed}
+.pgbtn:disabled:hover{background:var(--wh);border-color:var(--bd);color:var(--ch)}
+.pg-ellipsis{color:var(--gray);font-size:.85rem;padding:0 .25rem}
+
+/* ── RESPONSIVE (listing) ───────────────────────────────── */
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media(max-width:1100px){
   .offers-grid{grid-template-columns:repeat(2,1fr)}
@@ -317,6 +471,15 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
   .nav-acts .btn:not(.btn-or){display:none}
   .srch-grid{grid-template-columns:repeat(3,1fr)}
   .srch-grid .sb-wrap{grid-column:1/-1}
+  /* listing */
+  .lst-layout{grid-template-columns:1fr}
+  .filter-sidebar{position:fixed;top:0;left:-300px;width:290px;height:100vh;overflow-y:auto;border-radius:0;z-index:1500;transition:left .35s cubic-bezier(.4,0,.2,1);box-shadow:none}
+  .filter-sidebar.mob-open{left:0;box-shadow:4px 0 30px rgba(0,0,0,.18)}
+  .mob-filter-trigger{display:flex}
+  .fsb-apply{display:block}
+  .lst-grid{grid-template-columns:repeat(2,1fr)}
+  .lst-grid.list-view{grid-template-columns:1fr}
+  .lst-hero-right{display:none}
 }
 @media(max-width:768px){
   .section{padding:3.5rem 0}
@@ -333,6 +496,14 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
   .trust .container{gap:1.25rem}
   .why-float{width:140px;height:110px;right:-.5rem;bottom:-.5rem}
   .why-yr{left:-.5rem}
+  /* listing */
+  .lst-grid{grid-template-columns:1fr}
+  .lst-grid.list-view .ocard{flex-direction:column}
+  .lst-grid.list-view .oci{width:100%;height:200px;min-height:0}
+  .lst-grid.list-view .ocft{width:100%;flex-direction:row;padding-right:0}
+  .lst-tools{flex-wrap:wrap;gap:.65rem}
+  .lst-srch-row{gap:.5rem}
+  .lst-srch-row .sf{min-width:120px}
 }
 @media(max-width:480px){
   .hero h1{font-size:1.7rem}
@@ -343,6 +514,8 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
   .srch-grid{grid-template-columns:1fr}
   .nav-util{display:none}
   .hero-stats{flex-wrap:wrap;gap:1.25rem}
+  .lst-toolbar{flex-direction:column;align-items:flex-start}
+  .view-btns{display:none}
 }
 </style>
 </head>
@@ -363,17 +536,17 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
     <button class="drw-close" onclick="closeDrawer()" aria-label="Close menu"><i class="fas fa-times"></i></button>
   </div>
   <nav class="drw-links">
-    <a href="#"><i class="fas fa-home"></i>Home</a>
-    <a href="#"><i class="fas fa-flag"></i>Kenya Offers</a>
-    <a href="#"><i class="fas fa-flag"></i>Tanzania Offers</a>
-    <a href="#"><i class="fas fa-flag"></i>Uganda Offers</a>
-    <a href="#"><i class="fas fa-flag"></i>Rwanda Offers</a>
-    <a href="#"><i class="fas fa-id-card"></i>Resident Specials</a>
-    <a href="#"><i class="fas fa-users"></i>Family Offers</a>
-    <a href="#"><i class="fas fa-heart"></i>Honeymoon</a>
-    <a href="#"><i class="fas fa-bolt"></i>Last Minute</a>
-    <a href="#"><i class="fas fa-info-circle"></i>About</a>
-    <a href="#"><i class="fas fa-envelope"></i>Contact</a>
+    <a href="#" onclick="showPage('home');closeDrawer();return false"><i class="fas fa-home"></i>Home</a>
+    <a href="#" onclick="showPage('listing','kenya');closeDrawer();return false"><i class="fas fa-flag"></i>Kenya Offers</a>
+    <a href="#" onclick="showPage('listing','tanzania');closeDrawer();return false"><i class="fas fa-flag"></i>Tanzania Offers</a>
+    <a href="#" onclick="showPage('listing','uganda');closeDrawer();return false"><i class="fas fa-flag"></i>Uganda Offers</a>
+    <a href="#" onclick="showPage('listing','rwanda');closeDrawer();return false"><i class="fas fa-flag"></i>Rwanda Offers</a>
+    <a href="#" onclick="showPage('listing','resident');closeDrawer();return false"><i class="fas fa-id-card"></i>Resident Specials</a>
+    <a href="#" onclick="showPage('listing','family');closeDrawer();return false"><i class="fas fa-users"></i>Family Offers</a>
+    <a href="#" onclick="showPage('listing','honeymoon');closeDrawer();return false"><i class="fas fa-heart"></i>Honeymoon</a>
+    <a href="#" onclick="showPage('listing','lastminute');closeDrawer();return false"><i class="fas fa-bolt"></i>Last Minute</a>
+    <a href="#" onclick="showPage('home');closeDrawer();return false"><i class="fas fa-info-circle"></i>About</a>
+    <a href="#" onclick="showPage('home');closeDrawer();return false"><i class="fas fa-envelope"></i>Contact</a>
   </nav>
   <div class="drw-ctas">
     <a href="tel:+254700000000" class="btn btn-p"><i class="fas fa-phone"></i> Call Us</a>
@@ -406,7 +579,7 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
     <div class="container">
       <div class="nav-in">
         <!-- Logo -->
-        <a href="#" class="logo" aria-label="Safari Offers by Kiboko Kenya Safaris – Home">
+        <a href="#" onclick="showPage('home');return false" class="logo" aria-label="Safari Offers by Kiboko Kenya Safaris – Home">
           <!-- Kiboko hippo logo (SVG approximation – replace src with actual logo file) -->
           <svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="26" cy="26" r="25" fill="#FAF7F2"/>
@@ -442,23 +615,23 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
 
         <!-- Desktop links -->
         <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#">Home</a>
-          <a href="#">Kenya</a>
-          <a href="#">Tanzania</a>
-          <a href="#">Uganda</a>
-          <a href="#">Rwanda</a>
-          <a href="#">Residents</a>
-          <a href="#">Family</a>
-          <a href="#">Honeymoon</a>
-          <a href="#">Last Minute</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="#" onclick="showPage('home');return false">Home</a>
+          <a href="#" onclick="showPage('listing','kenya');return false">Kenya</a>
+          <a href="#" onclick="showPage('listing','tanzania');return false">Tanzania</a>
+          <a href="#" onclick="showPage('listing','uganda');return false">Uganda</a>
+          <a href="#" onclick="showPage('listing','rwanda');return false">Rwanda</a>
+          <a href="#" onclick="showPage('listing','resident');return false">Residents</a>
+          <a href="#" onclick="showPage('listing','family');return false">Family</a>
+          <a href="#" onclick="showPage('listing','honeymoon');return false">Honeymoon</a>
+          <a href="#" onclick="showPage('listing','lastminute');return false">Last Minute</a>
+          <a href="#" onclick="showPage('home');return false">About</a>
+          <a href="#" onclick="showPage('home');return false">Contact</a>
         </nav>
 
         <!-- CTAs + hamburger -->
         <div class="nav-acts">
           <a href="tel:+254700000000" class="btn btn-out btn-sm"><i class="fas fa-phone"></i> Call Us</a>
-          <a href="#offers" class="btn btn-or btn-sm">Book an Offer</a>
+          <a href="#" onclick="showPage('listing');return false" class="btn btn-or btn-sm">Book an Offer</a>
           <button class="hbg" id="hbgBtn" onclick="openDrawer()" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
@@ -471,7 +644,7 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
 <!-- ══════════════════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════════════════ -->
-<main>
+<main id="page-home">
 <section class="hero" aria-label="Hero">
   <div class="hero-bg" role="img" aria-label="Elephants on the African savanna at golden hour"></div>
   <div class="hero-wrap">
@@ -484,7 +657,7 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
         <h1>Discover <em>East Africa's</em><br>Best Safari Offers</h1>
         <p class="hero-lead">Hand-picked safari deals, lodge specials and limited-time offers from Kenya's most trusted safari experts. Your perfect East Africa adventure starts here.</p>
         <div class="hero-ctas">
-          <a href="#offers" class="btn btn-or btn-lg"><i class="fas fa-binoculars"></i> Browse Offers</a>
+          <a href="#" onclick="showPage('listing');return false" class="btn btn-or btn-lg"><i class="fas fa-binoculars"></i> Browse Offers</a>
           <a href="https://wa.me/254700000000" class="btn btn-out btn-lg" target="_blank"><i class="fab fa-whatsapp"></i> Talk to a Safari Expert</a>
         </div>
         <div class="hero-stats">
@@ -817,7 +990,7 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
     </div><!-- /offersGrid -->
 
     <div class="offers-more">
-      <a href="#" class="btn btn-gh btn-lg"><i class="fas fa-th-large"></i> View All 200+ Offers</a>
+      <a href="#" onclick="showPage('listing');return false" class="btn btn-gh btn-lg"><i class="fas fa-th-large"></i> View All 200+ Offers</a>
     </div>
   </div>
 </section>
@@ -833,42 +1006,42 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
       <p class="sub">From luxury lodges to family adventures and romantic escapes — we have the perfect safari offer for every traveller.</p>
     </div>
     <div class="cats-grid">
-      <div class="cat anim" role="button" tabindex="0" aria-label="Browse Luxury safari offers">
+      <div class="cat anim" role="button" tabindex="0" aria-label="Browse Luxury safari offers" onclick="showPage('listing','luxury')">
         <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80" alt="Luxury tented safari lodge" loading="lazy">
         <span class="cat-ico"><i class="fas fa-gem"></i></span>
         <div class="cat-info"><p class="cat-name">Luxury</p><span class="cat-ct">38 offers</span></div>
       </div>
-      <div class="cat anim d1" role="button" tabindex="0" aria-label="Browse Family safari offers">
+      <div class="cat anim d1" role="button" tabindex="0" aria-label="Browse Family safari offers" onclick="showPage('listing','family')">
         <img src="https://images.unsplash.com/photo-1515205244153-fce4e5d8239c?w=600&q=80" alt="Family on a morning game drive" loading="lazy">
         <span class="cat-ico"><i class="fas fa-users"></i></span>
         <div class="cat-info"><p class="cat-name">Family</p><span class="cat-ct">24 offers</span></div>
       </div>
-      <div class="cat anim d2" role="button" tabindex="0" aria-label="Browse Resident special offers">
+      <div class="cat anim d2" role="button" tabindex="0" aria-label="Browse Resident special offers" onclick="showPage('listing','resident')">
         <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&q=80" alt="Lion on the Kenyan savanna" loading="lazy">
         <span class="cat-ico"><i class="fas fa-id-card"></i></span>
         <div class="cat-info"><p class="cat-name">Resident</p><span class="cat-ct">19 offers</span></div>
       </div>
-      <div class="cat anim d3" role="button" tabindex="0" aria-label="Browse Fly-in safari offers">
+      <div class="cat anim d3" role="button" tabindex="0" aria-label="Browse Fly-in safari offers" onclick="showPage('listing','flyin')">
         <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="Small bush plane on a Kenya airstrip" loading="lazy">
         <span class="cat-ico"><i class="fas fa-plane"></i></span>
         <div class="cat-info"><p class="cat-name">Fly-in Safari</p><span class="cat-ct">16 offers</span></div>
       </div>
-      <div class="cat anim" role="button" tabindex="0" aria-label="Browse Great Migration safari offers">
+      <div class="cat anim" role="button" tabindex="0" aria-label="Browse Great Migration safari offers" onclick="showPage('listing','migration')">
         <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&q=80" alt="Wildebeest river crossing during the Great Migration" loading="lazy">
         <span class="cat-ico"><i class="fas fa-horse"></i></span>
         <div class="cat-info"><p class="cat-name">Migration</p><span class="cat-ct">12 offers</span></div>
       </div>
-      <div class="cat anim d1" role="button" tabindex="0" aria-label="Browse Beach and Safari combo offers">
+      <div class="cat anim d1" role="button" tabindex="0" aria-label="Browse Beach and Safari combo offers" onclick="showPage('listing','beach')">
         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Diani Beach on the Kenyan coast" loading="lazy">
         <span class="cat-ico"><i class="fas fa-umbrella-beach"></i></span>
         <div class="cat-info"><p class="cat-name">Beach &amp; Safari</p><span class="cat-ct">21 offers</span></div>
       </div>
-      <div class="cat anim d2" role="button" tabindex="0" aria-label="Browse Honeymoon safari offers">
+      <div class="cat anim d2" role="button" tabindex="0" aria-label="Browse Honeymoon safari offers" onclick="showPage('listing','honeymoon')">
         <img src="https://images.unsplash.com/photo-1543039625-14a4fd3b2e1a?w=600&q=80" alt="Romantic sundowner in the African bush" loading="lazy">
         <span class="cat-ico"><i class="fas fa-heart"></i></span>
         <div class="cat-info"><p class="cat-name">Honeymoon</p><span class="cat-ct">17 offers</span></div>
       </div>
-      <div class="cat anim d3" role="button" tabindex="0" aria-label="Browse Adventure safari offers">
+      <div class="cat anim d3" role="button" tabindex="0" aria-label="Browse Adventure safari offers" onclick="showPage('listing','adventure')">
         <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Hikers on Mount Kenya adventure trek" loading="lazy">
         <span class="cat-ico"><i class="fas fa-mountain"></i></span>
         <div class="cat-info"><p class="cat-name">Adventure</p><span class="cat-ct">14 offers</span></div>
@@ -1057,7 +1230,656 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
   </div>
 </section>
 
-</main><!-- /main -->
+</main><!-- /page-home -->
+
+<!-- ══════════════════════════════════════════════════════════
+     LISTING PAGE
+══════════════════════════════════════════════════════════ -->
+<div id="page-listing" aria-label="Safari Offers Listing">
+
+  <!-- Mobile sidebar overlay -->
+  <div class="mob-ov" id="fsbOv" onclick="closeMobFilters()"></div>
+
+  <!-- ── LISTING HERO ── -->
+  <section class="lst-hero">
+    <div class="container">
+      <div class="lst-hero-in">
+        <div>
+          <nav class="lst-bc" aria-label="Breadcrumb">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span id="lstBcCurrent">All Safari Offers</span>
+          </nav>
+          <h1 id="lstTitle">All Safari Offers</h1>
+          <p id="lstSubtitle">Hand-picked lodge specials &amp; safari deals across East Africa</p>
+        </div>
+        <div class="lst-hero-right">
+          <div class="lst-count-bubble">
+            <strong id="lstHeroCount">48</strong>
+            <span>Live Offers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick search row -->
+      <div class="lst-search">
+        <div class="lst-srch-row">
+          <div class="sf">
+            <label for="ls-dest">Destination</label>
+            <div class="sf-w">
+              <i class="fas fa-map-marker-alt ico"></i>
+              <select id="ls-dest">
+                <option value="">All Destinations</option>
+                <option value="kenya">Kenya</option>
+                <option value="tanzania">Tanzania</option>
+                <option value="uganda">Uganda</option>
+                <option value="rwanda">Rwanda</option>
+              </select>
+            </div>
+          </div>
+          <div class="sf">
+            <label for="ls-month">Travel Month</label>
+            <div class="sf-w">
+              <i class="fas fa-calendar-alt ico"></i>
+              <select id="ls-month">
+                <option value="">Any Month</option>
+                <option>Jan 2026</option><option>Feb 2026</option><option>Mar 2026</option>
+                <option>Apr 2026</option><option>May 2026</option><option>Jun 2026</option>
+                <option>Jul 2026</option><option>Aug 2026</option><option>Sep 2026</option>
+                <option>Oct 2026</option><option>Nov 2026</option><option>Dec 2026</option>
+              </select>
+            </div>
+          </div>
+          <div class="sf">
+            <label for="ls-type">Offer Type</label>
+            <div class="sf-w">
+              <i class="fas fa-star ico"></i>
+              <select id="ls-type">
+                <option value="">All Types</option>
+                <option value="luxury">Luxury Lodge</option>
+                <option value="family">Family</option>
+                <option value="honeymoon">Honeymoon</option>
+                <option value="resident">Resident Special</option>
+                <option value="lastminute">Last Minute</option>
+              </select>
+            </div>
+          </div>
+          <div class="sf">
+            <label for="ls-budget">Budget</label>
+            <div class="sf-w">
+              <i class="fas fa-tag ico"></i>
+              <select id="ls-budget">
+                <option value="">Any Budget</option>
+                <option>Under $1,000</option>
+                <option>$1,000–$2,000</option>
+                <option>$2,000–$3,500</option>
+                <option>$3,500–$5,000</option>
+                <option>$5,000+</option>
+                <option>KES (Residents)</option>
+              </select>
+            </div>
+          </div>
+          <button class="srch-btn" style="flex-shrink:0;border-radius:9px;padding:.68rem 1.5rem" onclick="applyQuickSearch()">
+            <i class="fas fa-search"></i> Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LISTING BODY ── -->
+  <div class="lst-body">
+    <div class="container">
+
+      <!-- Active filter chips -->
+      <div class="filter-chips empty" id="filterChips" aria-label="Active filters">
+        <span class="fchip-label">Filtered by:</span>
+        <!-- chips injected by JS -->
+        <button class="fchip-clear" onclick="clearAllFilters()"><i class="fas fa-times"></i> Clear All</button>
+      </div>
+
+      <!-- Mobile filter trigger -->
+      <button class="mob-filter-trigger" onclick="openMobFilters()" aria-label="Open filters">
+        <i class="fas fa-sliders-h"></i> Filters
+        <span class="fc-badge" id="filterBadge" style="display:none">0</span>
+        <i class="fas fa-chevron-right" style="margin-left:auto;font-size:.7rem;color:var(--gray)"></i>
+      </button>
+
+      <div class="lst-layout">
+
+        <!-- ── FILTER SIDEBAR ── -->
+        <aside class="filter-sidebar" id="filterSidebar" aria-label="Filter offers">
+          <div class="fsb-head">
+            <h3><i class="fas fa-sliders-h" style="color:var(--g);margin-right:.5rem;font-size:.85rem"></i>Refine Offers</h3>
+            <button class="fsb-clear" onclick="clearAllFilters()">Clear All</button>
+          </div>
+          <div class="fsb-body">
+
+            <!-- Country -->
+            <div class="fg2 open">
+              <div class="fg2-head" onclick="toggleFg(this.parentElement)">
+                <span>Country</span><i class="fas fa-chevron-up"></i>
+              </div>
+              <div class="fg2-body">
+                <div class="fcheck-list">
+                  <label class="fcheck"><input type="checkbox" value="kenya" onchange="updateFilters()"> Kenya <span class="fcheck-count">24</span></label>
+                  <label class="fcheck"><input type="checkbox" value="tanzania" onchange="updateFilters()"> Tanzania <span class="fcheck-count">12</span></label>
+                  <label class="fcheck"><input type="checkbox" value="uganda" onchange="updateFilters()"> Uganda <span class="fcheck-count">7</span></label>
+                  <label class="fcheck"><input type="checkbox" value="rwanda" onchange="updateFilters()"> Rwanda <span class="fcheck-count">5</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Park / Region -->
+            <div class="fg2 open">
+              <div class="fg2-head" onclick="toggleFg(this.parentElement)">
+                <span>Park / Region</span><i class="fas fa-chevron-up"></i>
+              </div>
+              <div class="fg2-body">
+                <select class="fselect" onchange="updateFilters()" aria-label="Select park or region">
+                  <option value="">All Parks &amp; Regions</option>
+                  <optgroup label="Kenya">
+                    <option>Masai Mara</option>
+                    <option>Amboseli</option>
+                    <option>Samburu</option>
+                    <option>Laikipia / Ol Pejeta</option>
+                    <option>Tsavo</option>
+                    <option>Lake Nakuru</option>
+                    <option>Diani Beach</option>
+                  </optgroup>
+                  <optgroup label="Tanzania">
+                    <option>Serengeti</option>
+                    <option>Ngorongoro</option>
+                    <option>Tarangire</option>
+                    <option>Zanzibar</option>
+                  </optgroup>
+                  <optgroup label="Uganda">
+                    <option>Bwindi (Gorillas)</option>
+                    <option>Queen Elizabeth NP</option>
+                  </optgroup>
+                  <optgroup label="Rwanda">
+                    <option>Volcanoes NP</option>
+                    <option>Nyungwe Forest</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <!-- Budget -->
+            <div class="fg2 open">
+              <div class="fg2-head" onclick="toggleFg(this.parentElement)">
+                <span>Budget (per person)</span><i class="fas fa-chevron-up"></i>
+              </div>
+              <div class="fg2-body">
+                <div class="range-val" id="budgetDisplay">Up to $5,000</div>
+                <div class="range-wrap">
+                  <input type="range" min="500" max="10000" value="5000" step="100" id="budgetRange" oninput="updateBudget(this.value)" aria-label="Maximum budget">
+                </div>
+                <div class="range-labels"><span>$500</span><span>$10,000+</span></div>
+              </div>
+            </div>
+
+            <!-- Offer Category -->
+            <div class="fg2 open">
+              <div class="fg2-head" onclick="toggleFg(this.parentElement)">
+                <span>Offer Category</span><i class="fas fa-chevron-up"></i>
+              </div>
+              <div class="fg2-body">
+                <div class="fcheck-list">
+                  <label class="fcheck"><input type="checkbox" value="luxury" onchange="updateFilters()"> Luxury Lodge <span class="fcheck-count">14</span></label>
+                  <label class="fcheck"><input type="checkbox" value="family" onchange="updateFilters()"> Family Safari <span class="fcheck-count">9</span></label>
+                  <label class="fcheck"><input type="checkbox" value="honeymoon" onchange="updateFilters()"> Honeymoon <span class="fcheck-count">7</span></label>
+                  <label class="fcheck"><input type="checkbox" value="resident" onchange="updateFilters()"> Resident Special <span class="fcheck-count">8</span></label>
+                  <label class="fcheck"><input type="checkbox" value="lastminute" onchange="updateFilters()"> Last Minute <span class="fcheck-count">6</span></label>
+                  <label class="fcheck"><input type="checkbox" value="flyin" onchange="updateFilters()"> Fly-in Safari <span class="fcheck-count">5</span></label>
+                  <label class="fcheck"><input type="checkbox" value="beach" onchange="updateFilters()"> Beach &amp; Safari <span class="fcheck-count">4</span></label>
+                  <label class="fcheck"><input type="checkbox" value="migration" onchange="updateFilters()"> Migration Special <span class="fcheck-count">5</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accommodation Type -->
+            <div class="fg2">
+              <div class="fg2-head" onclick="toggleFg(this.parentElement)">
+                <span>Accommodation</span><i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="fg2-body">
+                <div class="fcheck-list">
+                  <label class="fcheck"><input type="checkbox" onchange="updateFilters()"> Luxury Lodge</label>
+                  <label class="fcheck"><input type="checkbox" onchange="updateFilters()"> Tented Camp</label>
+                  <label class="fcheck"><input type="checkbox" onchange="updateFilters()"> Mobile Camp</label>
+                  <label class="fcheck"><input type="checkbox" onchange="updateFilters()"> Beach Property</label>
+                  <label class="fcheck"><input type="checkbox" onchange="updateFilters()"> Treehouse / Unique</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duration -->
+            <div class="fg2">
+              <div class="fg2-head" onclick="toggleFg(this.parentElement)">
+                <span>Duration</span><i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="fg2-body">
+                <div class="fradio-list">
+                  <label class="fradio"><input type="radio" name="duration" value="" checked onchange="updateFilters()"> Any Duration</label>
+                  <label class="fradio"><input type="radio" name="duration" value="2-3" onchange="updateFilters()"> 2–3 Nights</label>
+                  <label class="fradio"><input type="radio" name="duration" value="4-5" onchange="updateFilters()"> 4–5 Nights</label>
+                  <label class="fradio"><input type="radio" name="duration" value="6-7" onchange="updateFilters()"> 6–7 Nights</label>
+                  <label class="fradio"><input type="radio" name="duration" value="8+" onchange="updateFilters()"> 8+ Nights</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resident rates toggle -->
+            <div class="fg2" style="border-bottom:none">
+              <div class="fg2-head" onclick="toggleFg(this.parentElement)">
+                <span>Traveller Type</span><i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="fg2-body">
+                <div style="display:flex;flex-direction:column;gap:.75rem">
+                  <label class="ftoggle">
+                    Show Resident Rates Only
+                    <div class="toggle-sw">
+                      <input type="checkbox" id="residentToggle" onchange="updateFilters()">
+                      <div class="toggle-track"></div>
+                    </div>
+                  </label>
+                  <label class="ftoggle">
+                    Non-Resident Offers Only
+                    <div class="toggle-sw">
+                      <input type="checkbox" id="nonResidentToggle" onchange="updateFilters()">
+                      <div class="toggle-track"></div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /fsb-body -->
+
+          <!-- Mobile apply button -->
+          <button class="btn btn-p fsb-apply" onclick="closeMobFilters()">
+            <i class="fas fa-check"></i> Apply Filters
+          </button>
+        </aside><!-- /filter-sidebar -->
+
+        <!-- ── LISTING MAIN ── -->
+        <div class="lst-main">
+
+          <!-- Toolbar -->
+          <div class="lst-toolbar">
+            <p class="lst-found" id="lstFound"><strong>48</strong> safari offers found</p>
+            <div class="lst-tools">
+              <div class="sort-wrap">
+                <label for="lstSort">Sort:</label>
+                <select id="lstSort" onchange="sortListingOffers(this.value)">
+                  <option value="newest">Newest First</option>
+                  <option value="savings">Biggest Savings</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="duration">Duration</option>
+                </select>
+              </div>
+              <div class="view-btns" role="group" aria-label="View mode">
+                <button class="view-btn active" id="vbGrid" onclick="setView('grid')" aria-label="Grid view" aria-pressed="true"><i class="fas fa-th"></i></button>
+                <button class="view-btn" id="vbList" onclick="setView('list')" aria-label="List view" aria-pressed="false"><i class="fas fa-list"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div class="lst-grid" id="lstGrid" aria-live="polite" aria-label="Safari offers">
+
+            <!-- Card L1 -->
+            <article class="ocard" data-cats="kenya migration luxury" data-price="1890" data-savings="480" data-nights="3">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=700&q=80" alt="Wildebeest migration crossing the Mara River" loading="lazy">
+                <span class="ocbadge bg-red">🔥 Hot Deal</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Masai Mara, Kenya</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Mara Serena Safari Lodge</p>
+                <h3 class="octit">Migration Season Special – 20% Off Full Board</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Jul–Oct 2026</span>
+                  <span><i class="fas fa-moon"></i> Min 3 nights</span>
+                  <span><i class="fas fa-users"></i> 2+ guests</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$1,890 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $480</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L2 -->
+            <article class="ocard" data-cats="tanzania honeymoon luxury" data-price="2450" data-savings="620" data-nights="4">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=700&q=80" alt="Luxury romantic tented camp at sunset Tanzania" loading="lazy">
+                <span class="ocbadge bg-pur">Honeymoon</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Ngorongoro, Tanzania</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">&amp;Beyond Ngorongoro Crater Lodge</p>
+                <h3 class="octit">Honeymoon Escape – Sundowners &amp; Spa Included</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Nov 2025–Mar 2026</span>
+                  <span><i class="fas fa-moon"></i> Min 4 nights</span>
+                  <span><i class="fas fa-heart"></i> Couples</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$2,450 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $620</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L3 -->
+            <article class="ocard" data-cats="uganda gorilla" data-price="3200" data-savings="800" data-nights="5">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1589553416260-f586c1d08eca?w=700&q=80" alt="Mountain gorilla in Bwindi Impenetrable Forest Uganda" loading="lazy">
+                <span class="ocbadge bg-g">Best Value</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Bwindi, Uganda</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Bwindi Lodge</p>
+                <h3 class="octit">Gorilla Trekking Experience – 2 Nights Complimentary</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Oct–Dec 2025</span>
+                  <span><i class="fas fa-moon"></i> 5 nights</span>
+                  <span><i class="fas fa-users"></i> Max 8</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$3,200 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $800</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L4 -->
+            <article class="ocard" data-cats="kenya resident" data-price="850" data-savings="450" data-nights="2">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=700&q=80" alt="Lion resting in the Kenyan savanna at sunset" loading="lazy">
+                <span class="ocbadge bg-or">Resident Rate</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Laikipia, Kenya</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Ol Pejeta Bush Camp</p>
+                <h3 class="octit">Resident Special – 40% Off Weekend Bush Escape</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Jan–Mar 2026</span>
+                  <span><i class="fas fa-moon"></i> 2 nights min</span>
+                  <span><i class="fas fa-id-card"></i> Residents only</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">KES 85K <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save KES 45K</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L5 -->
+            <article class="ocard" data-cats="kenya family" data-price="2100" data-savings="0" data-nights="4">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=700&q=80" alt="Safari camp at golden hour with acacia trees Masai Mara" loading="lazy">
+                <span class="ocbadge bg-g">Kids Stay Free</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Masai Mara, Kenya</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Elewana Sand River Masai Mara</p>
+                <h3 class="octit">Family Safari – Children Under 12 Stay &amp; Fly Free</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Jun–Sep 2026</span>
+                  <span><i class="fas fa-moon"></i> Min 4 nights</span>
+                  <span><i class="fas fa-child"></i> Families</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$2,100 <span class="ppp">/ adult</span></p></div>
+                  <span class="savepill">Kids Free</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L6 -->
+            <article class="ocard" data-cats="kenya lastminute beach" data-price="2750" data-savings="550" data-nights="7">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Tropical beach at Diani on the Kenyan coast" loading="lazy">
+                <span class="ocbadge bg-red">Last Minute</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Diani + Mara, Kenya</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Alfajiri Beach Villa + Mara North</p>
+                <h3 class="octit">Beach &amp; Safari Combo – 7 Nights, Fly-in Included</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Book by 31 Jul</span>
+                  <span><i class="fas fa-moon"></i> 7 nights</span>
+                  <span><i class="fas fa-plane"></i> Fly-in incl.</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$2,750 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $550</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L7 -->
+            <article class="ocard" data-cats="tanzania flyin luxury" data-price="4500" data-savings="900" data-nights="6">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Serengeti plains at golden hour Tanzania" loading="lazy">
+                <span class="ocbadge bg-g">Fly-in Only</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Serengeti, Tanzania</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Singita Grumeti</p>
+                <h3 class="octit">Exclusive Serengeti Fly-in Safari – 15% Off Shoulder Season</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Apr–May 2026</span>
+                  <span><i class="fas fa-moon"></i> 6 nights</span>
+                  <span><i class="fas fa-plane"></i> Fly-in incl.</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$4,500 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $900</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L8 -->
+            <article class="ocard" data-cats="kenya resident" data-price="650" data-savings="300" data-nights="2">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=700&q=80" alt="Giraffe silhouette at sunset in Kenya" loading="lazy">
+                <span class="ocbadge bg-or">Resident Rate</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Amboseli, Kenya</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Amboseli Serena Safari Lodge</p>
+                <h3 class="octit">Resident Midweek Deal – Amboseli &amp; Kilimanjaro Views</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Year round</span>
+                  <span><i class="fas fa-moon"></i> 2 nights</span>
+                  <span><i class="fas fa-id-card"></i> Residents only</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">KES 65K <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save KES 30K</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L9 -->
+            <article class="ocard" data-cats="rwanda gorilla luxury" data-price="2800" data-savings="700" data-nights="3">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1528158222524-d4d912d2e208?w=700&q=80" alt="Safari vehicle on a game drive in Africa" loading="lazy">
+                <span class="ocbadge bg-pur">Gorilla Trek</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Volcanoes NP, Rwanda</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Bisate Lodge</p>
+                <h3 class="octit">Rwanda Mountain Gorilla Trek – Green Season Special</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Apr–Jun 2026</span>
+                  <span><i class="fas fa-moon"></i> 3 nights</span>
+                  <span><i class="fas fa-users"></i> Max 6 guests</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$2,800 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $700</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L10 -->
+            <article class="ocard" data-cats="kenya luxury migration" data-price="5500" data-savings="1200" data-nights="7">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=700&q=80" alt="Luxury tented camp in the Masai Mara conservancy" loading="lazy">
+                <span class="ocbadge bg-g">Ultra Luxury</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Mara Conservancy, Kenya</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Mahali Mzuri – Sir Richard Branson's Camp</p>
+                <h3 class="octit">Conservancy Luxury Camp – 7-Night Migration Package</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Jul–Oct 2026</span>
+                  <span><i class="fas fa-moon"></i> 7 nights</span>
+                  <span><i class="fas fa-gem"></i> Ultra luxury</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$5,500 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $1,200</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L11 -->
+            <article class="ocard" data-cats="kenya family lastminute" data-price="1200" data-savings="350" data-nights="3">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1551415923-a2297c7fda79?w=700&q=80" alt="Samburu National Reserve landscape Kenya" loading="lazy">
+                <span class="ocbadge bg-red">Flash Sale</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Samburu, Kenya</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Samburu Intrepids Camp</p>
+                <h3 class="octit">Samburu Flash Sale – 30% Off, Book This Week</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Book by 15 Aug</span>
+                  <span><i class="fas fa-moon"></i> 3 nights</span>
+                  <span><i class="fas fa-bolt"></i> Limited rooms</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$1,200 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $350</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+            <!-- Card L12 -->
+            <article class="ocard" data-cats="tanzania beach honeymoon" data-price="1800" data-savings="400" data-nights="5">
+              <div class="oci">
+                <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=700&q=80" alt="Zanzibar tropical beach with turquoise water" loading="lazy">
+                <span class="ocbadge bg-pur">Beach Escape</span>
+                <button class="ocsave" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+                <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Zanzibar, Tanzania</span>
+              </div>
+              <div class="ocb">
+                <p class="ocprop">Zuri Zanzibar Hotel &amp; Resort</p>
+                <h3 class="octit">Zanzibar Island Escape – 5 Nights, Breakfast &amp; Dinner</h3>
+                <div class="ocmeta">
+                  <span><i class="fas fa-calendar-alt"></i> Nov–Mar 2026</span>
+                  <span><i class="fas fa-moon"></i> 5 nights</span>
+                  <span><i class="fas fa-umbrella-beach"></i> Beach resort</span>
+                </div>
+                <div class="ocprice">
+                  <div><p class="pfrom">Price From</p><p class="pval">$1,800 <span class="ppp">/ pp</span></p></div>
+                  <span class="savepill">Save $400</span>
+                </div>
+              </div>
+              <div class="ocft">
+                <a href="#" class="btn btn-p btn-sm">Book This Offer</a>
+                <a href="#" class="btn btn-gh btn-sm">Details</a>
+              </div>
+            </article>
+
+          </div><!-- /lstGrid -->
+
+          <!-- Empty state -->
+          <div class="lst-empty" id="lstEmpty" aria-live="polite">
+            <i class="fas fa-binoculars"></i>
+            <h3>No Offers Found</h3>
+            <p>Try adjusting your filters or <button onclick="clearAllFilters()" style="color:var(--g);font-weight:600;background:none;border:none;cursor:pointer;font-size:inherit">clearing all filters</button> to see all available offers.</p>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="pagination" aria-label="Offers pagination">
+            <button class="pgbtn prev" disabled aria-label="Previous page"><i class="fas fa-chevron-left"></i> Prev</button>
+            <button class="pgbtn active" aria-current="page" aria-label="Page 1">1</button>
+            <button class="pgbtn" aria-label="Page 2" onclick="goToPage(2)">2</button>
+            <button class="pgbtn" aria-label="Page 3" onclick="goToPage(3)">3</button>
+            <span class="pg-ellipsis">…</span>
+            <button class="pgbtn" aria-label="Page 6" onclick="goToPage(6)">6</button>
+            <button class="pgbtn next" aria-label="Next page" onclick="goToPage(2)">Next <i class="fas fa-chevron-right"></i></button>
+          </nav>
+
+        </div><!-- /lst-main -->
+      </div><!-- /lst-layout -->
+    </div><!-- /container -->
+  </div><!-- /lst-body -->
+
+</div><!-- /page-listing -->
 
 <!-- ══════════════════════════════════════════════════════════
      FOOTER
@@ -1098,14 +1920,14 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
       <div class="fc">
         <h4>Destinations</h4>
         <ul>
-          <li><a href="#">Kenya Safari Offers</a></li>
-          <li><a href="#">Tanzania Safari Offers</a></li>
-          <li><a href="#">Uganda Safari Offers</a></li>
-          <li><a href="#">Rwanda Safari Offers</a></li>
-          <li><a href="#">Masai Mara Deals</a></li>
-          <li><a href="#">Serengeti Deals</a></li>
-          <li><a href="#">Bwindi Gorilla Treks</a></li>
-          <li><a href="#">Diani Beach Offers</a></li>
+          <li><a href="#" onclick="showPage('listing','kenya');return false">Kenya Safari Offers</a></li>
+          <li><a href="#" onclick="showPage('listing','tanzania');return false">Tanzania Safari Offers</a></li>
+          <li><a href="#" onclick="showPage('listing','uganda');return false">Uganda Safari Offers</a></li>
+          <li><a href="#" onclick="showPage('listing','rwanda');return false">Rwanda Safari Offers</a></li>
+          <li><a href="#" onclick="showPage('listing','kenya');return false">Masai Mara Deals</a></li>
+          <li><a href="#" onclick="showPage('listing','tanzania');return false">Serengeti Deals</a></li>
+          <li><a href="#" onclick="showPage('listing','gorilla');return false">Bwindi Gorilla Treks</a></li>
+          <li><a href="#" onclick="showPage('listing','beach');return false">Diani Beach Offers</a></li>
         </ul>
       </div>
 
@@ -1113,14 +1935,14 @@ footer{background:#1C1C1C;color:rgba(255,255,255,.62);padding:4.5rem 0 2rem}
       <div class="fc">
         <h4>Offer Types</h4>
         <ul>
-          <li><a href="#">Luxury Safari Offers</a></li>
-          <li><a href="#">Resident Specials</a></li>
-          <li><a href="#">Family Safari Deals</a></li>
-          <li><a href="#">Honeymoon Packages</a></li>
-          <li><a href="#">Last Minute Deals</a></li>
-          <li><a href="#">Fly-in Safari Offers</a></li>
-          <li><a href="#">Beach &amp; Safari Combos</a></li>
-          <li><a href="#">Migration Specials</a></li>
+          <li><a href="#" onclick="showPage('listing','luxury');return false">Luxury Safari Offers</a></li>
+          <li><a href="#" onclick="showPage('listing','resident');return false">Resident Specials</a></li>
+          <li><a href="#" onclick="showPage('listing','family');return false">Family Safari Deals</a></li>
+          <li><a href="#" onclick="showPage('listing','honeymoon');return false">Honeymoon Packages</a></li>
+          <li><a href="#" onclick="showPage('listing','lastminute');return false">Last Minute Deals</a></li>
+          <li><a href="#" onclick="showPage('listing','flyin');return false">Fly-in Safari Offers</a></li>
+          <li><a href="#" onclick="showPage('listing','beach');return false">Beach &amp; Safari Combos</a></li>
+          <li><a href="#" onclick="showPage('listing','migration');return false">Migration Specials</a></li>
         </ul>
       </div>
 
@@ -1213,13 +2035,17 @@ function toggleSave(btn) {
 
 /* ── SEARCH ────────────────────────────────────────────── */
 function handleSearch() {
-  const dest   = document.getElementById('s-dest').value;
-  const month  = document.getElementById('s-month').value;
-  const budget = document.getElementById('s-budget').value;
-  const type   = document.getElementById('s-type').value;
-  const dur    = document.getElementById('s-dur').value;
-  // Scroll to offers section (full listing page would be next phase)
-  document.getElementById('offers').scrollIntoView({ behavior: 'smooth' });
+  const dest = document.getElementById('s-dest').value;
+  const type = document.getElementById('s-type').value;
+  const destMap = {
+    'Kenya – Masai Mara':'kenya','Kenya – Amboseli':'kenya','Kenya – Samburu':'kenya','Kenya – Laikipia':'kenya',
+    'Tanzania – Serengeti':'tanzania','Tanzania – Ngorongoro':'tanzania',
+    'Uganda – Bwindi':'uganda','Rwanda – Volcanoes':'rwanda'
+  };
+  const catMap = { luxury:'luxury', family:'family', honeymoon:'honeymoon', resident:'resident', lastminute:'lastminute', migration:'migration', flyin:'flyin', beach:'beach' };
+  const destFilter = destMap[dest] || (dest ? dest.toLowerCase().split(/\s|–/)[0] : null);
+  const catFilter  = catMap[type] || null;
+  showPage('listing', destFilter || catFilter || null);
 }
 
 /* ── TESTIMONIAL SLIDER ────────────────────────────────── */
@@ -1306,6 +2132,303 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+/* ══════════════════════════════════════════════════════════
+   LISTING PAGE FUNCTIONS
+══════════════════════════════════════════════════════════ */
+
+/* ── PAGE SWITCHING ─────────────────────────────────── */
+function showPage(page, filter) {
+  const home = document.getElementById('page-home');
+  const listing = document.getElementById('page-listing');
+  const navEl = document.getElementById('nav');
+
+  if (page === 'home') {
+    listing.style.display = 'none';
+    home.style.display = '';
+    navEl.classList.remove('scrolled');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
+
+  home.style.display = 'none';
+  listing.style.display = 'block';
+  navEl.classList.add('scrolled');
+  window.scrollTo({ top: 0 });
+
+  // Reset without re-filtering yet
+  clearAllFilters(false);
+
+  const filterMeta = {
+    kenya:      { title: 'Kenya Safari Offers',       subtitle: 'Exclusive lodge deals & game reserve specials across Kenya',              bc: 'Kenya Offers',        dest: 'kenya' },
+    tanzania:   { title: 'Tanzania Safari Offers',    subtitle: 'Serengeti, Ngorongoro, Zanzibar and beyond – best Tanzania deals',       bc: 'Tanzania Offers',     dest: 'tanzania' },
+    uganda:     { title: 'Uganda Safari Offers',      subtitle: 'Gorilla trekking, chimp safaris & savanna game drives in Uganda',        bc: 'Uganda Offers',       dest: 'uganda' },
+    rwanda:     { title: 'Rwanda Safari Offers',      subtitle: 'Mountain gorillas, golden monkeys & rainforest adventures in Rwanda',    bc: 'Rwanda Offers',       dest: 'rwanda' },
+    luxury:     { title: 'Luxury Safari Offers',      subtitle: 'Five-star lodges, private camps & ultra-premium bush experiences',       bc: 'Luxury',              cat: 'luxury' },
+    family:     { title: 'Family Safari Offers',      subtitle: 'Safari adventures designed for families with children of all ages',       bc: 'Family',              cat: 'family' },
+    honeymoon:  { title: 'Honeymoon Safari Offers',   subtitle: 'Romantic escapes, private dinners & sundowners for couples in the bush', bc: 'Honeymoon',           cat: 'honeymoon' },
+    resident:   { title: 'Resident Specials',         subtitle: 'Exclusive rates for Kenya & East Africa residents – incredible savings',  bc: 'Resident Specials',   cat: 'resident' },
+    lastminute: { title: 'Last Minute Safari Deals',  subtitle: 'Book now, travel soon – incredible savings on remaining spaces',         bc: 'Last Minute',         cat: 'lastminute' },
+    migration:  { title: 'Great Migration Specials',  subtitle: 'Witness the greatest wildlife spectacle on Earth – limited places',      bc: 'Migration',           cat: 'migration' },
+    flyin:      { title: 'Fly-in Safari Offers',      subtitle: 'Exclusive fly-in camps with light aircraft transfers included',           bc: 'Fly-in Safaris',      cat: 'flyin' },
+    beach:      { title: 'Beach & Safari Combos',     subtitle: 'The perfect combination of bush adventure and tropical coast',           bc: 'Beach & Safari',      cat: 'beach' },
+    adventure:  { title: 'Adventure Safari Offers',   subtitle: 'Trekking, climbing & active wildlife experiences across East Africa',    bc: 'Adventure',           cat: 'adventure' },
+    gorilla:    { title: 'Gorilla Trekking Offers',   subtitle: 'Get closer to mountain gorillas in Uganda and Rwanda',                   bc: 'Gorilla Trekking',    cat: 'gorilla' },
+  };
+
+  const meta = filterMeta[filter] || { title: 'All Safari Offers', subtitle: 'Hand-picked lodge specials & safari deals across East Africa', bc: 'All Safari Offers' };
+
+  document.getElementById('lstTitle').textContent = meta.title;
+  document.getElementById('lstSubtitle').textContent = meta.subtitle;
+  document.getElementById('lstBcCurrent').textContent = meta.bc;
+
+  if (meta.dest) {
+    const cb = document.querySelector('#filterSidebar input[type="checkbox"][value="' + meta.dest + '"]');
+    if (cb) cb.checked = true;
+    const destSel = document.getElementById('ls-dest');
+    if (destSel) destSel.value = meta.dest;
+  } else if (meta.cat) {
+    const cb = document.querySelector('#filterSidebar input[type="checkbox"][value="' + meta.cat + '"]');
+    if (cb) cb.checked = true;
+  }
+
+  updateFilters();
+}
+
+/* ── FILTER ACCORDION ───────────────────────────────── */
+function toggleFg(el) {
+  el.classList.toggle('open');
+  const icon = el.querySelector('.fg2-head i');
+  if (icon) icon.className = el.classList.contains('open') ? 'fas fa-chevron-up' : 'fas fa-chevron-down';
+}
+
+/* ── UPDATE FILTERS ─────────────────────────────────── */
+function updateFilters() {
+  const grid = document.getElementById('lstGrid');
+  if (!grid) return;
+  const cards = [...grid.querySelectorAll('.ocard')];
+
+  // Country checkboxes
+  const destChecked = [...document.querySelectorAll('#filterSidebar input[type="checkbox"]')]
+    .filter(c => c.checked && ['kenya','tanzania','uganda','rwanda'].includes(c.value))
+    .map(c => c.value);
+
+  // Offer category checkboxes
+  const catChecked = [...document.querySelectorAll('#filterSidebar input[type="checkbox"]')]
+    .filter(c => c.checked && ['luxury','family','honeymoon','resident','lastminute','flyin','beach','migration','gorilla','adventure'].includes(c.value))
+    .map(c => c.value);
+
+  // Duration radio
+  const durEl = document.querySelector('#filterSidebar input[name="duration"]:checked');
+  const dur = durEl ? durEl.value : '';
+
+  // Budget
+  const budgetRange = document.getElementById('budgetRange');
+  const maxBudget = budgetRange ? parseInt(budgetRange.value) : 10000;
+
+  // Quick-search selectors (secondary filters)
+  const qsDest = (document.getElementById('ls-dest') || {}).value || '';
+  const qsType = (document.getElementById('ls-type') || {}).value || '';
+
+  let visible = 0;
+  cards.forEach(card => {
+    const cats = (card.getAttribute('data-cats') || '').split(' ');
+    const price = parseInt(card.getAttribute('data-price') || 0);
+    const nights = parseInt(card.getAttribute('data-nights') || 0);
+    let show = true;
+
+    // Destination
+    const destFilter = destChecked.length ? destChecked : (qsDest ? [qsDest] : []);
+    if (destFilter.length) show = show && destFilter.some(d => cats.includes(d));
+
+    // Category
+    const catFilter = catChecked.length ? catChecked : (qsType ? [qsType] : []);
+    if (catFilter.length) show = show && catFilter.some(c => cats.includes(c));
+
+    // Duration
+    if (dur) {
+      if (dur === '8+') {
+        show = show && nights >= 8;
+      } else {
+        const parts = dur.split('-').map(Number);
+        show = show && nights >= parts[0] && nights <= parts[1];
+      }
+    }
+
+    // Budget (skip KES-priced cards from budget slider)
+    if (price > 0) show = show && price <= maxBudget;
+
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  // Result count
+  const foundEl = document.getElementById('lstFound');
+  if (foundEl) foundEl.innerHTML = '<strong>' + visible + '</strong> safari offer' + (visible !== 1 ? 's' : '') + ' found';
+  const heroCountEl = document.getElementById('lstHeroCount');
+  if (heroCountEl) heroCountEl.textContent = visible;
+
+  // Empty state
+  const emptyEl = document.getElementById('lstEmpty');
+  if (emptyEl) emptyEl.style.display = visible === 0 ? 'flex' : 'none';
+
+  // Chips bar
+  _updateChips(destChecked, catChecked, dur, maxBudget);
+
+  // Mobile filter badge
+  const totalActive = destChecked.length + catChecked.length + (dur ? 1 : 0) + (maxBudget < 10000 ? 1 : 0);
+  const badge = document.getElementById('filterBadge');
+  if (badge) { badge.textContent = totalActive; badge.style.display = totalActive > 0 ? '' : 'none'; }
+}
+
+/* ── CHIPS BAR ──────────────────────────────────────── */
+function _updateChips(dests, cats, dur, maxBudget) {
+  const bar = document.getElementById('filterChips');
+  if (!bar) return;
+  bar.querySelectorAll('.fchip').forEach(c => c.remove());
+
+  const destLabels = { kenya:'Kenya', tanzania:'Tanzania', uganda:'Uganda', rwanda:'Rwanda' };
+  const catLabels  = { luxury:'Luxury', family:'Family', honeymoon:'Honeymoon', resident:'Resident Rates', lastminute:'Last Minute', flyin:'Fly-in', beach:'Beach & Safari', migration:'Migration', gorilla:'Gorilla Trek', adventure:'Adventure' };
+  const chips = [];
+
+  dests.forEach(d => chips.push(destLabels[d] || d));
+  cats.forEach(c => chips.push(catLabels[c] || c));
+  if (dur) chips.push(dur === '8+' ? '8+ Nights' : dur.replace('-','–') + ' Nights');
+  if (maxBudget < 10000) chips.push('Up to $' + parseInt(maxBudget).toLocaleString());
+
+  const clearBtn = bar.querySelector('.fchip-clear');
+  chips.forEach(label => {
+    const chip = document.createElement('span');
+    chip.className = 'fchip';
+    chip.innerHTML = label + ' <button onclick="this.parentElement.remove();updateFilters()" aria-label="Remove filter"><i class="fas fa-times"></i></button>';
+    bar.insertBefore(chip, clearBtn);
+  });
+
+  bar.classList.toggle('empty', chips.length === 0);
+}
+
+/* ── BUDGET RANGE ───────────────────────────────────── */
+function updateBudget(val) {
+  const display = document.getElementById('budgetDisplay');
+  const slider  = document.getElementById('budgetRange');
+  if (display) display.textContent = parseInt(val) >= 10000 ? '$10,000+' : 'Up to $' + parseInt(val).toLocaleString();
+  if (slider) {
+    const pct = ((val - 500) / (10000 - 500)) * 100;
+    slider.style.background = `linear-gradient(to right,var(--g) 0%,var(--g) ${pct}%,var(--bd) ${pct}%,var(--bd) 100%)`;
+  }
+  updateFilters();
+}
+
+/* ── CLEAR ALL FILTERS ──────────────────────────────── */
+function clearAllFilters(triggerUpdate) {
+  if (triggerUpdate === undefined) triggerUpdate = true;
+
+  document.querySelectorAll('#filterSidebar input[type="checkbox"]').forEach(cb => { cb.checked = false; });
+
+  const anyDur = document.querySelector('#filterSidebar input[name="duration"][value=""]');
+  if (anyDur) anyDur.checked = true;
+
+  const resT = document.getElementById('residentToggle');
+  const nonT = document.getElementById('nonResidentToggle');
+  if (resT) resT.checked = false;
+  if (nonT) nonT.checked = false;
+
+  const rangeEl = document.getElementById('budgetRange');
+  if (rangeEl) { rangeEl.value = 10000; rangeEl.style.background = ''; }
+  const dispEl = document.getElementById('budgetDisplay');
+  if (dispEl) dispEl.textContent = 'Up to $5,000';
+
+  ['ls-dest','ls-month','ls-type','ls-budget'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+
+  const bar = document.getElementById('filterChips');
+  if (bar) { bar.querySelectorAll('.fchip').forEach(c => c.remove()); bar.classList.add('empty'); }
+
+  const badge = document.getElementById('filterBadge');
+  if (badge) { badge.textContent = '0'; badge.style.display = 'none'; }
+
+  if (triggerUpdate) updateFilters();
+}
+
+/* ── MOBILE FILTER SIDEBAR ──────────────────────────── */
+function openMobFilters() {
+  document.getElementById('filterSidebar').classList.add('mob-open');
+  document.getElementById('fsbOv').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobFilters() {
+  document.getElementById('filterSidebar').classList.remove('mob-open');
+  document.getElementById('fsbOv').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+/* ── QUICK SEARCH (listing page) ────────────────────── */
+function applyQuickSearch() {
+  // Sync sidebar country checkbox from quick-search destination
+  const dest = (document.getElementById('ls-dest') || {}).value;
+  document.querySelectorAll('#filterSidebar input[type="checkbox"][value="kenya"], #filterSidebar input[type="checkbox"][value="tanzania"], #filterSidebar input[type="checkbox"][value="uganda"], #filterSidebar input[type="checkbox"][value="rwanda"]')
+    .forEach(cb => { if (dest) cb.checked = cb.value === dest; });
+  // Sync sidebar category checkbox from quick-search type
+  const type = (document.getElementById('ls-type') || {}).value;
+  ['luxury','family','honeymoon','resident','lastminute'].forEach(val => {
+    const cb = document.querySelector('#filterSidebar input[type="checkbox"][value="' + val + '"]');
+    if (cb && type) cb.checked = cb.value === type;
+  });
+  updateFilters();
+}
+
+/* ── SORT ───────────────────────────────────────────── */
+function sortListingOffers(val) {
+  const grid = document.getElementById('lstGrid');
+  if (!grid) return;
+  const cards = [...grid.querySelectorAll('.ocard')];
+  cards.sort((a, b) => {
+    const pa = parseInt(a.getAttribute('data-price')   || 0);
+    const pb = parseInt(b.getAttribute('data-price')   || 0);
+    const sa = parseInt(a.getAttribute('data-savings') || 0);
+    const sb = parseInt(b.getAttribute('data-savings') || 0);
+    const na = parseInt(a.getAttribute('data-nights')  || 0);
+    const nb = parseInt(b.getAttribute('data-nights')  || 0);
+    if (val === 'price-asc')  return pa - pb;
+    if (val === 'price-desc') return pb - pa;
+    if (val === 'savings')    return sb - sa;
+    if (val === 'duration')   return nb - na;
+    return 0;
+  });
+  cards.forEach(c => grid.appendChild(c));
+}
+
+/* ── VIEW MODE ──────────────────────────────────────── */
+function setView(mode) {
+  const grid = document.getElementById('lstGrid');
+  const btnG = document.getElementById('vbGrid');
+  const btnL = document.getElementById('vbList');
+  if (!grid) return;
+  if (mode === 'list') {
+    grid.classList.add('list-view');
+    btnG.classList.remove('active'); btnG.setAttribute('aria-pressed','false');
+    btnL.classList.add('active');    btnL.setAttribute('aria-pressed','true');
+  } else {
+    grid.classList.remove('list-view');
+    btnG.classList.add('active');    btnG.setAttribute('aria-pressed','true');
+    btnL.classList.remove('active'); btnL.setAttribute('aria-pressed','false');
+  }
+}
+
+/* ── PAGINATION (prototype) ─────────────────────────── */
+function goToPage(n) {
+  document.querySelectorAll('.pgbtn:not(.prev):not(.next)').forEach(b => {
+    const active = b.textContent.trim() === String(n);
+    b.classList.toggle('active', active);
+    active ? b.setAttribute('aria-current','page') : b.removeAttribute('aria-current');
+  });
+  const prevBtn = document.querySelector('.pgbtn.prev');
+  if (prevBtn) prevBtn.disabled = (n === 1);
+  const lstEl = document.getElementById('page-listing');
+  if (lstEl) window.scrollTo({ top: lstEl.offsetTop - 80, behavior: 'smooth' });
+}
 </script>
 </body>
 </html>
