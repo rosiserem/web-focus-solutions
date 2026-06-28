@@ -458,6 +458,130 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .pgbtn:disabled:hover{background:var(--wh);border-color:var(--bd);color:var(--ch)}
 .pg-ellipsis{color:var(--gray);font-size:.85rem;padding:0 .25rem}
 
+/* ── DETAIL PAGE ────────────────────────────────────────── */
+#page-detail{display:none}
+
+/* Gallery */
+.gal-wrap{background:var(--ch)}
+.gal-main{position:relative;height:510px;overflow:hidden}
+.gal-main img{width:100%;height:100%;object-fit:cover;transition:opacity .35s ease}
+.gal-badge-det{position:absolute;top:1.25rem;left:1.25rem;background:#DC2626;color:var(--wh);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.32rem .85rem;border-radius:50px}
+.gal-save{position:absolute;top:1.25rem;right:1.25rem;width:42px;height:42px;background:rgba(255,255,255,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;color:var(--gray);font-size:1rem;cursor:pointer;transition:var(--t)}
+.gal-save:hover,.gal-save.saved{color:#EF4444;background:var(--wh)}
+.gal-expand{position:absolute;bottom:1.25rem;right:1.25rem;background:rgba(0,0,0,.55);color:var(--wh);border:none;border-radius:8px;padding:.45rem .85rem;font-size:.78rem;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:.4rem;backdrop-filter:blur(4px);transition:var(--t)}
+.gal-expand:hover{background:rgba(0,0,0,.8)}
+.gal-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:4px}
+.gal-thumb{position:relative;height:92px;overflow:hidden;cursor:pointer;border:3px solid transparent;transition:border-color .25s;flex-shrink:0}
+.gal-thumb.active{border-color:var(--g)}
+.gal-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.gal-thumb:hover img{transform:scale(1.07)}
+.gal-count{position:absolute;inset:0;background:rgba(0,0,0,.52);color:var(--wh);font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:.32rem}
+
+/* Detail breadcrumb */
+.det-hero{background:var(--gd);padding:.75rem 0}
+.det-bc{display:flex;align-items:center;gap:.45rem;font-size:.75rem;color:rgba(255,255,255,.6)}
+.det-bc a{color:rgba(255,255,255,.6);transition:color .25s}
+.det-bc a:hover{color:var(--sd)}
+.det-bc i{font-size:.52rem}
+
+/* Detail body layout */
+.det-body{padding:2.5rem 0 4.5rem}
+.det-layout{display:grid;grid-template-columns:1fr 370px;gap:2.25rem;align-items:start}
+
+/* Offer header */
+.det-ofhd{margin-bottom:1.75rem}
+.det-ofhd .ocprop{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--or);margin-bottom:.3rem;display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
+.det-ofhd h1{font-size:clamp(1.45rem,2.8vw,2rem);font-weight:700;color:var(--ch);line-height:1.25;margin:.5rem 0 .65rem}
+.det-stars{display:flex;align-items:center;gap:.18rem;margin-bottom:.5rem}
+.det-stars i{color:var(--sd);font-size:.82rem}
+.det-stars span{font-size:.8rem;color:var(--gray);margin-left:.4rem}
+.det-meta{display:flex;flex-wrap:wrap;gap:.4rem .85rem;font-size:.79rem;color:var(--gray);margin-bottom:.85rem}
+.det-meta span{display:flex;align-items:center;gap:.26rem}
+.det-meta i{color:var(--g);font-size:.7rem}
+.det-pills{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.85rem}
+.det-pill{display:flex;align-items:center;gap:.32rem;background:var(--sl);color:var(--gd);font-size:.74rem;font-weight:600;padding:.32rem .85rem;border-radius:50px}
+.det-pill i{color:var(--g);font-size:.68rem}
+
+/* Sections */
+.det-sec{margin-bottom:2.25rem}
+.det-sec-title{font-size:1.1rem;font-weight:700;color:var(--ch);margin-bottom:1rem;padding-bottom:.55rem;border-bottom:2px solid var(--bd);display:flex;align-items:center;gap:.5rem}
+.det-sec-title i{color:var(--g);font-size:.88rem}
+.det-desc p{font-size:.91rem;color:var(--ch2);line-height:1.78;margin-bottom:.9rem}
+.det-desc p:last-child{margin-bottom:0}
+
+/* Lodge card */
+.lodge-card{display:flex;gap:1.1rem;background:var(--wh);border-radius:var(--r);padding:1.1rem;box-shadow:var(--ss);border:1px solid var(--bd)}
+.lodge-img{width:105px;height:85px;border-radius:8px;overflow:hidden;flex-shrink:0}
+.lodge-img img{width:100%;height:100%;object-fit:cover}
+.lodge-info h4{font-size:.94rem;font-weight:700;color:var(--ch);margin-bottom:.2rem}
+.lodge-loc{font-size:.76rem;color:var(--gray);display:flex;align-items:center;gap:.28rem;margin-bottom:.5rem}
+.lodge-loc i{color:var(--g);font-size:.68rem}
+.lodge-badges{display:flex;flex-wrap:wrap;gap:.35rem}
+.lodge-badge{font-size:.63rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.22rem .6rem;border-radius:50px}
+.lb-gold{background:#FEF3C7;color:#92400E}
+.lb-green{background:#DCFCE7;color:#15803D}
+.lb-blue{background:#DBEAFE;color:#1E40AF}
+
+/* Included / Excluded */
+.inc-exc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.inc-exc-head{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.65rem}
+.inc-list,.exc-list{list-style:none}
+.inc-list li,.exc-list li{display:flex;align-items:flex-start;gap:.55rem;font-size:.84rem;color:var(--ch2);padding:.38rem 0;border-bottom:1px solid var(--glf);line-height:1.45}
+.inc-list li:last-child,.exc-list li:last-child{border-bottom:none}
+.inc-list li i{color:#16A34A;flex-shrink:0;margin-top:.15rem;font-size:.8rem}
+.exc-list li i{color:#EF4444;flex-shrink:0;margin-top:.15rem;font-size:.8rem}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--bd)}
+.faq-item:first-child{border-top:1px solid var(--bd)}
+.faq-q{width:100%;text-align:left;padding:1.05rem 0;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-size:.88rem;font-weight:600;color:var(--ch);gap:1rem;line-height:1.35;transition:color .25s;font-family:inherit}
+.faq-q:hover{color:var(--g)}
+.faq-q i{color:var(--g);font-size:.78rem;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-q i{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .38s ease,padding .3s ease;font-size:.86rem;color:var(--ch2);line-height:1.72}
+.faq-item.open .faq-a{max-height:420px;padding-bottom:1.1rem}
+
+/* Similar offers */
+.sim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.sim-grid .oci{height:170px}
+.sim-grid .ocmeta{display:none}
+
+/* ── BOOKING SIDEBAR ─────────────────────────────────────── */
+.det-sidebar{position:sticky;top:88px}
+.booking-card{background:var(--wh);border-radius:var(--rl);box-shadow:var(--sl2);overflow:hidden;border:1px solid var(--bd)}
+.bk-head{background:linear-gradient(135deg,var(--gd) 0%,var(--gl) 100%);padding:1.4rem 1.5rem 1.2rem}
+.bk-label{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:.2rem}
+.bk-price{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--wh);line-height:1.1}
+.bk-pp{font-size:.72rem;color:rgba(255,255,255,.6)}
+.bk-save-pill{display:inline-flex;align-items:center;gap:.32rem;background:rgba(255,255,255,.15);color:var(--sd);font-size:.73rem;font-weight:700;padding:.26rem .7rem;border-radius:50px;margin-top:.45rem}
+.bk-body{padding:1.3rem 1.4rem}
+.bk-field{margin-bottom:.9rem}
+.bk-field label{display:block;font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gray);margin-bottom:.35rem}
+.bk-field input,.bk-field select,.bk-field textarea{width:100%;padding:.62rem .85rem;border:1.5px solid var(--bd);border-radius:8px;font-size:.84rem;color:var(--ch);background:var(--wh);transition:border-color .25s,box-shadow .25s;font-family:inherit}
+.bk-field textarea{resize:vertical;min-height:75px}
+.bk-field input:focus,.bk-field select:focus,.bk-field textarea:focus{border-color:var(--g);outline:none;box-shadow:0 0 0 3px rgba(26,92,56,.1)}
+.bk-field input.err,.bk-field select.err{border-color:#EF4444}
+.bk-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.bk-submit{width:100%;background:var(--g);color:var(--wh);border:none;border-radius:50px;padding:.82rem;font-size:.9rem;font-weight:700;cursor:pointer;transition:var(--t);display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.15rem;font-family:inherit}
+.bk-submit:hover:not(:disabled){background:var(--gd);transform:translateY(-2px)}
+.bk-submit:disabled{opacity:.7;cursor:default}
+.bk-divider{text-align:center;color:var(--gray);font-size:.76rem;margin:.85rem 1.4rem;position:relative}
+.bk-divider::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:var(--bd)}
+.bk-divider span{background:var(--wh);padding:0 .75rem;position:relative}
+.bk-contacts{display:flex;flex-direction:column;gap:.55rem;padding:0 1.4rem}
+.bk-wa,.bk-call{display:flex;align-items:center;justify-content:center;gap:.55rem;border-radius:50px;padding:.7rem;font-size:.86rem;font-weight:600;cursor:pointer;transition:var(--t);text-decoration:none;border:2px solid transparent;font-family:inherit}
+.bk-wa{background:#25D366;color:var(--wh);border-color:#25D366}
+.bk-wa:hover{background:#1da851}
+.bk-call{border-color:var(--g);color:var(--g);background:transparent}
+.bk-call:hover{background:var(--g);color:var(--wh)}
+.bk-trust{display:flex;justify-content:center;gap:1rem;padding:.9rem 1.4rem;border-top:1px solid var(--glf);flex-wrap:wrap;margin-top:.85rem}
+.bk-trust-item{display:flex;align-items:center;gap:.28rem;font-size:.67rem;color:var(--gray)}
+.bk-trust-item i{color:var(--g);font-size:.72rem}
+.bk-success{display:none;text-align:center;padding:2rem 1.5rem;flex-direction:column;align-items:center}
+.bk-success i{font-size:3rem;color:#16A34A;margin-bottom:.9rem}
+.bk-success h4{font-size:1.05rem;color:var(--ch);margin-bottom:.45rem}
+.bk-success p{font-size:.84rem;color:var(--gray);line-height:1.65}
+
 /* ── RESPONSIVE (listing) ───────────────────────────────── */
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media(max-width:1100px){
@@ -480,6 +604,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   .lst-grid{grid-template-columns:repeat(2,1fr)}
   .lst-grid.list-view{grid-template-columns:1fr}
   .lst-hero-right{display:none}
+  /* detail */
+  .det-layout{grid-template-columns:1fr}
+  .det-sidebar{position:static;top:auto}
+  .sim-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
   .section{padding:3.5rem 0}
@@ -504,6 +632,13 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   .lst-tools{flex-wrap:wrap;gap:.65rem}
   .lst-srch-row{gap:.5rem}
   .lst-srch-row .sf{min-width:120px}
+  /* detail */
+  .gal-main{height:320px}
+  .gal-thumbs{grid-template-columns:repeat(4,1fr)}
+  .gal-thumb:last-child{display:none}
+  .inc-exc-grid{grid-template-columns:1fr}
+  .sim-grid{grid-template-columns:1fr}
+  .bk-row{grid-template-columns:1fr}
 }
 @media(max-width:480px){
   .hero h1{font-size:1.7rem}
@@ -516,6 +651,11 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   .hero-stats{flex-wrap:wrap;gap:1.25rem}
   .lst-toolbar{flex-direction:column;align-items:flex-start}
   .view-btns{display:none}
+  /* detail */
+  .gal-main{height:240px}
+  .gal-thumbs{grid-template-columns:repeat(3,1fr)}
+  .lodge-card{flex-direction:column}
+  .lodge-img{width:100%;height:130px}
 }
 </style>
 </head>
@@ -1882,6 +2022,373 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 </div><!-- /page-listing -->
 
 <!-- ══════════════════════════════════════════════════════════
+     OFFER DETAIL PAGE
+══════════════════════════════════════════════════════════ -->
+<div id="page-detail" aria-label="Offer Detail Page">
+
+  <!-- Breadcrumb bar -->
+  <div class="det-hero">
+    <div class="container">
+      <nav class="det-bc" aria-label="Breadcrumb">
+        <a href="#" onclick="showPage('home');return false">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="#" onclick="showPage('listing');return false">All Safari Offers</a>
+        <i class="fas fa-chevron-right"></i>
+        <span id="detBcCurrent">Migration Season Special</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Photo Gallery -->
+  <div class="gal-wrap">
+    <div class="gal-main">
+      <img id="galMain" src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1400&q=85" alt="Wildebeest migration crossing the Mara River at sunrise">
+      <span class="gal-badge-det" id="detBadge">🔥 Hot Deal</span>
+      <button class="gal-save" id="detSaveBtn" onclick="toggleSave(this)" aria-label="Save this offer"><i class="far fa-heart"></i></button>
+      <button class="gal-expand" onclick="alert('Lightbox: opens full-screen gallery in production.')" aria-label="View all photos">
+        <i class="fas fa-expand-alt"></i> View all 12 photos
+      </button>
+    </div>
+    <div class="gal-thumbs">
+      <div class="gal-thumb active" onclick="switchGallery(this,'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1400&q=85','Wildebeest migration crossing the Mara River')">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=300&q=75" alt="Migration crossing" loading="lazy">
+      </div>
+      <div class="gal-thumb" onclick="switchGallery(this,'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1400&q=85','Elephants on the Masai Mara plains at golden hour')">
+        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=300&q=75" alt="Elephants at golden hour" loading="lazy">
+      </div>
+      <div class="gal-thumb" onclick="switchGallery(this,'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1400&q=85','Mara Serena Safari Lodge tented suite exterior')">
+        <img src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=300&q=75" alt="Lodge suite exterior" loading="lazy">
+      </div>
+      <div class="gal-thumb" onclick="switchGallery(this,'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1400&q=85','Luxury tent interior at Mara Serena')">
+        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=300&q=75" alt="Luxury tent interior" loading="lazy">
+      </div>
+      <div class="gal-thumb" onclick="switchGallery(this,'https://images.unsplash.com/photo-1549366021-9f761d450615?w=1400&q=85','Lion resting in the Masai Mara')">
+        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=300&q=75" alt="Lion sighting" loading="lazy">
+        <div class="gal-count"><i class="fas fa-images"></i> +8</div>
+      </div>
+    </div>
+  </div><!-- /gal-wrap -->
+
+  <!-- Detail Body -->
+  <div class="det-body">
+    <div class="container">
+      <div class="det-layout">
+
+        <!-- ── MAIN CONTENT ── -->
+        <div class="det-content">
+
+          <!-- Offer header -->
+          <div class="det-ofhd">
+            <p class="ocprop">
+              <i class="fas fa-map-marker-alt"></i>
+              <span id="detLocation">Masai Mara National Reserve, Kenya</span>
+              &nbsp;·&nbsp;
+              <span id="detPropName">Mara Serena Safari Lodge</span>
+            </p>
+            <h1 id="detTitle">Migration Season Special – 20% Off Full Board</h1>
+            <div class="det-stars" aria-label="Rating: 4.8 out of 5">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              <span>4.8 &nbsp;(142 verified reviews)</span>
+            </div>
+            <div class="det-meta">
+              <span><i class="fas fa-calendar-alt"></i> Valid Jul – Oct 2026</span>
+              <span><i class="fas fa-moon"></i> Min 3 Nights</span>
+              <span><i class="fas fa-users"></i> 2+ Guests</span>
+              <span><i class="fas fa-utensils"></i> Full Board</span>
+              <span><i class="fas fa-clock"></i> Limited availability</span>
+            </div>
+            <div class="det-pills">
+              <span class="det-pill"><i class="fas fa-check-circle"></i> Free airport transfers</span>
+              <span class="det-pill"><i class="fas fa-check-circle"></i> Twice-daily game drives</span>
+              <span class="det-pill"><i class="fas fa-check-circle"></i> All meals included</span>
+              <span class="det-pill"><i class="fas fa-tag"></i> Save $480 per person</span>
+            </div>
+          </div>
+
+          <!-- Lodge Info -->
+          <div class="det-sec">
+            <h2 class="det-sec-title"><i class="fas fa-hotel"></i> About the Property</h2>
+            <div class="lodge-card">
+              <div class="lodge-img">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=300&q=80" alt="Mara Serena Safari Lodge" loading="lazy">
+              </div>
+              <div class="lodge-info">
+                <h4>Mara Serena Safari Lodge</h4>
+                <p class="lodge-loc"><i class="fas fa-map-marker-alt"></i> Masai Mara National Reserve, Kenya</p>
+                <div class="lodge-badges">
+                  <span class="lodge-badge lb-gold">5-Star Lodge</span>
+                  <span class="lodge-badge lb-green">Eco Certified</span>
+                  <span class="lodge-badge lb-blue">Full Board</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="det-sec">
+            <h2 class="det-sec-title"><i class="fas fa-align-left"></i> Offer Description</h2>
+            <div class="det-desc">
+              <p>Experience the greatest wildlife spectacle on Earth at a 20% saving. The Great Migration sees over 1.5 million wildebeest and zebra thunder across the Masai Mara between July and October — and Mara Serena Safari Lodge sits in the heart of the action, perched on a hill overlooking the Mara River and the endless plains beyond.</p>
+              <p>This exclusive offer, negotiated directly by Kiboko Kenya Safaris, gives you access to the lodge's premium Full Board package at its lowest-ever migration-season price. Twice-daily game drives in open 4x4 vehicles led by expert Maasai guides, all three meals prepared from local ingredients, sundowner drinks on the viewing deck, and unlimited in-room wifi are all included — everything you need to immerse yourself fully in the Mara.</p>
+              <p>The lodge's 74 rooms are designed in traditional Maasai village style to blend seamlessly with the landscape. Each features a private balcony with unobstructed bush views. The solar-heated swimming pool, guided nature walks, cultural village visits, and optional hot-air balloon safaris (not included, bookable on site) make this one of the most complete safari experiences in Kenya.</p>
+            </div>
+          </div>
+
+          <!-- What's Included / Excluded -->
+          <div class="det-sec">
+            <h2 class="det-sec-title"><i class="fas fa-list-check"></i> What's Included &amp; Excluded</h2>
+            <div class="inc-exc-grid">
+              <div>
+                <p class="inc-exc-head" style="color:var(--g)">Included</p>
+                <ul class="inc-list">
+                  <li><i class="fas fa-check-circle"></i> All meals (breakfast, lunch &amp; dinner)</li>
+                  <li><i class="fas fa-check-circle"></i> Twice-daily guided 4x4 game drives</li>
+                  <li><i class="fas fa-check-circle"></i> Return airport / airstrip transfers</li>
+                  <li><i class="fas fa-check-circle"></i> All park fees &amp; conservancy levies</li>
+                  <li><i class="fas fa-check-circle"></i> In-room wifi &amp; laundry service</li>
+                  <li><i class="fas fa-check-circle"></i> Evening bush talks &amp; Maasai village visits</li>
+                  <li><i class="fas fa-check-circle"></i> Swimming pool &amp; fitness centre</li>
+                </ul>
+              </div>
+              <div>
+                <p class="inc-exc-head" style="color:#EF4444">Not Included</p>
+                <ul class="exc-list">
+                  <li><i class="fas fa-times-circle"></i> International flights to Nairobi</li>
+                  <li><i class="fas fa-times-circle"></i> Kenya visa fees (~$50 per person)</li>
+                  <li><i class="fas fa-times-circle"></i> Alcoholic &amp; premium soft drinks</li>
+                  <li><i class="fas fa-times-circle"></i> Hot-air balloon safari (optional, ~$480 pp)</li>
+                  <li><i class="fas fa-times-circle"></i> Gratuities for guides &amp; staff</li>
+                  <li><i class="fas fa-times-circle"></i> Travel insurance (required)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ -->
+          <div class="det-sec">
+            <h2 class="det-sec-title"><i class="fas fa-circle-question"></i> Frequently Asked Questions</h2>
+            <div class="faq-list">
+
+              <div class="faq-item open">
+                <button class="faq-q" onclick="toggleFaq(this.parentElement)" aria-expanded="true">
+                  When is the best time to see the Great Migration?
+                  <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-a">The main river crossings at the Mara River take place between late July and October, when the herds move from the Serengeti into Kenya. August and September see the most dramatic and frequent crossings. This offer covers the peak July–October window, giving you the best possible chance of witnessing multiple crossings.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this.parentElement)" aria-expanded="false">
+                  Can I extend my stay beyond the minimum 3 nights?
+                  <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-a">Yes — the discounted rate applies to stays of 3–10 nights, subject to availability. We recommend at least 4–5 nights to maximise crossing sightings. Send us an inquiry and we'll tailor the itinerary to your dates and preferences.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this.parentElement)" aria-expanded="false">
+                  Is this offer available for solo travellers?
+                  <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-a">Yes, solo travellers are welcome. The price shown is per person based on double occupancy sharing. A single supplement applies for a private room. Please inquire for the current rate — we can also try to match solo travellers with compatible companions on group departures.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this.parentElement)" aria-expanded="false">
+                  What is the booking and payment process?
+                  <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-a">Submit your inquiry here. Our team confirms availability within 24 hours and sends a personalised quote. To secure the booking, a 30% deposit is required. The balance is due 60 days before arrival. We accept bank transfers (USD/GBP/EUR/KES) and major credit cards via our secure payment portal.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this.parentElement)" aria-expanded="false">
+                  What is the cancellation policy?
+                  <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-a">Cancellations 60+ days before arrival: full deposit refund minus a $75 admin fee. 30–60 days: 50% of total is forfeited. Under 30 days: 100% is forfeited. We strongly recommend comprehensive travel insurance to cover unexpected cancellations, medical emergencies, and evacuation.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this.parentElement)" aria-expanded="false">
+                  Do I need travel insurance?
+                  <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-a">Yes — comprehensive travel insurance including medical evacuation coverage is required for this booking. The Masai Mara is a remote wilderness area and medical evacuation can cost $20,000+. We can recommend trusted specialist safari insurers with policies starting from around $5 per day.</div>
+              </div>
+
+            </div><!-- /faq-list -->
+          </div>
+
+          <!-- Similar Offers -->
+          <div class="det-sec">
+            <h2 class="det-sec-title"><i class="fas fa-compass"></i> You May Also Like</h2>
+            <div class="sim-grid">
+
+              <article class="ocard">
+                <div class="oci">
+                  <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=500&q=75" alt="Mahali Mzuri luxury camp" loading="lazy">
+                  <span class="ocbadge bg-g">Ultra Luxury</span>
+                  <button class="ocsave" onclick="toggleSave(this)" aria-label="Save"><i class="far fa-heart"></i></button>
+                  <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Mara Conservancy</span>
+                </div>
+                <div class="ocb">
+                  <p class="ocprop">Mahali Mzuri</p>
+                  <h3 class="octit">7-Night Conservancy Luxury Package – 15% Off</h3>
+                  <div class="ocprice">
+                    <div><p class="pfrom">From</p><p class="pval">$5,500 <span class="ppp">/ pp</span></p></div>
+                    <span class="savepill">Save $1,200</span>
+                  </div>
+                </div>
+                <div class="ocft">
+                  <a href="#" onclick="showDetail();return false" class="btn btn-p btn-sm">Book Offer</a>
+                  <a href="#" onclick="showDetail();return false" class="btn btn-gh btn-sm">Details</a>
+                </div>
+              </article>
+
+              <article class="ocard">
+                <div class="oci">
+                  <img src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=500&q=75" alt="Family safari camp" loading="lazy">
+                  <span class="ocbadge bg-g">Kids Stay Free</span>
+                  <button class="ocsave" onclick="toggleSave(this)" aria-label="Save"><i class="far fa-heart"></i></button>
+                  <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Masai Mara</span>
+                </div>
+                <div class="ocb">
+                  <p class="ocprop">Elewana Sand River</p>
+                  <h3 class="octit">Family Safari – Children Under 12 Fly &amp; Stay Free</h3>
+                  <div class="ocprice">
+                    <div><p class="pfrom">From</p><p class="pval">$2,100 <span class="ppp">/ adult</span></p></div>
+                    <span class="savepill">Kids Free</span>
+                  </div>
+                </div>
+                <div class="ocft">
+                  <a href="#" onclick="showDetail();return false" class="btn btn-p btn-sm">Book Offer</a>
+                  <a href="#" onclick="showDetail();return false" class="btn btn-gh btn-sm">Details</a>
+                </div>
+              </article>
+
+              <article class="ocard">
+                <div class="oci">
+                  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=75" alt="Diani beach" loading="lazy">
+                  <span class="ocbadge bg-red">Last Minute</span>
+                  <button class="ocsave" onclick="toggleSave(this)" aria-label="Save"><i class="far fa-heart"></i></button>
+                  <span class="ocloc"><i class="fas fa-map-marker-alt"></i> Diani + Mara</span>
+                </div>
+                <div class="ocb">
+                  <p class="ocprop">Alfajiri + Mara North</p>
+                  <h3 class="octit">Beach &amp; Safari Combo – 7 Nights Fly-in Included</h3>
+                  <div class="ocprice">
+                    <div><p class="pfrom">From</p><p class="pval">$2,750 <span class="ppp">/ pp</span></p></div>
+                    <span class="savepill">Save $550</span>
+                  </div>
+                </div>
+                <div class="ocft">
+                  <a href="#" onclick="showDetail();return false" class="btn btn-p btn-sm">Book Offer</a>
+                  <a href="#" onclick="showDetail();return false" class="btn btn-gh btn-sm">Details</a>
+                </div>
+              </article>
+
+            </div><!-- /sim-grid -->
+          </div>
+
+        </div><!-- /det-content -->
+
+        <!-- ── BOOKING SIDEBAR ── -->
+        <div class="det-sidebar">
+          <div class="booking-card">
+
+            <div class="bk-head">
+              <p class="bk-label">Price From</p>
+              <p class="bk-price" id="detSidePrice">$1,890 <span class="bk-pp">/ person</span></p>
+              <p class="bk-save-pill"><i class="fas fa-tag"></i> Save $480 on this offer</p>
+            </div>
+
+            <div class="bk-body">
+              <form id="detInqForm" onsubmit="submitInquiry(event)" novalidate>
+                <div class="bk-field">
+                  <label for="inq-name">Full Name *</label>
+                  <input type="text" id="inq-name" placeholder="Your full name" required autocomplete="name">
+                </div>
+                <div class="bk-row">
+                  <div class="bk-field">
+                    <label for="inq-email">Email *</label>
+                    <input type="email" id="inq-email" placeholder="you@email.com" required autocomplete="email">
+                  </div>
+                  <div class="bk-field">
+                    <label for="inq-phone">Phone / WhatsApp</label>
+                    <input type="tel" id="inq-phone" placeholder="+254 7…" autocomplete="tel">
+                  </div>
+                </div>
+                <div class="bk-row">
+                  <div class="bk-field">
+                    <label for="inq-date">Arrival Date *</label>
+                    <input type="date" id="inq-date" required>
+                  </div>
+                  <div class="bk-field">
+                    <label for="inq-nights">Nights</label>
+                    <select id="inq-nights">
+                      <option value="3">3 nights</option>
+                      <option value="4">4 nights</option>
+                      <option value="5" selected>5 nights</option>
+                      <option value="6">6 nights</option>
+                      <option value="7">7 nights</option>
+                      <option value="8">8+ nights</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="bk-field">
+                  <label for="inq-guests">Number of Guests *</label>
+                  <select id="inq-guests" required>
+                    <option value="">Select guests…</option>
+                    <option value="1">1 guest (single supplement applies)</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5+ guests (group rate)</option>
+                  </select>
+                </div>
+                <div class="bk-field">
+                  <label for="inq-notes">Special Requests</label>
+                  <textarea id="inq-notes" placeholder="Dietary requirements, anniversaries, room preferences…"></textarea>
+                </div>
+                <button type="submit" class="bk-submit" id="detSubmitBtn">
+                  <i class="fas fa-paper-plane"></i> Send Free Inquiry
+                </button>
+              </form>
+              <div class="bk-success" id="detInqSuccess" role="alert">
+                <i class="fas fa-circle-check"></i>
+                <h4>Inquiry Sent!</h4>
+                <p>Our safari experts will confirm availability and send you a personalised quote within 24 hours. Check your inbox (and spam folder).</p>
+              </div>
+            </div>
+
+            <div class="bk-divider"><span>or reach us directly</span></div>
+
+            <div class="bk-contacts">
+              <a href="https://wa.me/254700000000?text=Hi!+I%27m+interested+in+the+Migration+Season+Special+at+Mara+Serena" class="bk-wa" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+              <a href="tel:+254700000000" class="bk-call">
+                <i class="fas fa-phone"></i> Call +254 700 000 000
+              </a>
+            </div>
+
+            <div class="bk-trust">
+              <div class="bk-trust-item"><i class="fas fa-shield-halved"></i> Secure &amp; Safe</div>
+              <div class="bk-trust-item"><i class="fas fa-lock"></i> No Card Required</div>
+              <div class="bk-trust-item"><i class="fas fa-clock"></i> 24hr Response</div>
+            </div>
+
+          </div><!-- /booking-card -->
+        </div><!-- /det-sidebar -->
+
+      </div><!-- /det-layout -->
+    </div><!-- /container -->
+  </div><!-- /det-body -->
+
+</div><!-- /page-detail -->
+
+<!-- ══════════════════════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════════════════════ -->
 <footer aria-label="Site footer">
@@ -2416,6 +2923,93 @@ function setView(mode) {
     btnL.classList.remove('active'); btnL.setAttribute('aria-pressed','false');
   }
 }
+
+/* ── DETAIL PAGE ────────────────────────────────────── */
+function showDetail(offerId) {
+  document.getElementById('page-home').style.display    = 'none';
+  document.getElementById('page-listing').style.display = 'none';
+  document.getElementById('page-detail').style.display  = 'block';
+  document.getElementById('nav').classList.add('scrolled');
+  window.scrollTo({ top: 0 });
+  // Reset gallery to first thumb
+  document.querySelectorAll('.gal-thumb').forEach((t, i) => t.classList.toggle('active', i === 0));
+  const firstThumb = document.querySelector('.gal-thumb img');
+  if (firstThumb) {
+    document.getElementById('galMain').src = firstThumb.src.replace('w=300', 'w=1400').replace('q=75', 'q=85');
+  }
+  // Reset form if previously submitted
+  const form = document.getElementById('detInqForm');
+  const success = document.getElementById('detInqSuccess');
+  const submitBtn = document.getElementById('detSubmitBtn');
+  if (form) form.style.display = '';
+  if (success) success.style.display = 'none';
+  if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Free Inquiry'; }
+}
+
+function switchGallery(thumb, src, alt) {
+  const main = document.getElementById('galMain');
+  main.style.opacity = '0';
+  setTimeout(() => {
+    main.src = src;
+    main.alt = alt;
+    main.style.opacity = '1';
+  }, 200);
+  document.querySelectorAll('.gal-thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
+function toggleFaq(item) {
+  const willOpen = !item.classList.contains('open');
+  // Close all others
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+  });
+  if (willOpen) {
+    item.classList.add('open');
+    item.querySelector('.faq-q').setAttribute('aria-expanded', 'true');
+  }
+}
+
+function submitInquiry(e) {
+  e.preventDefault();
+  const name   = document.getElementById('inq-name');
+  const email  = document.getElementById('inq-email');
+  const date   = document.getElementById('inq-date');
+  const guests = document.getElementById('inq-guests');
+  const btn    = document.getElementById('detSubmitBtn');
+
+  let valid = true;
+  [name, email, date, guests].forEach(el => {
+    if (!el.value.trim()) {
+      el.classList.add('err');
+      valid = false;
+    } else {
+      el.classList.remove('err');
+    }
+  });
+  if (!valid) return;
+
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+  btn.disabled = true;
+
+  setTimeout(() => {
+    document.getElementById('detInqForm').style.display = 'none';
+    const success = document.getElementById('detInqSuccess');
+    success.style.display = 'flex';
+  }, 1300);
+}
+
+/* ── DELEGATION: "Details" / "View Details" buttons ── */
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('a.btn-gh, button.btn-gh');
+  if (!btn) return;
+  const txt = btn.textContent.trim();
+  if ((txt === 'Details' || txt === 'View Details') && btn.closest('.ocard')) {
+    e.preventDefault();
+    showDetail();
+  }
+});
 
 /* ── PAGINATION (prototype) ─────────────────────────── */
 function goToPage(n) {
