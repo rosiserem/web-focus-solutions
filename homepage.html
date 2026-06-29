@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Safari Offers by Kiboko Kenya Safaris | East Africa's Best Safari Deals</title>
+<meta name="description" content="Discover exclusive safari offers across Kenya, Tanzania, Uganda and Rwanda. Handpicked luxury, family, honeymoon and resident deals from Kiboko Kenya Safaris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ===== RESET & TOKENS ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g:#1A5C38;--gd:#0F3D24;--gm:#2E7D52;--gl:#3A9063;
+  --or:#C4773B;--ors:#D4955A;--sl:#F5E6C8;
+  --cr:#FAF7F2;--ch:#1E1E1E;--ch2:#3A3A3A;
+  --gray:#6B7280;--grayl:#9CA3AF;--bd:#E5E7EB;
+  --bg:#F3F4F6;--wh:#FFFFFF;
+  --ss:0 1px 4px rgba(0,0,0,.06),0 2px 8px rgba(0,0,0,.04);
+  --sm:0 4px 16px rgba(0,0,0,.10);
+  --sl2:0 8px 40px rgba(0,0,0,.14);
+  --r:14px;--rs:8px;--rl:24px;--rp:999px;
+  --t:all .28s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ch);background:var(--wh);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:inherit;border:none;background:none}
+ul{list-style:none}
+
+/* ===== TYPOGRAPHY ===== */
+.serif{font-family:'Playfair Display',serif}
+
+/* ===== UTILITIES ===== */
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+
+/* ===== ANIMATIONS ===== */
+.anim{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.anim.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}.d5{transition-delay:.48s}.d6{transition-delay:.58s}
+
+/* ===== NAV ===== */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  background:transparent;
+  transition:background .35s,box-shadow .35s,padding .3s;
+  padding:0;
+}
+#nav.scrolled{background:var(--gd);box-shadow:var(--sm)}
+.nav-inner{
+  display:flex;align-items:center;gap:1rem;
+  max-width:1440px;margin:0 auto;padding:0 32px;
+  height:72px;transition:height .3s;
+}
+#nav.scrolled .nav-inner{height:62px}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-logo svg{width:44px;height:44px}
+.logo-text{display:flex;flex-direction:column;line-height:1.15}
+.logo-top{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--wh);letter-spacing:.01em}
+.logo-sub{font-size:.62rem;font-weight:500;color:rgba(255,255,255,.72);letter-spacing:.12em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:.15rem;margin-left:auto}
+.nav-links a{
+  color:rgba(255,255,255,.88);font-size:.8rem;font-weight:500;
+  padding:.4rem .72rem;border-radius:var(--rs);
+  transition:color .2s,background .2s;white-space:nowrap;
+}
+.nav-links a:hover{color:var(--wh);background:rgba(255,255,255,.12)}
+.nav-links a.active{color:var(--wh);background:rgba(255,255,255,.15)}
+.nav-cta{
+  margin-left:.5rem;padding:.55rem 1.3rem;
+  background:var(--or);color:var(--wh)!important;
+  border-radius:var(--rp);font-weight:700!important;
+  font-size:.82rem!important;
+  transition:var(--t)!important;box-shadow:0 2px 10px rgba(196,119,59,.45);
+}
+.nav-cta:hover{background:var(--ors)!important;transform:translateY(-1px);box-shadow:0 4px 18px rgba(196,119,59,.55)!important}
+.nav-menu-btn{
+  display:none;flex-direction:column;gap:5px;
+  width:36px;height:36px;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.12);border-radius:var(--rs);margin-left:auto;
+}
+.nav-menu-btn span{display:block;width:20px;height:2px;background:var(--wh);border-radius:2px;transition:var(--t)}
+.nav-drawer{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:var(--gd);z-index:950;padding:1.5rem 1.75rem;
+  flex-direction:column;overflow-y:auto;
+}
+.nav-drawer.open{display:flex}
+.nd-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem}
+.nd-close{width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.1);border-radius:var(--rs);color:var(--wh);font-size:1.1rem}
+.nd-links{display:flex;flex-direction:column;gap:.3rem;flex:1}
+.nd-links a{color:rgba(255,255,255,.88);font-size:1.05rem;font-weight:500;padding:.75rem 1rem;border-radius:var(--r);transition:.2s}
+.nd-links a:hover{background:rgba(255,255,255,.1);color:var(--wh)}
+.nd-cta{
+  margin-top:1.5rem;padding:1rem;text-align:center;
+  background:var(--or);color:var(--wh);border-radius:var(--rp);
+  font-weight:700;font-size:1rem;
+}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=85') center/cover no-repeat;
+}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(
+    160deg,
+    rgba(15,61,36,.78) 0%,
+    rgba(15,61,36,.55) 45%,
+    rgba(0,0,0,.35) 100%
+  );
+}
+.hero-inner{
+  position:relative;z-index:2;
+  padding:160px 24px 100px;
+  max-width:1240px;margin:0 auto;width:100%;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(255,255,255,.14);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.28);
+  color:var(--wh);font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:.42rem 1rem;border-radius:var(--rp);margin-bottom:1.4rem;
+}
+.hero-badge i{color:var(--sl)}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.6rem,5.5vw,4.4rem);
+  font-weight:800;color:var(--wh);line-height:1.12;
+  max-width:720px;margin-bottom:.9rem;
+  text-shadow:0 2px 20px rgba(0,0,0,.4);
+}
+.hero h1 em{color:var(--sl);font-style:normal}
+.hero-sub{
+  font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,.88);
+  max-width:500px;margin-bottom:2.4rem;font-weight:300;
+  text-shadow:0 1px 8px rgba(0,0,0,.3);
+}
+.hero-btns{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:3.5rem}
+.btn-hero-primary{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--or);color:var(--wh);
+  padding:.9rem 2rem;border-radius:var(--rp);
+  font-weight:700;font-size:.95rem;
+  box-shadow:0 4px 20px rgba(196,119,59,.5);
+  transition:var(--t);
+}
+.btn-hero-primary:hover{background:var(--ors);transform:translateY(-2px);box-shadow:0 8px 28px rgba(196,119,59,.55)}
+.btn-hero-primary i{font-size:.8rem;transition:transform .2s}
+.btn-hero-primary:hover i{transform:translateX(3px)}
+.btn-hero-outline{
+  display:inline-flex;align-items:center;gap:.55rem;
+  border:2px solid rgba(255,255,255,.7);color:var(--wh);
+  padding:.87rem 1.8rem;border-radius:var(--rp);
+  font-weight:600;font-size:.95rem;backdrop-filter:blur(6px);
+  background:rgba(255,255,255,.08);
+  transition:var(--t);
+}
+.btn-hero-outline:hover{border-color:var(--wh);background:rgba(255,255,255,.18)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:1.5rem 3rem}
+.stat{display:flex;flex-direction:column;gap:.15rem}
+.stat-num{
+  font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;
+  color:var(--wh);line-height:1;
+}
+.stat-lbl{font-size:.75rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.65);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+}
+.hero-scroll span{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.6),transparent);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.4;transform:scaleY(.8)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ===== TRUST BAR ===== */
+.trust{
+  background:var(--gd);padding:1.1rem 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.trust-inner{
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:.6rem 3rem;
+  max-width:1240px;margin:0 auto;padding:0 24px;
+}
+.trust-item{display:flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.85);font-size:.78rem;font-weight:500}
+.trust-item i{color:var(--sl);font-size:.95rem}
+.trust-div{width:1px;height:18px;background:rgba(255,255,255,.18)}
+
+/* ===== SECTION HEADERS ===== */
+.sec-head{text-align:center;margin-bottom:3rem}
+.sec-tag{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--sl);color:var(--or);
+  font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.35rem .9rem;border-radius:var(--rp);margin-bottom:.9rem;
+}
+.sec-head h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.9rem,3.5vw,2.8rem);
+  font-weight:700;color:var(--ch);margin-bottom:.65rem;
+}
+.sec-head p{font-size:1rem;color:var(--gray);max-width:540px;margin:0 auto}
+
+/* ===== OFFER TABS ===== */
+.offers-section{padding:90px 0;background:var(--cr)}
+.offer-tabs{
+  display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;margin-bottom:2.8rem;
+}
+.otab{
+  padding:.5rem 1.3rem;border-radius:var(--rp);
+  font-size:.82rem;font-weight:600;color:var(--gray);
+  border:1.5px solid var(--bd);background:var(--wh);
+  transition:var(--t);
+}
+.otab:hover{border-color:var(--g);color:var(--g)}
+.otab.active{background:var(--g);color:var(--wh);border-color:var(--g)}
+
+/* ===== OFFER CARDS ===== */
+.offers-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  margin-bottom:2.5rem;
+}
+.ocard{
+  background:var(--wh);border-radius:var(--r);
+  box-shadow:var(--ss);overflow:hidden;
+  transition:transform .3s,box-shadow .3s;
+  display:flex;flex-direction:column;
+}
+.ocard:hover{transform:translateY(-5px);box-shadow:var(--sl2)}
+.ocard-img{position:relative;height:210px;overflow:hidden}
+.ocard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.ocard:hover .ocard-img img{transform:scale(1.06)}
+.ocard-badge{
+  position:absolute;top:.8rem;left:.8rem;
+  padding:.3rem .85rem;border-radius:var(--rp);
+  font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  backdrop-filter:blur(6px);
+}
+.badge-orange{background:rgba(196,119,59,.92);color:#fff}
+.badge-red{background:rgba(200,50,50,.88);color:#fff}
+.badge-green{background:rgba(26,92,56,.9);color:#fff}
+.badge-purple{background:rgba(120,60,160,.88);color:#fff}
+.ocard-save{
+  position:absolute;top:.8rem;right:.8rem;
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.85);backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gray);font-size:.85rem;transition:var(--t);
+  border:none;
+}
+.ocard-save:hover,.ocard-save.saved{color:#e53e3e}
+.ocard-save.saved i{font-weight:900}
+.ocard-savings{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(0,0,0,.72),transparent);
+  padding:1.4rem .9rem .6rem;color:var(--wh);font-size:.75rem;font-weight:600;
+}
+.ocard-savings i{color:var(--sl);margin-right:.3rem}
+.ocard-body{padding:1.1rem 1.2rem;flex:1;display:flex;flex-direction:column;gap:.5rem}
+.ocard-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--ch);line-height:1.3}
+.ocard-meta{display:flex;flex-wrap:wrap;gap:.3rem .7rem}
+.ocard-meta span{display:flex;align-items:center;gap:.3rem;font-size:.73rem;color:var(--gray)}
+.ocard-meta span i{color:var(--gm);font-size:.7rem}
+.ocard-divider{height:1px;background:var(--bd);margin:.3rem 0}
+.ocard-price-row{display:flex;align-items:flex-end;justify-content:space-between}
+.ocard-price{display:flex;flex-direction:column;gap:.05rem}
+.price-from{font-size:.65rem;color:var(--grayl);text-transform:uppercase;letter-spacing:.05em;font-weight:500}
+.price-val{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:var(--g);line-height:1}
+.price-pp{font-size:.68rem;color:var(--gray)}
+.btn-book{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--or);color:var(--wh);
+  padding:.55rem 1.2rem;border-radius:var(--rp);
+  font-size:.78rem;font-weight:700;
+  transition:var(--t);white-space:nowrap;
+}
+.btn-book:hover{background:var(--ors);transform:translateY(-1px)}
+.ocard[data-filter="hidden"]{display:none}
+.view-all-wrap{text-align:center;margin-top:.5rem}
+.btn-view-all{
+  display:inline-flex;align-items:center;gap:.5rem;
+  border:2px solid var(--g);color:var(--g);
+  padding:.8rem 2.2rem;border-radius:var(--rp);
+  font-weight:700;font-size:.9rem;transition:var(--t);
+}
+.btn-view-all:hover{background:var(--g);color:var(--wh)}
+
+/* ===== CATEGORIES ===== */
+.categories-section{padding:90px 0;background:var(--wh)}
+.cat-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.2rem;
+}
+.cat-card{
+  position:relative;height:200px;border-radius:var(--r);
+  overflow:hidden;cursor:pointer;
+  transition:transform .3s,box-shadow .3s;
+}
+.cat-card:hover{transform:translateY(-4px);box-shadow:var(--sl2)}
+.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.cat-card:hover img{transform:scale(1.08)}
+.cat-card-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,40,20,.78) 0%,rgba(0,0,0,.15) 60%,transparent 100%);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:1.1rem;transition:.3s;
+}
+.cat-card:hover .cat-card-overlay{background:linear-gradient(to top,rgba(10,40,20,.88) 0%,rgba(0,0,0,.25) 60%,transparent 100%)}
+.cat-icon{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.18);backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--wh);font-size:.9rem;margin-bottom:.5rem;
+}
+.cat-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--wh);line-height:1.2}
+.cat-count{font-size:.68rem;color:rgba(255,255,255,.72);margin-top:.15rem}
+.cat-arrow{
+  position:absolute;top:.8rem;right:.8rem;
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(255,255,255,.15);backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.7);font-size:.65rem;
+  transition:var(--t);
+}
+.cat-card:hover .cat-arrow{background:var(--or);color:var(--wh)}
+
+/* ===== WHY KIBOKO ===== */
+.why-section{padding:100px 0;background:var(--cr);overflow:hidden}
+.why-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+  max-width:1240px;margin:0 auto;padding:0 24px;
+}
+.why-visual{position:relative}
+.why-main-img{
+  border-radius:var(--rl);overflow:hidden;
+  height:540px;position:relative;
+}
+.why-main-img img{width:100%;height:100%;object-fit:cover}
+.why-float{
+  position:absolute;bottom:-1.5rem;right:-1.5rem;
+  width:220px;border-radius:var(--r);overflow:hidden;
+  box-shadow:var(--sl2);border:4px solid var(--wh);
+}
+.why-float img{width:100%;height:150px;object-fit:cover}
+.why-float-body{background:var(--wh);padding:.75rem 1rem}
+.why-float-body p{font-size:.72rem;color:var(--gray);margin-bottom:.2rem;font-weight:500}
+.why-float-body strong{font-family:'Playfair Display',serif;font-size:1rem;color:var(--ch)}
+.why-rating{display:flex;align-items:center;gap:.3rem;margin-top:.3rem}
+.why-rating i{color:#f59e0b;font-size:.7rem}
+.why-rating span{font-size:.7rem;color:var(--gray)}
+.why-badge-img{
+  position:absolute;top:1.2rem;left:-1.5rem;
+  background:var(--g);color:var(--wh);
+  padding:.7rem 1.1rem;border-radius:var(--r);
+  box-shadow:var(--sm);text-align:center;
+}
+.why-badge-img .num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1}
+.why-badge-img .lbl{font-size:.62rem;font-weight:600;opacity:.85;letter-spacing:.04em}
+.why-content .sec-head{text-align:left}
+.why-content .sec-head p{margin:0}
+.why-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1.1rem;margin:2rem 0;
+}
+.why-item{
+  background:var(--wh);border-radius:var(--r);
+  padding:1.2rem;display:flex;flex-direction:column;gap:.6rem;
+  box-shadow:var(--ss);transition:var(--t);
+}
+.why-item:hover{box-shadow:var(--sm);transform:translateY(-2px)}
+.why-icon{
+  width:42px;height:42px;border-radius:var(--rs);
+  background:var(--sl);display:flex;align-items:center;justify-content:center;
+  color:var(--or);font-size:1rem;
+}
+.why-item h3{font-size:.88rem;font-weight:700;color:var(--ch)}
+.why-item p{font-size:.78rem;color:var(--gray);line-height:1.5}
+.why-cta{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.5rem}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--g);color:var(--wh);
+  padding:.8rem 1.8rem;border-radius:var(--rp);
+  font-weight:700;font-size:.88rem;transition:var(--t);
+}
+.btn-primary:hover{background:var(--gm);transform:translateY(-1px)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:.5rem;
+  border:2px solid var(--g);color:var(--g);
+  padding:.78rem 1.6rem;border-radius:var(--rp);
+  font-weight:600;font-size:.88rem;transition:var(--t);
+}
+.btn-secondary:hover{background:var(--g);color:var(--wh)}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-section{padding:90px 0;background:var(--wh)}
+.tslider-wrap{position:relative;overflow:hidden;margin:0 -12px}
+.tslider-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.tslide{
+  flex:0 0 calc(33.333% - 24px);margin:0 12px;
+  background:var(--cr);border-radius:var(--r);
+  padding:1.8rem;display:flex;flex-direction:column;gap:1rem;
+  box-shadow:var(--ss);border:1px solid var(--bd);
+}
+.tslide-stars{display:flex;gap:.2rem}
+.tslide-stars i{color:#f59e0b;font-size:.85rem}
+.tslide-text{
+  font-size:.92rem;color:var(--ch2);line-height:1.7;
+  font-style:italic;flex:1;
+}
+.tslide-text::before{content:'\201C';font-family:'Playfair Display',serif;font-size:2rem;color:var(--sd);line-height:.5;display:block;margin-bottom:.3rem}
+.tslide-author{display:flex;align-items:center;gap:.85rem;margin-top:auto}
+.tslide-avatar{
+  width:44px;height:44px;border-radius:50%;object-fit:cover;
+  border:2px solid var(--sl);
+}
+.tslide-info strong{display:block;font-size:.85rem;font-weight:700;color:var(--ch)}
+.tslide-info span{font-size:.72rem;color:var(--gray)}
+.tslide-offer{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-size:.7rem;color:var(--g);font-weight:600;margin-top:.25rem;
+}
+.tslide-offer i{font-size:.65rem}
+.tslider-nav{
+  display:flex;justify-content:center;align-items:center;
+  gap:.6rem;margin-top:2.5rem;
+}
+.tslider-dot{
+  width:8px;height:8px;border-radius:50%;background:var(--bd);
+  border:none;transition:var(--t);
+}
+.tslider-dot.active{background:var(--g);width:24px;border-radius:var(--rp)}
+.tslider-btn{
+  width:42px;height:42px;border-radius:50%;
+  border:2px solid var(--bd);color:var(--gray);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;transition:var(--t);background:var(--wh);
+}
+.tslider-btn:hover{border-color:var(--g);color:var(--g);background:var(--sl)}
+
+/* ===== NEWSLETTER ===== */
+.nl-section{
+  padding:90px 0;position:relative;overflow:hidden;
+  background:url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1400&q=80') center/cover no-repeat;
+}
+.nl-section::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(15,61,36,.92) 0%,rgba(26,92,56,.82) 100%);
+}
+.nl-inner{position:relative;z-index:2;max-width:640px;margin:0 auto;text-align:center;padding:0 24px}
+.nl-icon{
+  width:58px;height:58px;border-radius:50%;
+  background:rgba(255,255,255,.14);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--sl);font-size:1.3rem;margin:0 auto 1.2rem;
+}
+.nl-inner h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,3vw,2.4rem);color:var(--wh);font-weight:700;margin-bottom:.7rem;
+}
+.nl-inner p{color:rgba(255,255,255,.82);font-size:.95rem;margin-bottom:2rem}
+.nl-form{display:flex;gap:.6rem;max-width:480px;margin:0 auto 1rem}
+.nl-input{
+  flex:1;padding:.85rem 1.2rem;border-radius:var(--rp);
+  border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);
+  color:var(--wh);font-size:.9rem;font-family:inherit;
+  backdrop-filter:blur(6px);
+  transition:border .2s;
+}
+.nl-input::placeholder{color:rgba(255,255,255,.55)}
+.nl-input:focus{outline:none;border-color:rgba(255,255,255,.7)}
+.nl-btn{
+  padding:.85rem 1.8rem;border-radius:var(--rp);
+  background:var(--or);color:var(--wh);
+  font-weight:700;font-size:.88rem;white-space:nowrap;
+  transition:var(--t);
+}
+.nl-btn:hover{background:var(--ors);transform:translateY(-1px)}
+.nl-note{color:rgba(255,255,255,.5);font-size:.72rem}
+.nl-note i{margin-right:.25rem}
+.nl-success{
+  display:none;flex-direction:column;align-items:center;gap:.7rem;
+  color:var(--wh);text-align:center;
+}
+.nl-success i{font-size:2.5rem;color:var(--sl)}
+.nl-success h3{font-family:'Playfair Display',serif;font-size:1.5rem}
+.nl-success p{color:rgba(255,255,255,.78)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--gd);color:rgba(255,255,255,.85);padding:70px 0 0}
+.footer-top{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.4fr;
+  gap:3rem;
+  padding:0 24px;max-width:1240px;margin:0 auto;
+}
+.footer-brand .nav-logo{margin-bottom:1.2rem}
+.footer-brand p{font-size:.82rem;color:rgba(255,255,255,.62);line-height:1.7;max-width:280px;margin-bottom:1.3rem}
+.footer-social{display:flex;gap:.6rem}
+.f-soc{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.75);font-size:.85rem;transition:var(--t);
+}
+.f-soc:hover{background:var(--or);color:var(--wh)}
+.footer-col h4{
+  font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--sl);margin-bottom:1.1rem;
+}
+.footer-col ul li{margin-bottom:.55rem}
+.footer-col ul li a{font-size:.82rem;color:rgba(255,255,255,.65);transition:.2s}
+.footer-col ul li a:hover{color:var(--wh)}
+.footer-contact-item{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:.8rem}
+.footer-contact-item i{color:var(--sl);font-size:.85rem;margin-top:.12rem;flex-shrink:0}
+.footer-contact-item span{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.5}
+.footer-contact-item a{color:rgba(255,255,255,.65)}
+.footer-contact-item a:hover{color:var(--wh)}
+.footer-wa{
+  margin-top:1.2rem;display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(37,211,102,.15);border:1.5px solid rgba(37,211,102,.35);
+  color:rgba(37,211,102,.95);padding:.6rem 1.1rem;border-radius:var(--rp);
+  font-size:.8rem;font-weight:600;transition:var(--t);
+}
+.footer-wa:hover{background:rgba(37,211,102,.25)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:3rem;padding:1.3rem 24px;
+  max-width:1240px;margin:3rem auto 0;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;
+}
+.footer-bottom p{font-size:.75rem;color:rgba(255,255,255,.45)}
+.footer-bottom-links{display:flex;gap:1.2rem}
+.footer-bottom-links a{font-size:.75rem;color:rgba(255,255,255,.45);transition:.2s}
+.footer-bottom-links a:hover{color:rgba(255,255,255,.8)}
+.footer-pb{padding-bottom:1.5rem}
+
+/* ===== WHATSAPP FAB ===== */
+.wa-fab{
+  position:fixed;bottom:2rem;right:2rem;z-index:800;
+  width:54px;height:54px;border-radius:50%;
+  background:#25d366;color:var(--wh);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;box-shadow:0 4px 20px rgba(37,211,102,.45);
+  transition:transform .25s,box-shadow .25s;
+}
+.wa-fab:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55)}
+.wa-fab::before{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:2px solid rgba(37,211,102,.45);
+  animation:waPing 2.2s ease-out infinite;
+}
+@keyframes waPing{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1100px){
+  .offers-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(4,1fr)}
+  .why-inner{gap:2.5rem}
+  .why-float{right:-0.5rem;bottom:-0.5rem;width:180px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+  .nav-links{display:none}
+  .nav-menu-btn{display:flex}
+}
+@media(max-width:768px){
+  .offers-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .why-inner{grid-template-columns:1fr}
+  .why-float{display:none}
+  .why-badge-img{display:none}
+  .why-main-img{height:300px}
+  .tslide{flex:0 0 calc(100% - 24px)}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .hero-stats{gap:1rem 2rem}
+  .nl-form{flex-direction:column}
+  .nl-input,.nl-btn{width:100%}
+}
+@media(max-width:540px){
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .cat-card{height:160px}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .trust-div{display:none}
+  .why-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header id="nav">
+  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-logo" aria-label="Kiboko Kenya Safaris home">
+      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="22" cy="22" r="22" fill="rgba(255,255,255,0.12)"/>
+        <ellipse cx="22" cy="27" rx="13" ry="8.5" fill="#2E7D52"/>
+        <ellipse cx="22" cy="25" rx="10" ry="7" fill="#3A9063"/>
+        <circle cx="15.5" cy="20" r="3" fill="#2E7D52"/>
+        <circle cx="28.5" cy="20" r="3" fill="#2E7D52"/>
+        <ellipse cx="22" cy="23" rx="5.5" ry="4" fill="#4AAD78"/>
+        <circle cx="19.5" cy="21.5" r="1" fill="#1E1E1E"/>
+        <circle cx="24.5" cy="21.5" r="1" fill="#1E1E1E"/>
+        <ellipse cx="22" cy="24.5" rx="2.5" ry="1" fill="#C4773B"/>
+        <rect x="14" y="17" width="2" height="5" rx="1" fill="#2E7D52"/>
+        <rect x="28" y="17" width="2" height="5" rx="1" fill="#2E7D52"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-top">Safari Offers</span>
+        <span class="logo-sub">by Kiboko Kenya Safaris</span>
+      </div>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="#" class="active" role="listitem">Home</a>
+      <a href="#offers" role="listitem">Kenya</a>
+      <a href="#offers" role="listitem">Tanzania</a>
+      <a href="#offers" role="listitem">Uganda</a>
+      <a href="#offers" role="listitem">Rwanda</a>
+      <a href="#offers" role="listitem">Resident</a>
+      <a href="#offers" role="listitem">Family</a>
+      <a href="#offers" role="listitem">Honeymoon</a>
+      <a href="#offers" role="listitem">Last Minute</a>
+      <a href="#why" role="listitem">About</a>
+      <a href="#footer" role="listitem">Contact</a>
+      <a href="tel:+254700000000" class="nav-cta" role="listitem">
+        <i class="fas fa-phone" aria-hidden="true"></i> Book This Offer
+      </a>
+    </div>
+    <button class="nav-menu-btn" id="navMenuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Drawer -->
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="nd-head">
+    <a href="#" class="nav-logo">
+      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="38" height="38">
+        <circle cx="22" cy="22" r="22" fill="rgba(255,255,255,0.12)"/>
+        <ellipse cx="22" cy="27" rx="13" ry="8.5" fill="#2E7D52"/>
+        <ellipse cx="22" cy="25" rx="10" ry="7" fill="#3A9063"/>
+        <circle cx="15.5" cy="20" r="3" fill="#2E7D52"/>
+        <circle cx="28.5" cy="20" r="3" fill="#2E7D52"/>
+        <ellipse cx="22" cy="23" rx="5.5" ry="4" fill="#4AAD78"/>
+        <circle cx="19.5" cy="21.5" r="1" fill="#1E1E1E"/>
+        <circle cx="24.5" cy="21.5" r="1" fill="#1E1E1E"/>
+        <ellipse cx="22" cy="24.5" rx="2.5" ry="1" fill="#C4773B"/>
+        <rect x="14" y="17" width="2" height="5" rx="1" fill="#2E7D52"/>
+        <rect x="28" y="17" width="2" height="5" rx="1" fill="#2E7D52"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-top">Safari Offers</span>
+        <span class="logo-sub">by Kiboko Kenya Safaris</span>
+      </div>
+    </a>
+    <button class="nd-close" id="navDrawerClose" aria-label="Close menu">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="nd-links">
+    <a href="#" onclick="closeDrawer()">Home</a>
+    <a href="#offers" onclick="closeDrawer()">Kenya Offers</a>
+    <a href="#offers" onclick="closeDrawer()">Tanzania Offers</a>
+    <a href="#offers" onclick="closeDrawer()">Uganda Offers</a>
+    <a href="#offers" onclick="closeDrawer()">Rwanda Offers</a>
+    <a href="#offers" onclick="closeDrawer()">Resident Specials</a>
+    <a href="#offers" onclick="closeDrawer()">Family Offers</a>
+    <a href="#offers" onclick="closeDrawer()">Honeymoon Offers</a>
+    <a href="#offers" onclick="closeDrawer()">Last Minute Deals</a>
+    <a href="#why" onclick="closeDrawer()">About Kiboko</a>
+    <a href="#footer" onclick="closeDrawer()">Contact Us</a>
+  </div>
+  <a href="tel:+254700000000" class="nd-cta" onclick="closeDrawer()">
+    <i class="fas fa-phone" aria-hidden="true"></i> Book This Offer Now
+  </a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <i class="fas fa-star" aria-hidden="true"></i>
+      East Africa's #1 Safari Offer Platform
+    </div>
+    <h1 class="serif">
+      Discover <em>East Africa's</em><br>Best Safari Offers
+    </h1>
+    <p class="hero-sub">
+      Handpicked luxury, family and resident deals across Kenya, Tanzania, Uganda and Rwanda — curated by experts.
+    </p>
+    <div class="hero-btns">
+      <a href="#offers" class="btn-hero-primary">
+        Browse Offers <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+      <a href="https://wa.me/254700000000" class="btn-hero-outline" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> Talk to a Safari Expert
+      </a>
+    </div>
+    <div class="hero-stats" role="list">
+      <div class="stat" role="listitem">
+        <span class="stat-num serif" data-target="150">0</span>
+        <span class="stat-lbl">Active Offers</span>
+      </div>
+      <div class="stat" role="listitem">
+        <span class="stat-num serif" data-target="18">0</span>
+        <span class="stat-lbl">Years of Experience</span>
+      </div>
+      <div class="stat" role="listitem">
+        <span class="stat-num serif" data-target="4200">0</span>
+        <span class="stat-lbl">Happy Travellers</span>
+      </div>
+      <div class="stat" role="listitem">
+        <span class="stat-num serif" data-target="40">0</span>
+        <span class="stat-lbl">Partner Lodges</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    Scroll <span></span>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust" role="complementary" aria-label="Trust indicators">
+  <div class="trust-inner">
+    <div class="trust-item"><i class="fas fa-shield-alt" aria-hidden="true"></i> KATO Certified</div>
+    <div class="trust-div" aria-hidden="true"></div>
+    <div class="trust-item"><i class="fas fa-star" aria-hidden="true"></i> 4.9 / 5 Guest Rating</div>
+    <div class="trust-div" aria-hidden="true"></div>
+    <div class="trust-item"><i class="fas fa-headset" aria-hidden="true"></i> 24/7 Support</div>
+    <div class="trust-div" aria-hidden="true"></div>
+    <div class="trust-item"><i class="fas fa-lock" aria-hidden="true"></i> Secure Booking</div>
+    <div class="trust-div" aria-hidden="true"></div>
+    <div class="trust-item"><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> Best Price Promise</div>
+    <div class="trust-div" aria-hidden="true"></div>
+    <div class="trust-item"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Tailor-Made Itineraries</div>
+  </div>
+</div>
+
+<!-- ===== FEATURED OFFERS ===== -->
+<section class="offers-section" id="offers">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag anim"><i class="fas fa-tag" aria-hidden="true"></i> Limited Time Deals</div>
+      <h2 class="serif anim d1">Featured Safari Offers</h2>
+      <p class="anim d2">Exclusive deals negotiated directly with East Africa's finest lodges and camps. Limited availability — book early to secure your spot.</p>
+    </div>
+
+    <div class="offer-tabs anim d2" role="tablist" aria-label="Filter offers">
+      <button class="otab active" data-tab="all" role="tab" aria-selected="true">All Offers</button>
+      <button class="otab" data-tab="kenya" role="tab" aria-selected="false">Kenya</button>
+      <button class="otab" data-tab="tanzania" role="tab" aria-selected="false">Tanzania</button>
+      <button class="otab" data-tab="uganda" role="tab" aria-selected="false">Uganda</button>
+      <button class="otab" data-tab="resident" role="tab" aria-selected="false">Resident</button>
+      <button class="otab" data-tab="honeymoon" role="tab" aria-selected="false">Honeymoon</button>
+      <button class="otab" data-tab="lastminute" role="tab" aria-selected="false">Last Minute</button>
+    </div>
+
+    <div class="offers-grid" id="offersGrid">
+
+      <!-- Card 1: Surana -->
+      <article class="ocard anim" data-cats="kenya luxury" aria-label="Surana Mara offer">
+        <div class="ocard-img">
+          <img src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=700&q=80" alt="Luxury tent at Surana Luxury Collection, Masai Mara" loading="lazy">
+          <div class="ocard-badge badge-orange">Stay 3 Pay 2</div>
+          <button class="ocard-save" aria-label="Save this offer" onclick="toggleSave(this)">
+            <i class="far fa-heart" aria-hidden="true"></i>
+          </button>
+          <div class="ocard-savings"><i class="fas fa-tag" aria-hidden="true"></i> Save up to USD 1,075 per person sharing</div>
+        </div>
+        <div class="ocard-body">
+          <h3 class="ocard-title serif">Surana Luxury Collection — Stay 3, Pay 2</h3>
+          <div class="ocard-meta">
+            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Masai Mara, Kenya</span>
+            <span><i class="fas fa-home" aria-hidden="true"></i> Surana Luxury Collection</span>
+            <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> Valid to 31 Dec 2025</span>
+          </div>
+          <div class="ocard-divider"></div>
+          <div class="ocard-price-row">
+            <div class="ocard-price">
+              <span class="price-from">From</span>
+              <span class="price-val serif">$3,225</span>
+              <span class="price-pp">per person sharing · Full Board</span>
+            </div>
+            <a href="https://wa.me/254700000000?text=I'm%20interested%20in%20the%20Surana%20Stay%203%20Pay%202%20offer" class="btn-book" target="_blank" rel="noopener" aria-label="Book Surana offer">
+              Book Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Mara Serena Migration -->
+      <article class="ocard anim d1" data-cats="kenya lastminute" aria-label="Mara Serena migration offer">
+        <div class="ocard-img">
+          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=700&q=80" alt="Wildebeest migration crossing Mara River" loading="lazy">
+          <div class="ocard-badge badge-red">Hot Deal</div>
+          <button class="ocard-save" aria-label="Save this offer" onclick="toggleSave(this)">
+            <i class="far fa-heart" aria-hidden="true"></i>
+          </button>
+          <div class="ocard-savings"><i class="fas fa-tag" aria-hidden="true"></i> Save USD 480 per person</div>
+        </div>
+        <div class="ocard-body">
+          <h3 class="ocard-title serif">Mara Serena — Migration Season 20% Off</h3>
+          <div class="ocard-meta">
+            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Masai Mara, Kenya</span>
+            <span><i class="fas fa-home" aria-hidden="true"></i> Mara Serena Safari Lodge</span>
+            <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> Jul – Oct 2025</span>
+          </div>
+          <div class="ocard-divider"></div>
+          <div class="ocard-price-row">
+            <div class="ocard-price">
+              <span class="price-from">From</span>
+              <span class="price-val serif">$1,890</span>
+              <span class="price-pp">per person sharing · Full Board</span>
+            </div>
+            <a href="https://wa.me/254700000000?text=I'm%20interested%20in%20the%20Mara%20Serena%20Migration%20offer" class="btn-book" target="_blank" rel="noopener" aria-label="Book Mara Serena offer">
+              Book Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Ngorongoro Honeymoon -->
+      <article class="ocard anim d2" data-cats="tanzania honeymoon luxury" aria-label="Ngorongoro honeymoon offer">
+        <div class="ocard-img">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=700&q=80" alt="Romantic sundowner at Ngorongoro, Tanzania" loading="lazy">
+          <div class="ocard-badge badge-purple">Honeymoon</div>
+          <button class="ocard-save" aria-label="Save this offer" onclick="toggleSave(this)">
+            <i class="far fa-heart" aria-hidden="true"></i>
+          </button>
+          <div class="ocard-savings"><i class="fas fa-tag" aria-hidden="true"></i> Complimentary spa & sunset dinner</div>
+        </div>
+        <div class="ocard-body">
+          <h3 class="ocard-title serif">&Beyond Ngorongoro — Honeymoon Escape</h3>
+          <div class="ocard-meta">
+            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Ngorongoro, Tanzania</span>
+            <span><i class="fas fa-home" aria-hidden="true"></i> &Beyond Ngorongoro Crater Lodge</span>
+            <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> Year-round</span>
+          </div>
+          <div class="ocard-divider"></div>
+          <div class="ocard-price-row">
+            <div class="ocard-price">
+              <span class="price-from">From</span>
+              <span class="price-val serif">$2,450</span>
+              <span class="price-pp">per person sharing · All Inclusive</span>
+            </div>
+            <a href="https://wa.me/254700000000?text=I'm%20interested%20in%20the%20Ngorongoro%20Honeymoon%20offer" class="btn-book" target="_blank" rel="noopener" aria-label="Book Ngorongoro honeymoon offer">
+              Book Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Bwindi Gorilla -->
+      <article class="ocard anim d3" data-cats="uganda" aria-label="Bwindi gorilla trekking offer">
+        <div class="ocard-img">
+          <img src="https://images.unsplash.com/photo-1589553416260-f586c1a06d5b?w=700&q=80" alt="Mountain gorilla in Bwindi Impenetrable Forest, Uganda" loading="lazy">
+          <div class="ocard-badge badge-green">Best Value</div>
+          <button class="ocard-save" aria-label="Save this offer" onclick="toggleSave(this)">
+            <i class="far fa-heart" aria-hidden="true"></i>
+          </button>
+          <div class="ocard-savings"><i class="fas fa-tag" aria-hidden="true"></i> 2 complimentary nights included</div>
+        </div>
+        <div class="ocard-body">
+          <h3 class="ocard-title serif">Bwindi Lodge — Gorilla Trekking 2 Nights Free</h3>
+          <div class="ocard-meta">
+            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bwindi, Uganda</span>
+            <span><i class="fas fa-home" aria-hidden="true"></i> Bwindi Gorilla Lodge</span>
+            <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> Valid to 31 Mar 2026</span>
+          </div>
+          <div class="ocard-divider"></div>
+          <div class="ocard-price-row">
+            <div class="ocard-price">
+              <span class="price-from">From</span>
+              <span class="price-val serif">$3,200</span>
+              <span class="price-pp">per person sharing · Full Board</span>
+            </div>
+            <a href="https://wa.me/254700000000?text=I'm%20interested%20in%20the%20Bwindi%20Gorilla%20Trekking%20offer" class="btn-book" target="_blank" rel="noopener" aria-label="Book Bwindi gorilla offer">
+              Book Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5: Resident Special -->
+      <article class="ocard anim d4" data-cats="kenya resident" aria-label="Ol Pejeta resident special">
+        <div class="ocard-img">
+          <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=700&q=80" alt="Rhino at Ol Pejeta Conservancy, Kenya" loading="lazy">
+          <div class="ocard-badge badge-orange">Resident Rate</div>
+          <button class="ocard-save" aria-label="Save this offer" onclick="toggleSave(this)">
+            <i class="far fa-heart" aria-hidden="true"></i>
+          </button>
+          <div class="ocard-savings"><i class="fas fa-tag" aria-hidden="true"></i> 40% off rack rate for residents</div>
+        </div>
+        <div class="ocard-body">
+          <h3 class="ocard-title serif">Ol Pejeta Conservancy — Resident 40% Off</h3>
+          <div class="ocard-meta">
+            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Laikipia, Kenya</span>
+            <span><i class="fas fa-home" aria-hidden="true"></i> Sweetwaters Serena Camp</span>
+            <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> Low season only</span>
+          </div>
+          <div class="ocard-divider"></div>
+          <div class="ocard-price-row">
+            <div class="ocard-price">
+              <span class="price-from">From</span>
+              <span class="price-val serif">KES 85K</span>
+              <span class="price-pp">per person sharing · Full Board</span>
+            </div>
+            <a href="https://wa.me/254700000000?text=I'm%20interested%20in%20the%20Ol%20Pejeta%20Resident%20Special" class="btn-book" target="_blank" rel="noopener" aria-label="Book resident special">
+              Book Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6: Beach & Safari Combo -->
+      <article class="ocard anim d5" data-cats="kenya lastminute luxury" aria-label="Beach safari combo offer">
+        <div class="ocard-img">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Tropical beach and safari combination offer" loading="lazy">
+          <div class="ocard-badge badge-red">Last Minute</div>
+          <button class="ocard-save" aria-label="Save this offer" onclick="toggleSave(this)">
+            <i class="far fa-heart" aria-hidden="true"></i>
+          </button>
+          <div class="ocard-savings"><i class="fas fa-tag" aria-hidden="true"></i> Save USD 620 on 7-night combo</div>
+        </div>
+        <div class="ocard-body">
+          <h3 class="ocard-title serif">Alfajiri + Mara North — Beach &amp; Safari 7 Nights</h3>
+          <div class="ocard-meta">
+            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Diani + Mara, Kenya</span>
+            <span><i class="fas fa-home" aria-hidden="true"></i> Alfajiri Villas + Mara North Camp</span>
+            <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> Specific dates apply</span>
+          </div>
+          <div class="ocard-divider"></div>
+          <div class="ocard-price-row">
+            <div class="ocard-price">
+              <span class="price-from">From</span>
+              <span class="price-val serif">$2,750</span>
+              <span class="price-pp">per person sharing · Full Board</span>
+            </div>
+            <a href="https://wa.me/254700000000?text=I'm%20interested%20in%20the%20Beach%20and%20Safari%20combo%20offer" class="btn-book" target="_blank" rel="noopener" aria-label="Book beach safari combo">
+              Book Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /offers-grid -->
+
+    <div class="view-all-wrap anim">
+      <a href="#" class="btn-view-all">
+        View All Safari Offers <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="categories-section" id="categories" aria-labelledby="cat-heading">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag anim"><i class="fas fa-compass" aria-hidden="true"></i> Browse by Type</div>
+      <h2 class="serif anim d1" id="cat-heading">Find Your Perfect Safari</h2>
+      <p class="anim d2">From the Great Migration to gorilla trekking, romantic honeymoons to family adventures — we have the perfect offer for every traveller.</p>
+    </div>
+    <div class="cat-grid">
+
+      <a href="#offers" class="cat-card anim" data-filter="luxury" aria-label="Browse Luxury Safaris">
+        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=75" alt="Luxury safari tent at sunset" loading="lazy">
+        <div class="cat-card-overlay">
+          <div class="cat-icon"><i class="fas fa-gem" aria-hidden="true"></i></div>
+          <div class="cat-name serif">Luxury Safaris</div>
+          <div class="cat-count">12 offers available</div>
+        </div>
+        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+      </a>
+
+      <a href="#offers" class="cat-card anim d1" data-filter="family" aria-label="Browse Family Safaris">
+        <img src="https://images.unsplash.com/photo-1528158222524-d4d912d2e208?w=600&q=75" alt="Family on safari vehicle watching elephants" loading="lazy">
+        <div class="cat-card-overlay">
+          <div class="cat-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+          <div class="cat-name serif">Family Safaris</div>
+          <div class="cat-count">8 offers available</div>
+        </div>
+        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+      </a>
+
+      <a href="#offers" class="cat-card anim d2" data-filter="resident" aria-label="Browse Resident Specials">
+        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&q=75" alt="Kenyan savannah landscape at golden hour" loading="lazy">
+        <div class="cat-card-overlay">
+          <div class="cat-icon"><i class="fas fa-id-card" aria-hidden="true"></i></div>
+          <div class="cat-name serif">Resident Specials</div>
+          <div class="cat-count">14 offers available</div>
+        </div>
+        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+      </a>
+
+      <a href="#offers" class="cat-card anim d3" data-filter="flyin" aria-label="Browse Fly-in Safaris">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=75" alt="Light aircraft flying over African plains" loading="lazy">
+        <div class="cat-card-overlay">
+          <div class="cat-icon"><i class="fas fa-plane" aria-hidden="true"></i></div>
+          <div class="cat-name serif">Fly-in Safaris</div>
+          <div class="cat-count">6 offers available</div>
+        </div>
+        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+      </a>
+
+      <a href="#offers" class="cat-card anim d4" data-filter="migration" aria-label="Browse Migration Safaris">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&q=75" alt="Wildebeest migration in Masai Mara" loading="lazy">
+        <div class="cat-card-overlay">
+          <div class="cat-icon"><i class="fas fa-paw" aria-hidden="true"></i></div>
+          <div class="cat-name serif">Migration Safaris</div>
+          <div class="cat-count">5 offers available</div>
+        </div>
+        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+      </a>
+
+      <a href="#offers" class="cat-card anim d5" data-filter="beach" aria-label="Browse Beach and Safari Combos">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=75" alt="Indian Ocean beach in Kenya" loading="lazy">
+        <div class="cat-card-overlay">
+          <div class="cat-icon"><i class="fas fa-umbrella-beach" aria-hidden="true"></i></div>
+          <div class="cat-name serif">Beach &amp; Safari</div>
+          <div class="cat-count">7 offers available</div>
+        </div>
+        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+      </a>
+
+      <a href="#offers" class="cat-card anim" data-filter="honeymoon" aria-label="Browse Honeymoon Safaris">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=75" alt="Romantic bush dinner at sunset" loading="lazy">
+        <div class="cat-card-overlay">
+          <div class="cat-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+          <div class="cat-name serif">Honeymoon</div>
+          <div class="cat-count">9 offers available</div>
+        </div>
+        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+      </a>
+
+      <a href="#offers" class="cat-card anim d1" data-filter="adventure" aria-label="Browse Adventure Safaris">
+        <img src="https://images.unsplash.com/photo-1589553416260-f586c1a06d5b?w=600&q=75" alt="Mountain gorilla trekking adventure" loading="lazy">
+        <div class="cat-card-overlay">
+          <div class="cat-icon"><i class="fas fa-mountain" aria-hidden="true"></i></div>
+          <div class="cat-name serif">Adventure</div>
+          <div class="cat-count">10 offers available</div>
+        </div>
+        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY KIBOKO ===== -->
+<section class="why-section" id="why" aria-labelledby="why-heading">
+  <div class="why-inner">
+    <div class="why-visual anim">
+      <div class="why-main-img">
+        <img src="https://images.unsplash.com/photo-1528158222524-d4d912d2e208?w=900&q=80" alt="Safari consultant planning an itinerary with a couple" loading="lazy">
+      </div>
+      <div class="why-badge-img" aria-label="18 years of experience">
+        <div class="num serif">18</div>
+        <div class="lbl">Years Expert</div>
+      </div>
+      <div class="why-float" aria-hidden="false">
+        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=400&q=80" alt="Happy travellers on game drive" loading="lazy">
+        <div class="why-float-body">
+          <p>Latest Review</p>
+          <strong class="serif">Unforgettable!</strong>
+          <div class="why-rating">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <span>5.0 · Sarah M.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-content">
+      <div class="sec-head anim d1">
+        <div class="sec-tag"><i class="fas fa-award" aria-hidden="true"></i> Why Kiboko</div>
+        <h2 class="serif" id="why-heading">Your Trusted Safari Partner Since 2007</h2>
+        <p>We don't just sell safaris — we craft once-in-a-lifetime experiences. As a KATO-certified Kenyan operator, every offer we list is vetted, negotiated and backed by our personal guarantee.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item anim d1">
+          <div class="why-icon"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
+          <h3>Trusted Local Experts</h3>
+          <p>Born and raised in East Africa, our team knows every lodge, road and river crossing personally.</p>
+        </div>
+        <div class="why-item anim d2">
+          <div class="why-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
+          <h3>Personal Consultants</h3>
+          <p>One dedicated consultant guides you from first enquiry to airport drop-off and beyond.</p>
+        </div>
+        <div class="why-item anim d3">
+          <div class="why-icon"><i class="fas fa-hand-holding-usd" aria-hidden="true"></i></div>
+          <h3>Best Available Offers</h3>
+          <p>Direct lodge relationships mean we access rates and perks the public booking sites never see.</p>
+        </div>
+        <div class="why-item anim d4">
+          <div class="why-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+          <h3>Secure &amp; Insured</h3>
+          <p>All bookings are fully bonded. Your payments are protected every step of the way.</p>
+        </div>
+        <div class="why-item anim d1">
+          <div class="why-icon"><i class="fas fa-sliders-h" aria-hidden="true"></i></div>
+          <h3>Tailor-Made Itineraries</h3>
+          <p>Any offer can be extended, combined or customised to match your budget and travel style exactly.</p>
+        </div>
+        <div class="why-item anim d2">
+          <div class="why-icon"><i class="fas fa-leaf" aria-hidden="true"></i></div>
+          <h3>Responsible Travel</h3>
+          <p>We partner with conservancies and community lodges that give back to local ecosystems and people.</p>
+        </div>
+      </div>
+      <div class="why-cta anim d3">
+        <a href="https://wa.me/254700000000" class="btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat With Us
+        </a>
+        <a href="#offers" class="btn-secondary">
+          Browse All Offers <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-tag anim"><i class="fas fa-star" aria-hidden="true"></i> Guest Reviews</div>
+      <h2 class="serif anim d1" id="reviews-heading">What Our Travellers Say</h2>
+      <p class="anim d2">Over 4,200 happy safari-goers can't be wrong. Here's what some of them had to say about their Kiboko experience.</p>
+    </div>
+    <div class="tslider-wrap anim d2">
+      <div class="tslider-track" id="tsliderTrack" role="list">
+
+        <div class="tslide" role="listitem">
+          <div class="tslide-stars" aria-label="5 star review">
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </div>
+          <p class="tslide-text">Kiboko found us a stay-3-pay-2 deal at a lodge we'd been dreaming of for years. The booking was effortless, the savings were real, and the safari exceeded every expectation. We'll never book a safari any other way.</p>
+          <div class="tslide-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" class="tslide-avatar" alt="Sarah M. profile photo" loading="lazy">
+            <div class="tslide-info">
+              <strong>Sarah &amp; James M.</strong>
+              <span>London, United Kingdom</span>
+              <div class="tslide-offer"><i class="fas fa-tag" aria-hidden="true"></i> Masai Mara Luxury Safari</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tslide" role="listitem">
+          <div class="tslide-stars" aria-label="5 star review">
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </div>
+          <p class="tslide-text">As Kenyan residents we always felt overlooked by safari companies. Kiboko changed that completely. The resident rates they negotiated were incredible — we did 4 nights in the Mara for less than we'd imagined possible.</p>
+          <div class="tslide-author">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" class="tslide-avatar" alt="David K. profile photo" loading="lazy">
+            <div class="tslide-info">
+              <strong>David K.</strong>
+              <span>Nairobi, Kenya</span>
+              <div class="tslide-offer"><i class="fas fa-tag" aria-hidden="true"></i> Resident Special – Mara</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tslide" role="listitem">
+          <div class="tslide-stars" aria-label="5 star review">
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </div>
+          <p class="tslide-text">Our honeymoon in Ngorongoro was pure magic. Kiboko personalised every detail — the private sundowner, the rose petals, the upgrade. They clearly have deep relationships with the lodges that make a real difference.</p>
+          <div class="tslide-author">
+            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=100&q=80" class="tslide-avatar" alt="Priya R. profile photo" loading="lazy">
+            <div class="tslide-info">
+              <strong>Priya &amp; Arjun R.</strong>
+              <span>Mumbai, India</span>
+              <div class="tslide-offer"><i class="fas fa-tag" aria-hidden="true"></i> Ngorongoro Honeymoon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tslide" role="listitem">
+          <div class="tslide-stars" aria-label="5 star review">
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </div>
+          <p class="tslide-text">Gorilla trekking in Bwindi was the highlight of our lives. Kiboko secured permits we thought were impossible and bundled 2 free nights into the package. Seamless logistics, warm team, zero stress.</p>
+          <div class="tslide-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" class="tslide-avatar" alt="Tom W. profile photo" loading="lazy">
+            <div class="tslide-info">
+              <strong>Tom &amp; Claire W.</strong>
+              <span>Sydney, Australia</span>
+              <div class="tslide-offer"><i class="fas fa-tag" aria-hidden="true"></i> Bwindi Gorilla Trekking</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tslide" role="listitem">
+          <div class="tslide-stars" aria-label="5 star review">
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </div>
+          <p class="tslide-text">We took our three kids on their first safari and Kiboko made sure every detail was family-friendly. The guide knew exactly how to keep the children engaged. A trip we'll talk about for the rest of our lives.</p>
+          <div class="tslide-author">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=100&q=80" class="tslide-avatar" alt="Lisa P. profile photo" loading="lazy">
+            <div class="tslide-info">
+              <strong>Lisa P. &amp; Family</strong>
+              <span>Toronto, Canada</span>
+              <div class="tslide-offer"><i class="fas fa-tag" aria-hidden="true"></i> Family Safari – Amboseli</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="tslider-nav" role="group" aria-label="Testimonial navigation">
+      <button class="tslider-btn" id="tPrev" aria-label="Previous testimonials">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <div id="tDots" style="display:flex;gap:.6rem;align-items:center" role="tablist" aria-label="Testimonial pages"></div>
+      <button class="tslider-btn" id="tNext" aria-label="Next testimonials">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="nl-section" aria-labelledby="nl-heading">
+  <div class="nl-inner">
+    <div class="nl-icon anim"><i class="fas fa-envelope-open-text" aria-hidden="true"></i></div>
+    <h2 class="serif anim d1" id="nl-heading">Never Miss a Safari Deal</h2>
+    <p class="anim d2">Join 12,000+ travellers who receive our exclusive offers before they sell out. No spam, unsubscribe any time.</p>
+    <form class="nl-form anim d3" id="nlForm" novalidate aria-label="Newsletter signup">
+      <label for="nlEmail" class="sr-only">Your email address</label>
+      <input type="email" id="nlEmail" class="nl-input" placeholder="Your email address" autocomplete="email" required aria-required="true">
+      <button type="submit" class="nl-btn" id="nlBtn">
+        Subscribe <i class="fas fa-paper-plane" aria-hidden="true"></i>
+      </button>
+    </form>
+    <p class="nl-note anim d4"><i class="fas fa-lock" aria-hidden="true"></i> We respect your privacy. Unsubscribe anytime.</p>
+    <div class="nl-success" id="nlSuccess" role="alert" aria-live="polite">
+      <i class="fas fa-check-circle" aria-hidden="true"></i>
+      <h3 class="serif">You're in!</h3>
+      <p>Watch your inbox for exclusive safari deals from Kiboko.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="40" height="40">
+          <circle cx="22" cy="22" r="22" fill="rgba(255,255,255,0.1)"/>
+          <ellipse cx="22" cy="27" rx="13" ry="8.5" fill="#2E7D52"/>
+          <ellipse cx="22" cy="25" rx="10" ry="7" fill="#3A9063"/>
+          <circle cx="15.5" cy="20" r="3" fill="#2E7D52"/>
+          <circle cx="28.5" cy="20" r="3" fill="#2E7D52"/>
+          <ellipse cx="22" cy="23" rx="5.5" ry="4" fill="#4AAD78"/>
+          <circle cx="19.5" cy="21.5" r="1" fill="#1E1E1E"/>
+          <circle cx="24.5" cy="21.5" r="1" fill="#1E1E1E"/>
+          <ellipse cx="22" cy="24.5" rx="2.5" ry="1" fill="#C4773B"/>
+          <rect x="14" y="17" width="2" height="5" rx="1" fill="#2E7D52"/>
+          <rect x="28" y="17" width="2" height="5" rx="1" fill="#2E7D52"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-top">Safari Offers</span>
+          <span class="logo-sub">by Kiboko Kenya Safaris</span>
+        </div>
+      </div>
+      <p>Your trusted East African safari specialist since 2007. KATO certified, personally curated, and passionately delivered.</p>
+      <div class="footer-social" aria-label="Social media links">
+        <a href="#" class="f-soc" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" class="f-soc" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" class="f-soc" aria-label="Follow us on X (Twitter)"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+        <a href="#" class="f-soc" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="#" class="f-soc" aria-label="Watch us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Destinations</h4>
+      <ul>
+        <li><a href="#offers">Kenya Safaris</a></li>
+        <li><a href="#offers">Tanzania Safaris</a></li>
+        <li><a href="#offers">Uganda Safaris</a></li>
+        <li><a href="#offers">Rwanda Safaris</a></li>
+        <li><a href="#offers">Beach &amp; Safari</a></li>
+        <li><a href="#offers">Multi-Country</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Offer Types</h4>
+      <ul>
+        <li><a href="#offers">Luxury Safaris</a></li>
+        <li><a href="#offers">Family Packages</a></li>
+        <li><a href="#offers">Honeymoon Deals</a></li>
+        <li><a href="#offers">Resident Specials</a></li>
+        <li><a href="#offers">Last Minute Deals</a></li>
+        <li><a href="#offers">Fly-In Safaris</a></li>
+        <li><a href="#offers">Migration Specials</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        <span>Westlands, Nairobi, Kenya</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        <span><a href="tel:+254700000000">+254 700 000 000</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span><a href="mailto:offers@kibokokenyasafaris.com">offers@kibokokenyasafaris.com</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fas fa-clock" aria-hidden="true"></i>
+        <span>Mon–Fri 8am–6pm EAT</span>
+      </div>
+      <a href="https://wa.me/254700000000" class="footer-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-pb">
+    <div class="footer-bottom">
+      <p>&copy; 2025 Kiboko Kenya Safaris. All rights reserved. KATO Member.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/254700000000" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat with Kiboko on WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<script>
+/* ===== NAV ===== */
+const nav = document.getElementById('nav');
+const menuBtn = document.getElementById('navMenuBtn');
+const drawer = document.getElementById('navDrawer');
+const drawerClose = document.getElementById('navDrawerClose');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, {passive: true});
+
+menuBtn.addEventListener('click', () => {
+  drawer.classList.add('open');
+  drawer.setAttribute('aria-hidden', 'false');
+  menuBtn.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+});
+
+function closeDrawer() {
+  drawer.classList.remove('open');
+  drawer.setAttribute('aria-hidden', 'true');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+drawerClose.addEventListener('click', closeDrawer);
+drawer.addEventListener('click', e => { if (e.target === drawer) closeDrawer(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+/* ===== HERO COUNTER ===== */
+function animateCount(el, target) {
+  const dur = 1800;
+  const start = performance.now();
+  const update = (now) => {
+    const p = Math.min((now - start) / dur, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    const val = Math.round(ease * target);
+    el.textContent = val >= 1000 ? val.toLocaleString() + '+' : val + '+';
+    if (p < 1) requestAnimationFrame(update);
+    else el.textContent = target >= 1000 ? target.toLocaleString() + '+' : target + '+';
+  };
+  requestAnimationFrame(update);
+}
+
+const statEls = document.querySelectorAll('.stat-num[data-target]');
+let countersStarted = false;
+const statsObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && !countersStarted) {
+    countersStarted = true;
+    statEls.forEach(el => animateCount(el, parseInt(el.dataset.target)));
+    statsObs.disconnect();
+  }
+}, { threshold: .4 });
+if (statEls.length) statsObs.observe(statEls[0]);
+
+/* ===== SCROLL ANIMATIONS ===== */
+const animObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); animObs.unobserve(e.target); } });
+}, { threshold: .12 });
+document.querySelectorAll('.anim').forEach(el => animObs.observe(el));
+
+/* ===== OFFER TABS ===== */
+const tabs = document.querySelectorAll('.otab');
+const cards = document.querySelectorAll('.ocard');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected','true');
+    const filter = tab.dataset.tab;
+    cards.forEach(card => {
+      if (filter === 'all') {
+        card.removeAttribute('data-filter');
+      } else {
+        const cats = (card.dataset.cats || '').split(' ');
+        card.setAttribute('data-filter', cats.includes(filter) ? '' : 'hidden');
+      }
+    });
+  });
+});
+
+/* ===== SAVE TOGGLE ===== */
+function toggleSave(btn) {
+  btn.classList.toggle('saved');
+  const icon = btn.querySelector('i');
+  if (btn.classList.contains('saved')) {
+    icon.classList.replace('far','fas');
+    btn.setAttribute('aria-label','Remove from saved');
+  } else {
+    icon.classList.replace('fas','far');
+    btn.setAttribute('aria-label','Save this offer');
+  }
+}
+
+/* ===== TESTIMONIALS SLIDER ===== */
+(function() {
+  const track = document.getElementById('tsliderTrack');
+  const dotsContainer = document.getElementById('tDots');
+  const prevBtn = document.getElementById('tPrev');
+  const nextBtn = document.getElementById('tNext');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.tslide');
+  let current = 0;
+  let autoTimer;
+
+  function perView() {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1100) return 2;
+    return 3;
+  }
+
+  function totalPages() {
+    return Math.ceil(slides.length / perView());
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalPages(); i++) {
+      const dot = document.createElement('button');
+      dot.className = 'tslider-dot' + (i === current ? ' active' : '');
+      dot.setAttribute('aria-label', `Go to page ${i + 1}`);
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-selected', i === current ? 'true' : 'false');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateSlideWidth() {
+    const pv = perView();
+    const gap = 24;
+    const wrapW = track.parentElement.offsetWidth;
+    const slideW = (wrapW - gap * (pv - 1)) / pv;
+    slides.forEach(s => {
+      s.style.flexBasis = slideW + 'px';
+      s.style.minWidth = slideW + 'px';
+      s.style.marginRight = gap + 'px';
+    });
+  }
+
+  function goTo(page) {
+    current = Math.max(0, Math.min(page, totalPages() - 1));
+    const pv = perView();
+    const gap = 24;
+    const wrapW = track.parentElement.offsetWidth;
+    const slideW = (wrapW - gap * (pv - 1)) / pv;
+    const offset = current * pv * (slideW + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+    buildDots();
+  }
+
+  function next() { goTo(current + 1 < totalPages() ? current + 1 : 0); }
+  function prev() { goTo(current - 1 >= 0 ? current - 1 : totalPages() - 1); }
+
+  function startAuto() {
+    autoTimer = setInterval(next, 5000);
+  }
+
+  nextBtn.addEventListener('click', () => { clearInterval(autoTimer); next(); startAuto(); });
+  prevBtn.addEventListener('click', () => { clearInterval(autoTimer); prev(); startAuto(); });
+
+  let touchStart = 0;
+  track.addEventListener('touchstart', e => { touchStart = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const diff = touchStart - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { clearInterval(autoTimer); diff > 0 ? next() : prev(); startAuto(); }
+  }, {passive:true});
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { current = 0; updateSlideWidth(); goTo(0); }, 150);
+  });
+
+  updateSlideWidth();
+  buildDots();
+  goTo(0);
+  startAuto();
+})();
+
+/* ===== NEWSLETTER ===== */
+document.getElementById('nlForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const emailEl = document.getElementById('nlEmail');
+  const successEl = document.getElementById('nlSuccess');
+  const btnEl = document.getElementById('nlBtn');
+
+  if (!emailEl.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+    emailEl.style.borderColor = '#e53e3e';
+    emailEl.focus();
+    return;
+  }
+  emailEl.style.borderColor = '';
+  btnEl.disabled = true;
+  btnEl.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+  setTimeout(() => {
+    this.style.display = 'none';
+    document.querySelector('.nl-note').style.display = 'none';
+    successEl.style.display = 'flex';
+  }, 1100);
+});
+
+/* ===== CAT CARD KEYBOARD NAV ===== */
+document.querySelectorAll('.cat-card').forEach(card => {
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+  });
+  if (!card.getAttribute('tabindex')) card.setAttribute('tabindex', '0');
+});
+</script>
+</body>
+</html>
