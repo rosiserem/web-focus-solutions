@@ -57,7 +57,7 @@ ul{list-style:none}
 }
 #nav.scrolled .nav-inner{height:62px}
 .nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.nav-logo svg{width:auto;height:52px}
+.nav-logo img{height:52px;width:auto;border-radius:8px;display:block}
 .logo-text{display:flex;flex-direction:column;line-height:1.15}
 .logo-top{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--wh);letter-spacing:.01em}
 .logo-sub{font-size:.62rem;font-weight:500;color:rgba(255,255,255,.72);letter-spacing:.12em;text-transform:uppercase}
@@ -296,46 +296,6 @@ ul{list-style:none}
 }
 .btn-view-all:hover{background:var(--g);color:var(--wh)}
 
-/* ===== CATEGORIES ===== */
-.categories-section{padding:90px 0;background:var(--wh)}
-.cat-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:1.2rem;
-}
-.cat-card{
-  position:relative;height:200px;border-radius:var(--r);
-  overflow:hidden;cursor:pointer;
-  transition:transform .3s,box-shadow .3s;
-}
-.cat-card:hover{transform:translateY(-4px);box-shadow:var(--sl2)}
-.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.cat-card:hover img{transform:scale(1.08)}
-.cat-card-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,40,20,.78) 0%,rgba(0,0,0,.15) 60%,transparent 100%);
-  display:flex;flex-direction:column;justify-content:flex-end;
-  padding:1.1rem;transition:.3s;
-}
-.cat-card:hover .cat-card-overlay{background:linear-gradient(to top,rgba(10,40,20,.88) 0%,rgba(0,0,0,.25) 60%,transparent 100%)}
-.cat-icon{
-  width:36px;height:36px;border-radius:50%;
-  background:rgba(255,255,255,.18);backdrop-filter:blur(4px);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--wh);font-size:.9rem;margin-bottom:.5rem;
-}
-.cat-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--wh);line-height:1.2}
-.cat-count{font-size:.68rem;color:rgba(255,255,255,.72);margin-top:.15rem}
-.cat-arrow{
-  position:absolute;top:.8rem;right:.8rem;
-  width:28px;height:28px;border-radius:50%;
-  background:rgba(255,255,255,.15);backdrop-filter:blur(4px);
-  display:flex;align-items:center;justify-content:center;
-  color:rgba(255,255,255,.7);font-size:.65rem;
-  transition:var(--t);
-}
-.cat-card:hover .cat-arrow{background:var(--or);color:var(--wh)}
-
 /* ===== WHY KIBOKO ===== */
 .why-section{padding:100px 0;background:var(--cr);overflow:hidden}
 .why-inner{
@@ -567,8 +527,7 @@ footer{background:var(--gd);color:rgba(255,255,255,.85);padding:70px 0 0}
 /* ===== RESPONSIVE ===== */
 @media(max-width:1100px){
   .offers-grid{grid-template-columns:repeat(2,1fr)}
-  .cat-grid{grid-template-columns:repeat(4,1fr)}
-  .why-inner{gap:2.5rem}
+.why-inner{gap:2.5rem}
   .why-float{right:-0.5rem;bottom:-0.5rem;width:180px}
   .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
   .nav-links{display:none}
@@ -576,8 +535,7 @@ footer{background:var(--gd);color:rgba(255,255,255,.85);padding:70px 0 0}
 }
 @media(max-width:768px){
   .offers-grid{grid-template-columns:1fr}
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .why-inner{grid-template-columns:1fr}
+.why-inner{grid-template-columns:1fr}
   .why-float{display:none}
   .why-badge-img{display:none}
   .why-main-img{height:300px}
@@ -589,9 +547,7 @@ footer{background:var(--gd);color:rgba(255,255,255,.85);padding:70px 0 0}
   .nl-input,.nl-btn{width:100%}
 }
 @media(max-width:540px){
-  .cat-grid{grid-template-columns:1fr 1fr}
-  .cat-card{height:160px}
-  .hero-btns{flex-direction:column;align-items:flex-start}
+.hero-btns{flex-direction:column;align-items:flex-start}
   .trust-div{display:none}
   .why-grid{grid-template-columns:1fr}
 }
@@ -603,40 +559,7 @@ footer{background:var(--gd);color:rgba(255,255,255,.85);padding:70px 0 0}
 <header id="nav">
   <nav class="nav-inner" role="navigation" aria-label="Main navigation">
     <a href="#" class="nav-logo" aria-label="Kiboko Kenya Safaris home">
-      <svg viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <!-- Arch frame -->
-        <path d="M 8 72 A 52 52 0 0 1 112 72" stroke="rgba(255,255,255,0.9)" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <line x1="8" y1="72" x2="112" y2="72" stroke="rgba(255,255,255,0.9)" stroke-width="4" stroke-linecap="round"/>
-        <!-- Hippo body -->
-        <ellipse cx="56" cy="57" rx="38" ry="26" fill="rgba(255,255,255,0.92)"/>
-        <!-- Hippo rump/back-left bump -->
-        <ellipse cx="24" cy="55" rx="18" ry="16" fill="rgba(255,255,255,0.92)"/>
-        <!-- Head right -->
-        <ellipse cx="87" cy="48" rx="24" ry="18" fill="rgba(255,255,255,0.92)"/>
-        <!-- Upper jaw extends right -->
-        <path d="M 82 37 Q 104 28 116 33 Q 119 37 112 41 Q 100 40 82 43" fill="rgba(255,255,255,0.92)"/>
-        <!-- Lower jaw extends right -->
-        <path d="M 82 59 Q 104 63 116 57 Q 120 62 112 67 Q 98 68 82 62" fill="rgba(255,255,255,0.92)"/>
-        <!-- Mouth opening (dark gap) -->
-        <path d="M 84 43 Q 104 38 113.5 42 L 113.5 57 Q 103 53 84 57 Z" fill="rgba(15,61,36,0.7)"/>
-        <!-- Ear -->
-        <ellipse cx="81" cy="33" rx="7" ry="5.5" fill="rgba(255,255,255,0.92)"/>
-        <!-- Eye -->
-        <circle cx="87" cy="45" r="4" fill="#0F3D24"/>
-        <circle cx="88" cy="44" r="1.5" fill="white"/>
-        <!-- Nostrils -->
-        <ellipse cx="96" cy="54" rx="3.5" ry="2" fill="rgba(200,180,140,0.6)"/>
-        <ellipse cx="102" cy="53" rx="3.5" ry="2" fill="rgba(200,180,140,0.6)"/>
-        <!-- Legs/feet -->
-        <rect x="34" y="78" width="14" height="14" rx="4" fill="rgba(255,255,255,0.92)"/>
-        <rect x="56" y="79" width="14" height="13" rx="4" fill="rgba(255,255,255,0.92)"/>
-        <!-- Tail left -->
-        <path d="M 10 58 Q 3 46 8 36" stroke="rgba(255,255,255,0.92)" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <!-- KIBOKO text -->
-        <text x="60" y="108" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="20" fill="white" letter-spacing="1.5">KIBOKO</text>
-        <!-- KENYA SAFARIS text -->
-        <text x="60" y="124" text-anchor="middle" font-family="Arial,sans-serif" font-weight="600" font-size="9.5" fill="rgba(255,255,255,0.78)" letter-spacing="2.5">KENYA SAFARIS</text>
-      </svg>
+      <img src="kiboko-logo.png" alt="Kiboko Kenya Safaris">
     </a>
     <div class="nav-links" role="list">
       <a href="#" class="active" role="listitem">Home</a>
@@ -664,26 +587,7 @@ footer{background:var(--gd);color:rgba(255,255,255,.85);padding:70px 0 0}
 <nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation" aria-hidden="true">
   <div class="nd-head">
     <a href="#" class="nav-logo">
-      <svg viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M 8 72 A 52 52 0 0 1 112 72" stroke="rgba(255,255,255,0.9)" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <line x1="8" y1="72" x2="112" y2="72" stroke="rgba(255,255,255,0.9)" stroke-width="4" stroke-linecap="round"/>
-        <ellipse cx="56" cy="57" rx="38" ry="26" fill="rgba(255,255,255,0.92)"/>
-        <ellipse cx="24" cy="55" rx="18" ry="16" fill="rgba(255,255,255,0.92)"/>
-        <ellipse cx="87" cy="48" rx="24" ry="18" fill="rgba(255,255,255,0.92)"/>
-        <path d="M 82 37 Q 104 28 116 33 Q 119 37 112 41 Q 100 40 82 43" fill="rgba(255,255,255,0.92)"/>
-        <path d="M 82 59 Q 104 63 116 57 Q 120 62 112 67 Q 98 68 82 62" fill="rgba(255,255,255,0.92)"/>
-        <path d="M 84 43 Q 104 38 113.5 42 L 113.5 57 Q 103 53 84 57 Z" fill="rgba(15,61,36,0.7)"/>
-        <ellipse cx="81" cy="33" rx="7" ry="5.5" fill="rgba(255,255,255,0.92)"/>
-        <circle cx="87" cy="45" r="4" fill="#0F3D24"/>
-        <circle cx="88" cy="44" r="1.5" fill="white"/>
-        <ellipse cx="96" cy="54" rx="3.5" ry="2" fill="rgba(200,180,140,0.6)"/>
-        <ellipse cx="102" cy="53" rx="3.5" ry="2" fill="rgba(200,180,140,0.6)"/>
-        <rect x="34" y="78" width="14" height="14" rx="4" fill="rgba(255,255,255,0.92)"/>
-        <rect x="56" y="79" width="14" height="13" rx="4" fill="rgba(255,255,255,0.92)"/>
-        <path d="M 10 58 Q 3 46 8 36" stroke="rgba(255,255,255,0.92)" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <text x="60" y="108" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="20" fill="white" letter-spacing="1.5">KIBOKO</text>
-        <text x="60" y="124" text-anchor="middle" font-family="Arial,sans-serif" font-weight="600" font-size="9.5" fill="rgba(255,255,255,0.78)" letter-spacing="2.5">KENYA SAFARIS</text>
-      </svg>
+      <img src="kiboko-logo.png" alt="Kiboko Kenya Safaris">
     </a>
     <button class="nd-close" id="navDrawerClose" aria-label="Close menu">
       <i class="fas fa-times" aria-hidden="true"></i>
@@ -987,100 +891,6 @@ footer{background:var(--gd);color:rgba(255,255,255,.85);padding:70px 0 0}
   </div>
 </section>
 
-<!-- ===== CATEGORIES ===== -->
-<section class="categories-section" id="categories" aria-labelledby="cat-heading">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-tag anim"><i class="fas fa-compass" aria-hidden="true"></i> Browse by Type</div>
-      <h2 class="serif anim d1" id="cat-heading">Find Your Perfect Safari</h2>
-      <p class="anim d2">From the Great Migration to gorilla trekking, romantic honeymoons to family adventures — we have the perfect offer for every traveller.</p>
-    </div>
-    <div class="cat-grid">
-
-      <a href="#offers" class="cat-card anim" data-filter="luxury" aria-label="Browse Luxury Safaris">
-        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=75" alt="Luxury safari tent at sunset" loading="lazy">
-        <div class="cat-card-overlay">
-          <div class="cat-icon"><i class="fas fa-gem" aria-hidden="true"></i></div>
-          <div class="cat-name serif">Luxury Safaris</div>
-          <div class="cat-count">12 offers available</div>
-        </div>
-        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
-      </a>
-
-      <a href="#offers" class="cat-card anim d1" data-filter="family" aria-label="Browse Family Safaris">
-        <img src="https://images.unsplash.com/photo-1528158222524-d4d912d2e208?w=600&q=75" alt="Family on safari vehicle watching elephants" loading="lazy">
-        <div class="cat-card-overlay">
-          <div class="cat-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
-          <div class="cat-name serif">Family Safaris</div>
-          <div class="cat-count">8 offers available</div>
-        </div>
-        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
-      </a>
-
-      <a href="#offers" class="cat-card anim d2" data-filter="resident" aria-label="Browse Resident Specials">
-        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&q=75" alt="Kenyan savannah landscape at golden hour" loading="lazy">
-        <div class="cat-card-overlay">
-          <div class="cat-icon"><i class="fas fa-id-card" aria-hidden="true"></i></div>
-          <div class="cat-name serif">Resident Specials</div>
-          <div class="cat-count">14 offers available</div>
-        </div>
-        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
-      </a>
-
-      <a href="#offers" class="cat-card anim d3" data-filter="flyin" aria-label="Browse Fly-in Safaris">
-        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=75" alt="Light aircraft flying over African plains" loading="lazy">
-        <div class="cat-card-overlay">
-          <div class="cat-icon"><i class="fas fa-plane" aria-hidden="true"></i></div>
-          <div class="cat-name serif">Fly-in Safaris</div>
-          <div class="cat-count">6 offers available</div>
-        </div>
-        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
-      </a>
-
-      <a href="#offers" class="cat-card anim d4" data-filter="migration" aria-label="Browse Migration Safaris">
-        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&q=75" alt="Wildebeest migration in Masai Mara" loading="lazy">
-        <div class="cat-card-overlay">
-          <div class="cat-icon"><i class="fas fa-paw" aria-hidden="true"></i></div>
-          <div class="cat-name serif">Migration Safaris</div>
-          <div class="cat-count">5 offers available</div>
-        </div>
-        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
-      </a>
-
-      <a href="#offers" class="cat-card anim d5" data-filter="beach" aria-label="Browse Beach and Safari Combos">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=75" alt="Indian Ocean beach in Kenya" loading="lazy">
-        <div class="cat-card-overlay">
-          <div class="cat-icon"><i class="fas fa-umbrella-beach" aria-hidden="true"></i></div>
-          <div class="cat-name serif">Beach &amp; Safari</div>
-          <div class="cat-count">7 offers available</div>
-        </div>
-        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
-      </a>
-
-      <a href="#offers" class="cat-card anim" data-filter="honeymoon" aria-label="Browse Honeymoon Safaris">
-        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=75" alt="Romantic bush dinner at sunset" loading="lazy">
-        <div class="cat-card-overlay">
-          <div class="cat-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
-          <div class="cat-name serif">Honeymoon</div>
-          <div class="cat-count">9 offers available</div>
-        </div>
-        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
-      </a>
-
-      <a href="#offers" class="cat-card anim d1" data-filter="adventure" aria-label="Browse Adventure Safaris">
-        <img src="https://images.unsplash.com/photo-1589553416260-f586c1a06d5b?w=600&q=75" alt="Mountain gorilla trekking adventure" loading="lazy">
-        <div class="cat-card-overlay">
-          <div class="cat-icon"><i class="fas fa-mountain" aria-hidden="true"></i></div>
-          <div class="cat-name serif">Adventure</div>
-          <div class="cat-count">10 offers available</div>
-        </div>
-        <div class="cat-arrow"><i class="fas fa-arrow-right" aria-hidden="true"></i></div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
 <!-- ===== WHY KIBOKO ===== -->
 <section class="why-section" id="why" aria-labelledby="why-heading">
   <div class="why-inner">
@@ -1295,26 +1105,7 @@ footer{background:var(--gd);color:rgba(255,255,255,.85);padding:70px 0 0}
   <div class="footer-top">
     <div class="footer-brand">
       <div class="nav-logo">
-        <svg viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M 8 72 A 52 52 0 0 1 112 72" stroke="rgba(255,255,255,0.9)" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <line x1="8" y1="72" x2="112" y2="72" stroke="rgba(255,255,255,0.9)" stroke-width="4" stroke-linecap="round"/>
-          <ellipse cx="56" cy="57" rx="38" ry="26" fill="rgba(255,255,255,0.92)"/>
-          <ellipse cx="24" cy="55" rx="18" ry="16" fill="rgba(255,255,255,0.92)"/>
-          <ellipse cx="87" cy="48" rx="24" ry="18" fill="rgba(255,255,255,0.92)"/>
-          <path d="M 82 37 Q 104 28 116 33 Q 119 37 112 41 Q 100 40 82 43" fill="rgba(255,255,255,0.92)"/>
-          <path d="M 82 59 Q 104 63 116 57 Q 120 62 112 67 Q 98 68 82 62" fill="rgba(255,255,255,0.92)"/>
-          <path d="M 84 43 Q 104 38 113.5 42 L 113.5 57 Q 103 53 84 57 Z" fill="rgba(15,61,36,0.7)"/>
-          <ellipse cx="81" cy="33" rx="7" ry="5.5" fill="rgba(255,255,255,0.92)"/>
-          <circle cx="87" cy="45" r="4" fill="#0F3D24"/>
-          <circle cx="88" cy="44" r="1.5" fill="white"/>
-          <ellipse cx="96" cy="54" rx="3.5" ry="2" fill="rgba(200,180,140,0.6)"/>
-          <ellipse cx="102" cy="53" rx="3.5" ry="2" fill="rgba(200,180,140,0.6)"/>
-          <rect x="34" y="78" width="14" height="14" rx="4" fill="rgba(255,255,255,0.92)"/>
-          <rect x="56" y="79" width="14" height="13" rx="4" fill="rgba(255,255,255,0.92)"/>
-          <path d="M 10 58 Q 3 46 8 36" stroke="rgba(255,255,255,0.92)" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <text x="60" y="108" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="20" fill="white" letter-spacing="1.5">KIBOKO</text>
-          <text x="60" y="124" text-anchor="middle" font-family="Arial,sans-serif" font-weight="600" font-size="9.5" fill="rgba(255,255,255,0.78)" letter-spacing="2.5">KENYA SAFARIS</text>
-        </svg>
+        <img src="kiboko-logo.png" alt="Kiboko Kenya Safaris">
       </div>
       <p>Your trusted East African safari specialist since 2007. KATO certified, personally curated, and passionately delivered.</p>
       <div class="footer-social" aria-label="Social media links">
@@ -1597,13 +1388,6 @@ document.getElementById('nlForm').addEventListener('submit', function(e) {
   }, 1100);
 });
 
-/* ===== CAT CARD KEYBOARD NAV ===== */
-document.querySelectorAll('.cat-card').forEach(card => {
-  card.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
-  });
-  if (!card.getAttribute('tabindex')) card.setAttribute('tabindex', '0');
-});
 </script>
 </body>
 </html>
