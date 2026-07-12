@@ -3,77 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Focus Kenya | Google Ads Management &amp; Training for Kenyan Businesses</title>
-  <meta name="description" content="Web Focus Kenya specialises in Google Ads management and Google Ads training for businesses in Kenya. Get more leads, or learn to run your own campaigns.">
-  <meta name="keywords" content="Web Focus Kenya, Google Ads Kenya, Google Ads Agency Nairobi, Google Ads Training Kenya, PPC Management Kenya">
-  <link rel="canonical" href="https://www.webfocuskenya.com/">
-  <meta property="og:title" content="Web Focus Kenya | Google Ads Management &amp; Training">
-  <meta property="og:description" content="Expert Google Ads management and practical Google Ads training for businesses across Kenya.">
-  <meta property="og:url" content="https://www.webfocuskenya.com">
+  <title>Web Focus Solutions | Google Ads for Kenyan Safari &amp; Tour Operators</title>
+  <meta name="description" content="Google Ads set up properly for Kenyan tour operators and safari companies. One fixed fee, no retainers. Get enquiries from travelers already searching for safaris.">
+  <meta name="keywords" content="Google Ads Safari Kenya, Google Ads Tour Operators, Safari Marketing Kenya, Google Ads Consultant Kenya, Travel Google Ads">
+  <link rel="canonical" href="https://www.webfocussolutions.co.ke/">
+  <meta property="og:title" content="Web Focus Solutions | Google Ads for Kenyan Safari &amp; Tour Operators">
+  <meta property="og:description" content="Google Ads set up properly for tour operators. One fixed fee, no retainers. AI does the heavy lifting; a safari insider steers it.">
+  <meta property="og:url" content="https://www.webfocussolutions.co.ke">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.webfocuskenya.com/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .services-split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
-    .service-card{border-radius:var(--radius-lg);overflow:hidden;border:2px solid var(--border);background:var(--bg-white);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
-    .service-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(10,36,99,.11)}
-    .service-card__header{background:var(--primary);padding:2.5rem 2.5rem 2rem;position:relative}
-    .service-card__header--training{background:linear-gradient(135deg,#061840 0%,#0A2463 100%)}
-    .service-card__icon{font-size:2.5rem;display:block;margin-bottom:1.25rem}
-    .service-card__label{font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.5rem}
-    .service-card__title{font-family:var(--font-heading);font-size:1.625rem;font-weight:700;color:white;line-height:1.25;margin-bottom:1rem}
-    .service-card__tagline{font-size:.9375rem;color:rgba(255,255,255,.78);line-height:1.65}
-    .service-card__body{padding:2rem 2.5rem 2.5rem;flex:1;display:flex;flex-direction:column;gap:1.5rem}
-    .service-card__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem;flex:1}
-    .service-card__list li{font-size:.9375rem;color:var(--text-body);padding-left:1.5rem;position:relative;line-height:1.55}
-    .service-card__list li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700}
-    .service-card__note{font-size:.875rem;color:var(--text-muted);padding-top:1.25rem;border-top:1px solid var(--border);line-height:1.6}
-    .service-card__note strong{color:var(--text-dark)}
-    .stats-strip{background:var(--primary);padding:2.75rem 0}
-    .stats-strip__inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-    .stats-strip__item{text-align:center;padding:.75rem 1.5rem;border-right:1px solid rgba(255,255,255,.1)}
-    .stats-strip__item:last-child{border-right:none}
-    .stats-strip__item strong{display:block;font-family:var(--font-heading);font-size:2.25rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:.375rem}
-    .stats-strip__item span{font-size:.875rem;color:rgba(255,255,255,.7)}
-    .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-    .who-item{display:flex;align-items:flex-start;gap:.875rem;padding:1.25rem;background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-md)}
-    .who-item__icon{font-size:1.5rem;flex-shrink:0;line-height:1;margin-top:.1rem}
-    .who-item__text h4{font-size:.9375rem;font-weight:600;color:var(--text-dark);margin-bottom:.25rem}
-    .who-item__text p{font-size:.8125rem;color:var(--text-muted);line-height:1.5}
-    .choose-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
-    .choose-card{padding:1.75rem;background:var(--bg-white);border:2px solid var(--border);border-radius:var(--radius-md)}
-    .choose-card--ads{border-top-color:var(--accent)}
-    .choose-card--training{border-top-color:var(--primary)}
-    .choose-card h4{font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:.875rem}
-    .choose-card p{font-size:.9375rem;color:var(--text-body);line-height:1.7}
+    /* Problem cards */
+    .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+    .problem-card{background:var(--bg-white);border:2px solid var(--border);border-left:4px solid #E5484D;border-radius:var(--radius-md);padding:1.75rem}
+    .problem-card h3{font-size:1.0625rem;color:var(--text-dark);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+    .problem-card p{font-size:0.9375rem;color:var(--text-body);line-height:1.7}
+    .problem-card p+p{margin-top:0.75rem}
+
+    /* AI differentiator */
+    .ai-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+    .ai-item{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.75rem}
+    .ai-item__num{font-family:var(--font-heading);font-weight:800;font-size:1.25rem;color:var(--accent);margin-bottom:0.75rem}
+    .ai-item h4{font-size:1rem;color:var(--text-dark);margin-bottom:0.5rem}
+    .ai-item p{font-size:0.875rem;color:var(--text-body);line-height:1.65}
+    .ai-payoff{margin-top:2rem;background:var(--primary);border-radius:var(--radius-md);padding:1.5rem 1.75rem;color:white;font-size:1rem;line-height:1.6;text-align:center}
+    .ai-payoff strong{color:var(--accent)}
+
+    /* Offer cards */
+    .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;align-items:start;margin-top:3rem}
+    .offer-card{border:2px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-white);overflow:hidden;display:flex;flex-direction:column}
+    .offer-card--featured{border-color:var(--accent);box-shadow:0 20px 60px rgba(0,200,81,0.14)}
+    .offer-card__header{padding:1.75rem 1.75rem 1.5rem;background:var(--bg-light);position:relative}
+    .offer-card--featured .offer-card__header{background:var(--primary)}
+    .offer-badge{position:absolute;top:1rem;right:1rem;background:var(--accent);color:white;font-size:0.625rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:0.25rem 0.625rem;border-radius:999px}
+    .offer-card__name{font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:var(--text-dark);margin-bottom:0.5rem}
+    .offer-card--featured .offer-card__name{color:white}
+    .offer-card__price{display:flex;align-items:baseline;gap:0.375rem;margin-top:0.75rem}
+    .offer-card__price .amount{font-family:var(--font-heading);font-size:1.75rem;font-weight:800;color:var(--primary)}
+    .offer-card--featured .offer-card__price .amount{color:var(--accent)}
+    .offer-card__price .unit{font-size:0.8125rem;color:var(--text-muted)}
+    .offer-card--featured .offer-card__price .unit{color:rgba(255,255,255,0.6)}
+    .offer-card__body{padding:1.75rem;flex:1;display:flex;flex-direction:column;gap:1.25rem}
+    .offer-card__desc{font-size:0.9375rem;color:var(--text-body);line-height:1.65}
+    .offer-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.625rem;flex:1}
+    .offer-list li{font-size:0.9375rem;color:var(--text-body);padding-left:1.5rem;position:relative;line-height:1.5}
+    .offer-list li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700}
+
+    /* Case study */
+    .case-study{background:var(--primary);border-radius:var(--radius-lg);padding:3rem;color:white;margin-top:2.5rem}
+    .case-study__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:2rem 0}
+    .case-stat{text-align:center}
+    .case-stat strong{display:block;font-family:var(--font-heading);font-size:2.5rem;font-weight:800;color:var(--accent);line-height:1}
+    .case-stat span{font-size:0.8125rem;color:rgba(255,255,255,0.7);margin-top:0.5rem;display:block}
+    .case-study__quote{font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.9);border-left:3px solid var(--accent);padding-left:1.25rem;margin-top:1.5rem}
+
+    /* Scarcity */
+    .scarcity{background:#FFF8E6;border:2px solid #F0C24B;border-radius:var(--radius-md);padding:2rem;text-align:center;max-width:680px;margin:0 auto}
+    .scarcity h3{font-size:1.375rem;color:var(--text-dark);margin-bottom:0.75rem}
+    .scarcity p{font-size:0.9375rem;color:var(--text-body);line-height:1.7}
+
+    /* About */
+    .about-box{max-width:720px;margin:0 auto;text-align:center}
+    .about-box p{font-size:1.0625rem;color:var(--text-body);line-height:1.85}
+
+    /* Placeholder highlight */
+    .ph{background:#FFF3BF;color:#7a5c00;padding:0 0.25rem;border-radius:3px;font-style:normal;font-weight:600}
+
     @media(max-width:1024px){
-      .services-split{grid-template-columns:1fr;max-width:580px;margin-left:auto;margin-right:auto}
-      .stats-strip__inner{grid-template-columns:repeat(2,1fr)}
-      .stats-strip__item:nth-child(2){border-right:none}
-      .stats-strip__item:nth-child(3),.stats-strip__item:nth-child(4){border-top:1px solid rgba(255,255,255,.1)}
-      .who-grid{grid-template-columns:repeat(2,1fr)}
-      .choose-grid{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+      .problem-grid,.ai-list{grid-template-columns:1fr}
+      .offer-grid{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}
+      .case-study__stats{grid-template-columns:1fr;gap:1.5rem}
     }
     @media(max-width:640px){
-      .who-grid{grid-template-columns:1fr}
-      .service-card__header{padding:1.75rem 1.75rem 1.5rem}
-      .service-card__body{padding:1.5rem 1.75rem 1.75rem}
+      .case-study{padding:1.75rem}
     }
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Web Focus Kenya",
-    "description": "Google Ads specialist agency offering expert PPC management and practical Google Ads training for businesses in Kenya.",
-    "url": "https://www.webfocuskenya.com",
-    "email": "info@webfocuskenya.com",
-    "telephone": "+254700000000",
-    "address": {"@type": "PostalAddress","addressLocality": "Nairobi","addressCountry": "KE"},
-    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-13:00"]
+    "name": "Web Focus Solutions",
+    "description": "Google Ads consultancy for Kenyan tour operators and safari companies. One-time fixed-fee setup, team training, and optional monthly account check-ups.",
+    "url": "https://www.webfocussolutions.co.ke",
+    "areaServed": "Kenya",
+    "knowsAbout": ["Google Ads", "Safari Tourism Marketing", "Performance Max", "Conversion Tracking"],
+    "address": {"@type": "PostalAddress","addressLocality": "Nairobi","addressCountry": "KE"}
   }
   </script>
 </head>
@@ -82,34 +99,28 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="container">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo" aria-label="Web Focus Kenya Home">
+      <a href="index.html" class="nav__logo" aria-label="Web Focus Solutions Home">
         <span class="nav__logo-dot" aria-hidden="true"></span>
-        Web Focus Kenya
+        Web Focus Solutions
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="google-ads.html">Google Ads</a></li>
-        <li><a href="ai-marketing-engine.html">AI Engine</a></li>
-        <li><a href="training.html">Training</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
-      <a href="contact.html#booking" class="btn btn--primary btn--sm nav__cta">Book Free Call</a>
+      <a href="https://wa.me/254700000000?text=Hi%2C%20I%20run%20a%20tour%20company%20and%20I%27m%20interested%20in%20Google%20Ads%20setup." class="btn btn--primary btn--sm nav__cta" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
       <button class="nav__hamburger" aria-expanded="false" aria-label="Toggle mobile menu">
         <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
     </div>
   </div>
   <div class="nav__mobile" role="menu">
-    <a href="index.html" role="menuitem">Home</a>
-    <a href="google-ads.html" role="menuitem">Google Ads</a>
-    <a href="ai-marketing-engine.html" role="menuitem">AI Engine</a>
-    <a href="training.html" role="menuitem">Training</a>
-    <a href="about.html" role="menuitem">About</a>
-    <a href="blog.html" role="menuitem">Blog</a>
-    <a href="contact.html" role="menuitem">Contact</a>
-    <a href="contact.html#booking" class="btn btn--primary">Book Free Call</a>
+    <a href="#problem" role="menuitem">The Problem</a>
+    <a href="#offers" role="menuitem">Offers</a>
+    <a href="#results" role="menuitem">Results</a>
+    <a href="#about" role="menuitem">About</a>
+    <a href="https://wa.me/254700000000?text=Hi%2C%20I%20run%20a%20tour%20company%20and%20I%27m%20interested%20in%20Google%20Ads%20setup." class="btn btn--primary" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
   </div>
 </nav>
 
@@ -120,88 +131,153 @@
   <div class="container">
     <div class="hero__content">
       <div class="hero__badge">
-        <span aria-hidden="true">🇰🇪</span>
-        Kenya's Google Ads Specialists
+        <span aria-hidden="true">🦁</span>
+        Google Ads for Safari &amp; Tour Operators
       </div>
-      <h1 id="hero-heading">Get More Leads from<br>Google Ads — or Learn<br>to Run Them Yourself</h1>
-      <p class="hero__sub">We manage Google Ads campaigns for Kenyan businesses that want consistent leads and sales. And we train the ones who want to take control of their own advertising.</p>
+      <h1 id="hero-heading">Get Enquiries from Travelers<br>Already Searching for a Safari</h1>
+      <p class="hero__sub">Right now, someone is on Google typing "7-day Masai Mara safari." I set up your Google Ads so they find you — and message you — instead of your competitor. One fixed fee. No retainers. No jargon.</p>
       <div class="hero__ctas">
-        <a href="contact.html#booking" class="btn btn--primary btn--lg">Book a Free Strategy Call</a>
-        <a href="contact.html#audit" class="btn btn--outline btn--lg">Get a Free Ads Audit</a>
+        <a href="https://wa.me/254700000000?text=Hi%2C%20I%20run%20a%20tour%20company%20and%20I%27m%20interested%20in%20Google%20Ads%20setup." class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">WhatsApp Me to Get Started</a>
+        <a href="#offers" class="btn btn--outline btn--lg">See the 3 Offers</a>
       </div>
-      <div class="hero__trust" role="list" aria-label="Trust indicators">
-        <div class="hero__trust-item" role="listitem"><strong>50+</strong><span>Campaigns Managed</span></div>
-        <div class="hero__trust-item" role="listitem"><strong>KSh 50M+</strong><span>Ad Spend Managed</span></div>
-        <div class="hero__trust-item" role="listitem"><strong>3x</strong><span>Average ROAS</span></div>
-        <div class="hero__trust-item" role="listitem"><strong>98%</strong><span>Client Retention</span></div>
+      <div class="hero__trust" role="list" aria-label="Experience">
+        <div class="hero__trust-item" role="listitem"><strong><span class="ph">[X]</span> yrs</strong><span>Running Safari Ads</span></div>
+        <div class="hero__trust-item" role="listitem"><strong>GoKenyaSafari</strong><span>.com</span></div>
+        <div class="hero__trust-item" role="listitem"><strong>Kiboko</strong><span>Kenya Safaris</span></div>
+        <div class="hero__trust-item" role="listitem"><strong>3/month</strong><span>Setups Only</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS STRIP -->
-<div class="stats-strip" role="region" aria-label="Company highlights">
-  <div class="container">
-    <div class="stats-strip__inner">
-      <div class="stats-strip__item"><strong>50+</strong><span>Google Ads Campaigns</span></div>
-      <div class="stats-strip__item"><strong>KSh 50M+</strong><span>Ad Budget Managed</span></div>
-      <div class="stats-strip__item"><strong>3x</strong><span>Average Return on Ad Spend</span></div>
-      <div class="stats-strip__item"><strong>98%</strong><span>Client Retention Rate</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- TWO SERVICES -->
-<section class="section" id="services" aria-labelledby="services-heading">
+<!-- PROBLEM -->
+<section class="section" id="problem" aria-labelledby="problem-heading">
   <div class="container">
     <div class="section-header" data-animate>
-      <p class="section-label">What We Do</p>
-      <h2 id="services-heading">Two Ways We Can Help</h2>
-      <p>Whether you want us to manage your Google Ads for you, or you're ready to learn how to run them yourself — we have a service built for exactly where you are.</p>
+      <p class="section-label">Sound Familiar?</p>
+      <h2 id="problem-heading">Two Ways Tour Operators Lose Money on Google</h2>
+      <p>If you've tried Google Ads before, you've probably hit one of these. Both are fixable.</p>
     </div>
-    <div class="services-split" data-animate>
+    <div class="problem-grid" data-animate>
+      <div class="problem-card">
+        <h3><span aria-hidden="true">💸</span> The Agency Trap</h3>
+        <p>They charge you a retainer every single month — for work that mostly happens once. The account gets built at the start, then barely touched.</p>
+        <p>You keep paying whether they log in or not. And you never actually own or understand your own account.</p>
+      </div>
+      <div class="problem-card">
+        <h3><span aria-hidden="true">🔥</span> The DIY Money Pit</h3>
+        <p>You set it up yourself, the budget disappears, and the enquiries never come. Usually it's one thing: conversion tracking is broken.</p>
+        <p>So Google optimises for clicks, not enquiries — spending your money on the wrong people. You can't fix what you can't measure.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- MANAGED SERVICE -->
-      <div class="service-card">
-        <div class="service-card__header">
-          <span class="service-card__icon" aria-hidden="true">🎯</span>
-          <p class="service-card__label">Managed Service</p>
-          <h3 class="service-card__title">Google Ads Management</h3>
-          <p class="service-card__tagline">We plan, build, and optimize your campaigns while you focus on running your business. Every shilling tracked, every result reported.</p>
+<!-- AI DIFFERENTIATOR -->
+<section class="section section--alt" aria-labelledby="ai-heading">
+  <div class="container">
+    <div class="section-header" data-animate>
+      <p class="section-label">How I Work</p>
+      <h2 id="ai-heading">AI Does the Heavy Lifting.<br>A Safari Insider Steers It.</h2>
+      <p>The big agencies charge monthly retainers for tools you can now use directly. Here's exactly what that looks like — no buzzwords.</p>
+    </div>
+    <div class="ai-list" data-animate>
+      <div class="ai-item">
+        <div class="ai-item__num">01</div>
+        <h4>AI Keyword &amp; Competitor Research</h4>
+        <p>AI-assisted research finds what travelers actually type — "Kenya honeymoon safari," "budget Mara package" — and what your competitors are bidding on. We target real searches, not guesses.</p>
+      </div>
+      <div class="ai-item">
+        <div class="ai-item__num">02</div>
+        <h4>AI-Written Ads, Tested Against Each Other</h4>
+        <p>Dozens of ad variations written and tested head-to-head, so the winners rise automatically. No more running one tired ad and hoping.</p>
+      </div>
+      <div class="ai-item">
+        <div class="ai-item__num">03</div>
+        <h4>Google's AI, Configured Properly</h4>
+        <p>Performance Max and Smart Bidding are powerful — but they burn money when set up wrong. Configured right, they cut your cost per enquiry instead of inflating it.</p>
+      </div>
+    </div>
+    <div class="ai-payoff" data-animate>
+      What this means for you: <strong>faster setup, a lower cost per enquiry, and the same AI tools agencies charge a monthly retainer to use</strong> — without the retainer.
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section class="section" id="offers" aria-labelledby="offers-heading">
+  <div class="container">
+    <div class="section-header" data-animate>
+      <p class="section-label">Simple, Fixed Pricing</p>
+      <h2 id="offers-heading">Three Ways to Work Together</h2>
+      <p>Pick what fits. No packages that trap you, no surprise monthly bills. You own your account, always.</p>
+    </div>
+    <div class="offer-grid" data-animate>
+
+      <!-- SETUP -->
+      <div class="offer-card">
+        <div class="offer-card__header">
+          <h3 class="offer-card__name">Setup</h3>
+          <div class="offer-card__price">
+            <span class="amount">Ksh <span class="ph">[SETUP]</span></span>
+            <span class="unit">one-time</span>
+          </div>
         </div>
-        <div class="service-card__body">
-          <ul class="service-card__list">
-            <li>Google Search Ads, Performance Max &amp; Remarketing</li>
-            <li>Full conversion tracking — know exactly what's working</li>
-            <li>Landing page optimization recommendations</li>
-            <li>Transparent monthly reporting — plain English, no jargon</li>
-            <li>Ongoing optimization, testing, and bid management</li>
-            <li>No long-term contracts — we earn your business every month</li>
+        <div class="offer-card__body">
+          <p class="offer-card__desc">I build your Google Ads account properly, from scratch. Then it's yours to run.</p>
+          <ul class="offer-list">
+            <li>Conversion tracking set up correctly — so you see real enquiries</li>
+            <li>AI keyword &amp; competitor research for your safari packages</li>
+            <li>Campaigns, ad copy &amp; Performance Max configured right</li>
+            <li>Smart Bidding set up to chase enquiries, not clicks</li>
+            <li>You own the account 100% — no lock-in</li>
           </ul>
-          <p class="service-card__note">Recommended ad budget from <strong>Ksh 30,000/month</strong> (paid directly to Google). Management fee quoted on your free strategy call.</p>
-          <a href="google-ads.html" class="btn btn--primary" style="width:100%;justify-content:center;">See Google Ads Services →</a>
+          <a href="https://wa.me/254700000000?text=Hi%2C%20I%27d%20like%20the%20Google%20Ads%20SETUP%20for%20my%20tour%20company." class="btn btn--outline-dark" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer">WhatsApp About Setup</a>
         </div>
       </div>
 
-      <!-- TRAINING -->
-      <div class="service-card">
-        <div class="service-card__header service-card__header--training">
-          <span class="service-card__icon" aria-hidden="true">📚</span>
-          <p class="service-card__label">Learn It Yourself</p>
-          <h3 class="service-card__title">Google Ads Training</h3>
-          <p class="service-card__tagline">Practical, Kenya-market focused training that takes you from zero to confidently running your own Google Ads campaigns.</p>
+      <!-- SETUP + TRAINING -->
+      <div class="offer-card offer-card--featured">
+        <div class="offer-card__header">
+          <span class="offer-badge">Most Popular</span>
+          <h3 class="offer-card__name">Setup + Training</h3>
+          <div class="offer-card__price">
+            <span class="amount">Ksh <span class="ph">[SETUP+TRAINING]</span></span>
+            <span class="unit">one-time</span>
+          </div>
         </div>
-        <div class="service-card__body">
-          <ul class="service-card__list">
-            <li>7-module curriculum covering the full Google Ads system</li>
-            <li>Hands-on exercises on real campaign accounts</li>
-            <li>Live online, in-person, and corporate group formats</li>
-            <li>Kenyan market examples — not generic Western case studies</li>
-            <li>Post-training support and Q&amp;A access included</li>
-            <li>Certificate of completion</li>
+        <div class="offer-card__body">
+          <p class="offer-card__desc">Everything in Setup — plus I train you or your team to run it, so you never depend on anyone.</p>
+          <ul class="offer-list">
+            <li>Everything in the Setup package</li>
+            <li>Hands-on training for you or your staff</li>
+            <li>How to read the numbers that actually matter</li>
+            <li>How to adjust budgets during high and low season</li>
+            <li>Recordings &amp; a simple playbook to keep</li>
           </ul>
-          <p class="service-card__note">Available for <strong>individuals, small teams, and corporate groups</strong>. Online and Nairobi in-person options. Enquire for current schedule and pricing.</p>
-          <a href="training.html" class="btn btn--primary" style="width:100%;justify-content:center;">See Training Details →</a>
+          <a href="https://wa.me/254700000000?text=Hi%2C%20I%27d%20like%20Google%20Ads%20SETUP%20%2B%20TRAINING%20for%20my%20tour%20company." class="btn btn--primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer">WhatsApp About Setup + Training</a>
+        </div>
+      </div>
+
+      <!-- MONTHLY CHECK-UP -->
+      <div class="offer-card">
+        <div class="offer-card__header">
+          <h3 class="offer-card__name">Monthly Check-up</h3>
+          <div class="offer-card__price">
+            <span class="amount">Ksh <span class="ph">[CHECKUP]</span></span>
+            <span class="unit">/ month</span>
+          </div>
+        </div>
+        <div class="offer-card__body">
+          <p class="offer-card__desc">Optional. For operators who'd rather I keep an eye on things. Cancel anytime — no contract.</p>
+          <ul class="offer-list">
+            <li>Monthly account review — I catch waste before it adds up</li>
+            <li>Bid &amp; budget adjustments for the season</li>
+            <li>New ad tests to keep cost per enquiry low</li>
+            <li>A plain-English report — what happened, what I changed</li>
+            <li>No lock-in. Stop any month.</li>
+          </ul>
+          <a href="https://wa.me/254700000000?text=Hi%2C%20I%27m%20interested%20in%20the%20MONTHLY%20CHECK-UP%20for%20my%20Google%20Ads." class="btn btn--outline-dark" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer">WhatsApp About Check-ups</a>
         </div>
       </div>
 
@@ -209,256 +285,57 @@
   </div>
 </section>
 
-<!-- WHO WE HELP -->
-<section class="section section--alt" aria-labelledby="who-heading">
+<!-- PROOF / CASE STUDY -->
+<section class="section section--alt" id="results" aria-labelledby="results-heading">
   <div class="container">
     <div class="section-header" data-animate>
-      <p class="section-label">Who We Work With</p>
-      <h2 id="who-heading">Built for Kenyan Businesses</h2>
-      <p>Our services are designed around the realities of doing business in Kenya — local market dynamics, local budgets, and customers who search on Google every day.</p>
+      <p class="section-label">Real Numbers</p>
+      <h2 id="results-heading">What Proper Setup Actually Does</h2>
+      <p>One example from a Kenyan safari company. Real account, real results.</p>
     </div>
-    <div class="who-grid" data-animate>
-      <div class="who-item">
-        <span class="who-item__icon" aria-hidden="true">🏥</span>
-        <div class="who-item__text"><h4>Healthcare &amp; Clinics</h4><p>Appointment bookings and patient acquisition for hospitals and specialist clinics.</p></div>
+    <div class="case-study" data-animate>
+      <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:700;margin-bottom:0.5rem;">Case Study — <span class="ph">[COMPANY NAME]</span></p>
+      <h3 style="color:white;font-size:1.5rem;margin-bottom:0.5rem;">From wasted budget to a steady stream of enquiries</h3>
+      <div class="case-study__stats">
+        <div class="case-stat">
+          <strong>Ksh <span class="ph">[BEFORE]</span></strong>
+          <span>Cost per enquiry — before</span>
+        </div>
+        <div class="case-stat">
+          <strong>Ksh <span class="ph">[AFTER]</span></strong>
+          <span>Cost per enquiry — after</span>
+        </div>
+        <div class="case-stat">
+          <strong><span class="ph">[X]</span></strong>
+          <span>Enquiries per month</span>
+        </div>
       </div>
-      <div class="who-item">
-        <span class="who-item__icon" aria-hidden="true">🏠</span>
-        <div class="who-item__text"><h4>Real Estate &amp; Property</h4><p>Lead generation for property sales, rentals, and development projects.</p></div>
-      </div>
-      <div class="who-item">
-        <span class="who-item__icon" aria-hidden="true">⚖️</span>
-        <div class="who-item__text"><h4>Professional Services</h4><p>Law firms, accountants, and consultants acquiring new clients cost-effectively.</p></div>
-      </div>
-      <div class="who-item">
-        <span class="who-item__icon" aria-hidden="true">🛒</span>
-        <div class="who-item__text"><h4>E-Commerce &amp; Retail</h4><p>Online stores driving sales and returning customers without wasting ad budget.</p></div>
-      </div>
-      <div class="who-item">
-        <span class="who-item__icon" aria-hidden="true">🎓</span>
-        <div class="who-item__text"><h4>Schools &amp; Training Providers</h4><p>Student enrolment campaigns for schools, colleges, and vocational trainers.</p></div>
-      </div>
-      <div class="who-item">
-        <span class="who-item__icon" aria-hidden="true">🔧</span>
-        <div class="who-item__text"><h4>Services &amp; Trades</h4><p>Plumbers, electricians, and service businesses getting local leads that convert.</p></div>
-      </div>
+      <blockquote class="case-study__quote">
+        "<span class="ph">[Insert one or two lines from the client — what changed for their business.]</span>"
+      </blockquote>
     </div>
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section class="section" aria-labelledby="why-heading">
-  <div class="container">
-    <div class="why-grid">
-      <div>
-        <p class="section-label">Why Web Focus Kenya</p>
-        <h2 id="why-heading">Specialists, Not Generalists</h2>
-        <p style="margin-bottom:2.5rem;color:var(--text-body);">We don't do social media, SEO, or web design. Google Ads is everything we do — which means deeper expertise, faster results, and a team that's fully accountable for your campaign performance.</p>
-        <div class="why-feature" data-animate>
-          <div class="why-feature__icon" aria-hidden="true">✓</div>
-          <div class="why-feature__text">
-            <h4>Google Ads Only</h4>
-            <p>100% focused on Google Ads — no divided attention, just deep expertise applied to your campaigns every day.</p>
-          </div>
-        </div>
-        <div class="why-feature" data-animate>
-          <div class="why-feature__icon" aria-hidden="true">📈</div>
-          <div class="why-feature__text">
-            <h4>Transparent Reporting</h4>
-            <p>Clear monthly reports that show exactly what your budget achieved — no jargon, no vanity metrics, just real business results.</p>
-          </div>
-        </div>
-        <div class="why-feature" data-animate>
-          <div class="why-feature__icon" aria-hidden="true">💰</div>
-          <div class="why-feature__text">
-            <h4>ROI-Focused Decisions</h4>
-            <p>Every bid adjustment and ad test is made with one question: does this improve your return on ad spend?</p>
-          </div>
-        </div>
-        <div class="why-feature" data-animate>
-          <div class="why-feature__icon" aria-hidden="true">🤝</div>
-          <div class="why-feature__text">
-            <h4>No Long-Term Contracts</h4>
-            <p>We earn your business every month. Our 98% retention rate speaks for itself — no lock-in required.</p>
-          </div>
-        </div>
-      </div>
-      <div class="why-stats" data-animate>
-        <div class="grid grid--2" style="gap:0;">
-          <div class="why-stat" style="border-bottom:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1);"><strong>50+</strong><span>Campaigns Managed</span></div>
-          <div class="why-stat" style="border-bottom:1px solid rgba(255,255,255,0.1);"><strong>3x</strong><span>Average ROAS</span></div>
-          <div class="why-stat" style="border-right:1px solid rgba(255,255,255,0.1);"><strong>98%</strong><span>Client Retention</span></div>
-          <div class="why-stat"><strong>5★</strong><span>Client Rating</span></div>
-        </div>
-        <div style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem;text-align:center;">
-          <p style="color:rgba(255,255,255,0.8);font-size:0.9375rem;margin-bottom:1.25rem;">"We finally understand where our ad budget is going — and it's generating real returns."</p>
-          <div style="display:flex;align-items:center;justify-content:center;gap:0.75rem;">
-            <div style="width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:0.875rem;">JM</div>
-            <div style="text-align:left;">
-              <strong style="color:white;display:block;font-size:0.9rem;">James Mwangi</strong>
-              <span style="color:rgba(255,255,255,0.65);font-size:0.8rem;">Savannah Properties, Nairobi</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="section section--alt" aria-labelledby="process-heading">
+<!-- ABOUT -->
+<section class="section" id="about" aria-labelledby="about-heading">
   <div class="container">
     <div class="section-header" data-animate>
-      <p class="section-label">How It Works</p>
-      <h2 id="process-heading">A Simple, Transparent Process</h2>
-      <p>From your first call to a fully optimized campaign — here's what working with us looks like.</p>
+      <p class="section-label">Who You're Working With</p>
+      <h2 id="about-heading">Not an Agency. A Safari Ads Specialist.</h2>
     </div>
-    <div class="process-grid">
-      <div class="process-step" data-animate>
-        <div class="process-step__number" aria-hidden="true">1</div>
-        <h3 class="process-step__title">Free Strategy Call</h3>
-        <p class="process-step__text">We learn about your business, goals, and budget. No pitch — just an honest conversation about what Google Ads can realistically do for you.</p>
-      </div>
-      <div class="process-step" data-animate>
-        <div class="process-step__number" aria-hidden="true">2</div>
-        <h3 class="process-step__title">Account Audit</h3>
-        <p class="process-step__text">We review your existing account (or research your market from scratch) to find the fastest path to results before spending a single shilling.</p>
-      </div>
-      <div class="process-step" data-animate>
-        <div class="process-step__number" aria-hidden="true">3</div>
-        <h3 class="process-step__title">Campaign Launch</h3>
-        <p class="process-step__text">We build your campaigns with precise keyword targeting, compelling ad copy, and complete conversion tracking — structured correctly from day one.</p>
-      </div>
-      <div class="process-step" data-animate>
-        <div class="process-step__number" aria-hidden="true">4</div>
-        <h3 class="process-step__title">Optimization &amp; Growth</h3>
-        <p class="process-step__text">Ongoing testing, bid management, and strategy refinement to maximize your return as campaigns mature and data accumulates.</p>
-      </div>
+    <div class="about-box" data-animate>
+      <p>I'm <span class="ph">[YOUR NAME]</span>. I've spent <span class="ph">[X]</span> years running Google Ads for Kenyan safari companies — including <strong>GoKenyaSafari.com</strong> and <strong>Kiboko Kenya Safaris</strong>. I'm not a big agency with fifty clients and a junior on your account. I know the booking seasons, the margins, and how travelers actually search for a safari. When you hire me, you get me — the person who builds it and knows why every setting is where it is.</p>
     </div>
   </div>
 </section>
 
-<!-- WHICH PATH -->
-<section class="section" aria-labelledby="choose-heading">
-  <div class="container" style="max-width:840px;">
-    <div class="section-header" data-animate>
-      <p class="section-label">Which Is Right for You?</p>
-      <h2 id="choose-heading">Management or Training?</h2>
-      <p>Both services are built around Google Ads expertise. The difference is who does the work — and that depends on your goals.</p>
-    </div>
-    <div class="choose-grid" data-animate>
-      <div class="choose-card choose-card--ads">
-        <h4>🎯 Choose Google Ads Management if:</h4>
-        <p>You have a monthly ad budget and want an expert to manage your campaigns, optimize spend, and report results — while you focus on your business. You want leads and sales, not a new skill set.</p>
-        <a href="google-ads.html" class="btn btn--outline-dark" style="margin-top:1.25rem;display:inline-flex;">See the Services →</a>
-      </div>
-      <div class="choose-card choose-card--training">
-        <h4>📚 Choose Google Ads Training if:</h4>
-        <p>You want to run your own campaigns in-house, or upskill your marketing team. You're prepared to invest the time to learn and want training built around the Kenyan market — not a generic course.</p>
-        <a href="training.html" class="btn btn--outline-dark" style="margin-top:1.25rem;display:inline-flex;">See the Training →</a>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:2rem;color:var(--text-muted);font-size:0.9375rem;" data-animate>Not sure? <a href="contact.html#booking" style="color:var(--primary);font-weight:600;">Book a free call</a> — we'll give you an honest recommendation.</p>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section section--alt" aria-labelledby="testimonials-heading">
+<!-- SCARCITY -->
+<section class="section section--alt" aria-labelledby="scarcity-heading">
   <div class="container">
-    <div class="section-header" data-animate>
-      <p class="section-label">Client Results</p>
-      <h2 id="testimonials-heading">What Our Clients Say</h2>
-    </div>
-    <div class="grid grid--3">
-      <article class="testimonial-card" data-animate>
-        <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-        <blockquote class="testimonial-card__quote">"Web Focus Kenya transformed our Google Ads. Our cost per lead dropped by 60% in the first two months and we're getting more qualified enquiries than ever before."</blockquote>
-        <footer class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">AK</div>
-          <div>
-            <cite class="testimonial-card__name">Amina Kamau</cite>
-            <p class="testimonial-card__company">Kamau Legal Associates, Nairobi</p>
-          </div>
-        </footer>
-      </article>
-      <article class="testimonial-card" data-animate>
-        <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-        <blockquote class="testimonial-card__quote">"Before working with Web Focus Kenya, we were burning money on Google Ads with nothing to show for it. Now we track every conversion and our ROAS is consistently above 4x."</blockquote>
-        <footer class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">PO</div>
-          <div>
-            <cite class="testimonial-card__name">Peter Odhiambo</cite>
-            <p class="testimonial-card__company">Odhiambo Auto Parts, Mombasa</p>
-          </div>
-        </footer>
-      </article>
-      <article class="testimonial-card" data-animate>
-        <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-        <blockquote class="testimonial-card__quote">"The team's reporting is excellent — I always know exactly what my budget is achieving. Highly professional and genuinely invested in our business growth."</blockquote>
-        <footer class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">GW</div>
-          <div>
-            <cite class="testimonial-card__name">Grace Wanjiru</cite>
-            <p class="testimonial-card__company">Pristine Home Interiors, Nairobi</p>
-          </div>
-        </footer>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" id="faq" aria-labelledby="faq-heading">
-  <div class="container" style="max-width:720px;">
-    <div class="section-header" data-animate>
-      <p class="section-label">Common Questions</p>
-      <h2 id="faq-heading">Frequently Asked Questions</h2>
-    </div>
-    <div class="accordion" data-animate>
-      <div class="accordion__item">
-        <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-1">
-          How much should I budget for Google Ads?
-          <span class="accordion__icon" aria-hidden="true">▼</span>
-        </button>
-        <div class="accordion__panel" id="faq-1" role="region">
-          <div class="accordion__panel-inner">
-            <p>It depends on your industry, goals, and competitive landscape. For most small-to-medium businesses in Kenya, we recommend starting with a minimum ad budget of KSh 30,000–50,000 per month (paid directly to Google). We'll help you determine the right starting point during your free strategy call.</p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion__item">
-        <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-2">
-          How quickly will I see results?
-          <span class="accordion__icon" aria-hidden="true">▼</span>
-        </button>
-        <div class="accordion__panel" id="faq-2" role="region">
-          <div class="accordion__panel-inner">
-            <p>Most clients see initial leads within the first 2–4 weeks of a campaign going live. It typically takes 60–90 days of optimization to reach peak performance as we gather data and refine the campaigns. We'll always set realistic expectations upfront.</p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion__item">
-        <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-3">
-          Can you take over my existing Google Ads account?
-          <span class="accordion__icon" aria-controls="faq-3">▼</span>
-        </button>
-        <div class="accordion__panel" id="faq-3" role="region">
-          <div class="accordion__panel-inner">
-            <p>Yes — and in most cases we find significant room for improvement. We start with a thorough audit to identify wasted spend, structural issues, and quick wins before beginning ongoing management. You retain full ownership of your account at all times.</p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion__item">
-        <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-4">
-          Who is the Google Ads training suitable for?
-          <span class="accordion__icon" aria-hidden="true">▼</span>
-        </button>
-        <div class="accordion__panel" id="faq-4" role="region">
-          <div class="accordion__panel-inner">
-            <p>The training is for business owners who want to run their own ads, in-house marketers who need to upskill, and marketing teams looking for structured, practical Google Ads knowledge. It's built around the Kenyan market — not a generic course recycled from abroad. No prior experience needed.</p>
-          </div>
-        </div>
-      </div>
+    <div class="scarcity" data-animate>
+      <h3 id="scarcity-heading">Only 3 Setups a Month</h3>
+      <p>Setup is hands-on and I don't rush it — so I take on just three new tour operators each month. If you want yours done properly before the next high season, message me now and I'll tell you honestly when the next slot is.</p>
     </div>
   </div>
 </section>
@@ -466,13 +343,13 @@
 <!-- FINAL CTA -->
 <section class="cta-section" aria-labelledby="cta-heading">
   <div class="container" style="text-align:center;">
-    <p class="section-label" style="color:var(--accent);">Get Started Today</p>
-    <h2 id="cta-heading">Ready to Make Google Ads<br>Work for Your Business?</h2>
-    <p>Book a free 30-minute strategy call. No pressure, no pitch — just honest advice on whether management, training, or both is the right fit for you.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
-      <a href="contact.html#booking" class="btn btn--primary btn--lg">Book Free Strategy Call</a>
-      <a href="contact.html#audit" class="btn btn--outline btn--lg">Request Free Ads Audit</a>
+    <p class="section-label" style="color:var(--accent);">Let's Talk</p>
+    <h2 id="cta-heading">Ready for Enquiries Instead<br>of Wasted Ad Spend?</h2>
+    <p>Send me a WhatsApp. Tell me about your tour company. I'll tell you straight whether Google Ads is right for you — no pitch, no pressure.</p>
+    <div style="margin-top:2rem;">
+      <a href="https://wa.me/254700000000?text=Hi%2C%20I%20run%20a%20tour%20company%20and%20I%27m%20interested%20in%20Google%20Ads%20setup." class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">WhatsApp Me Now</a>
     </div>
+    <p style="color:rgba(255,255,255,0.6);font-size:0.875rem;margin-top:1.5rem;">Typically replies same day · Based in Nairobi</p>
   </div>
 </section>
 
@@ -482,49 +359,43 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <div class="footer__logo"><span style="color:var(--accent);">●</span> Web Focus Kenya</div>
-        <p>Helping Kenyan businesses generate more leads, sales, and revenue through expert Google Ads management and practical Google Ads training.</p>
+        <div class="footer__logo"><span style="color:var(--accent);">●</span> Web Focus Solutions</div>
+        <p>Google Ads set up properly for Kenyan tour operators and safari companies. One fixed fee, no retainers — AI does the heavy lifting, a safari insider steers it.</p>
         <div class="footer__social" aria-label="Social media links">
           <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
-          <a href="#" aria-label="Twitter/X"><span aria-hidden="true">𝕏</span></a>
           <a href="#" aria-label="Facebook"><span aria-hidden="true">f</span></a>
           <a href="#" aria-label="Instagram"><span aria-hidden="true">◎</span></a>
         </div>
       </div>
       <div>
-        <h4>Google Ads Services</h4>
+        <h4>What I Do</h4>
         <ul class="footer__links">
-          <li><a href="google-ads.html#services">Google Search Ads</a></li>
-          <li><a href="google-ads.html#services">Performance Max</a></li>
-          <li><a href="google-ads.html#services">Remarketing</a></li>
-          <li><a href="google-ads.html#services">Conversion Tracking</a></li>
-          <li><a href="google-ads.html#services">Campaign Audits</a></li>
+          <li><a href="#offers">Google Ads Setup</a></li>
+          <li><a href="#offers">Setup + Training</a></li>
+          <li><a href="#offers">Monthly Check-up</a></li>
+          <li><a href="#results">Results</a></li>
         </ul>
       </div>
       <div>
         <h4>Company</h4>
         <ul class="footer__links">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="training.html">Google Ads Training</a></li>
-          <li><a href="ai-marketing-engine.html">AI Marketing Engine</a></li>
-          <li><a href="blog.html">Blog &amp; Resources</a></li>
-          <li><a href="contact.html#booking">Book Free Call</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#problem">The Problem</a></li>
+          <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4>Get in Touch</h4>
         <ul class="footer__links">
-          <li><a href="mailto:info@webfocuskenya.com">info@webfocuskenya.com</a></li>
-          <li><a href="tel:+254700000000">+254 700 000 000</a></li>
-          <li><a href="https://wa.me/254700000000">WhatsApp Us</a></li>
-          <li>Mon–Fri: 8am–6pm EAT</li>
-          <li>Sat: 9am–1pm EAT</li>
+          <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">WhatsApp Me</a></li>
+          <li>Based in Nairobi, Kenya</li>
+          <li>Serving tour operators countrywide</li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <p>&copy; 2025 Web Focus Kenya. All rights reserved. | Made with ❤️ in Kenya</p>
-      <div style="display:flex;gap:1.5rem;"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      <p>&copy; 2026 Web Focus Solutions. All rights reserved.</p>
+      <div style="display:flex;gap:1.5rem;"><a href="#">Privacy</a><a href="#">Terms</a></div>
     </div>
   </div>
 </footer>
