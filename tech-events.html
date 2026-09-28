@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenya Tech Events Roundup | Web Focus Solutions</title>
+  <meta name="description" content="A weekly, independent roundup of digital marketing, startup and tech events happening across Kenya over the next 60 days. Compiled by Web Focus Solutions.">
+  <meta name="keywords" content="Kenya Tech Events, Nairobi Tech Conferences, Tech Events Kenya 2026, Digital Marketing Events Kenya, Startup Events Nairobi">
+  <link rel="canonical" href="https://www.webfocussolutions.co.ke/tech-events.html">
+  <meta property="og:title" content="Kenya Tech Events Roundup | Web Focus Solutions">
+  <meta property="og:description" content="A weekly snapshot of tech, digital marketing and startup events across Kenya over the next 60 days.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Meta bar under hero */
+    .events-meta{display:flex;flex-wrap:wrap;gap:0.75rem 2rem;justify-content:center;align-items:center;background:var(--bg-light);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem 0;font-size:0.9375rem;color:var(--text-body)}
+    .events-meta strong{color:var(--primary)}
+
+    /* Disclaimer */
+    .disclaimer{max-width:820px;margin:2rem auto 0;background:#FFF8E6;border:1px solid #F0C24B;border-radius:var(--radius-md);padding:1.25rem 1.5rem;font-size:0.875rem;color:#6b5300;line-height:1.65}
+
+    /* Filter chips */
+    .filter-bar{display:flex;flex-wrap:wrap;gap:0.625rem;justify-content:center;margin:2.5rem 0 0}
+    .filter-chip{font-family:var(--font-body);font-size:0.875rem;font-weight:600;padding:0.5rem 1.1rem;border-radius:999px;border:1.5px solid var(--border);background:var(--bg-white);color:var(--text-body);cursor:pointer;transition:all .18s ease}
+    .filter-chip:hover{border-color:var(--accent);color:var(--primary)}
+    .filter-chip.active{background:var(--primary);border-color:var(--primary);color:white}
+
+    /* Category groups */
+    .cat-group{margin-top:3rem}
+    .cat-title{font-family:var(--font-heading);font-size:1.375rem;font-weight:700;color:var(--text-dark);display:flex;align-items:center;gap:0.625rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);margin-bottom:1.5rem}
+    .cat-title .count{font-family:var(--font-body);font-size:0.8125rem;font-weight:600;color:var(--text-muted);background:var(--bg-light);padding:0.15rem 0.6rem;border-radius:999px}
+
+    /* Event card */
+    .event-list{display:grid;gap:1.25rem}
+    .event-card{display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:start;background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem 1.75rem;transition:box-shadow .2s ease,transform .2s ease}
+    .event-card:hover{box-shadow:0 12px 32px rgba(10,36,99,.09);transform:translateY(-2px)}
+    .event-date{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--primary);color:white;border-radius:var(--radius-sm);min-width:64px;padding:0.6rem 0.5rem;text-align:center}
+    .event-date .m{font-size:0.6875rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent)}
+    .event-date .d{font-family:var(--font-heading);font-size:1.5rem;font-weight:800;line-height:1.1}
+    .event-main h3{font-size:1.125rem;color:var(--text-dark);margin-bottom:0.35rem;line-height:1.3}
+    .event-meta-row{display:flex;flex-wrap:wrap;gap:0.5rem 1rem;font-size:0.8125rem;color:var(--text-muted);margin-bottom:0.6rem}
+    .event-meta-row span{display:inline-flex;align-items:center;gap:0.3rem}
+    .event-desc{font-size:0.9375rem;color:var(--text-body);line-height:1.65}
+    .badge-free{background:var(--accent-light,#E6FFF0);color:#00A844;font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;padding:0.15rem 0.55rem;border-radius:999px}
+    .event-cta{align-self:center}
+    .event-cta .btn{white-space:nowrap}
+
+    /* AI note */
+    .ai-note{max-width:820px;margin:3rem auto 0;background:var(--bg-light);border-left:4px solid var(--accent);border-radius:var(--radius-sm);padding:1.25rem 1.5rem;font-size:0.9375rem;color:var(--text-body);line-height:1.7;font-style:italic}
+
+    @media(max-width:768px){
+      .event-card{grid-template-columns:auto 1fr;gap:1rem}
+      .event-cta{grid-column:1 / -1;align-self:stretch}
+      .event-cta .btn{width:100%;justify-content:center}
+    }
+    @media(max-width:480px){
+      .event-card{grid-template-columns:1fr}
+      .event-date{flex-direction:row;gap:0.4rem;min-width:0;width:fit-content;padding:0.35rem 0.75rem}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Kenya Tech Events Roundup",
+    "description": "A weekly independent roundup of tech, digital marketing and startup events across Kenya, compiled by Web Focus Solutions.",
+    "url": "https://www.webfocussolutions.co.ke/tech-events.html",
+    "isPartOf": {"@type": "WebSite","name": "Web Focus Solutions"}
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Web Focus Solutions Home">
+        <span class="nav__logo-dot" aria-hidden="true"></span>
+        Web Focus Solutions
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="google-ads-setup.html">Setup Service</a></li>
+        <li><a href="tech-events.html" class="active">Tech Events</a></li>
+      </ul>
+      <a href="https://wa.me/254700000000?text=Hi%2C%20I%20run%20a%20tour%20company%20and%20I%27m%20interested%20in%20Google%20Ads%20setup." class="btn btn--primary btn--sm nav__cta" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+      <button class="nav__hamburger" aria-expanded="false" aria-label="Toggle mobile menu">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="index.html" role="menuitem">Home</a>
+    <a href="google-ads-setup.html" role="menuitem">Setup Service</a>
+    <a href="tech-events.html" role="menuitem">Tech Events</a>
+    <a href="https://wa.me/254700000000?text=Hi%2C%20I%20run%20a%20tour%20company%20and%20I%27m%20interested%20in%20Google%20Ads%20setup." class="btn btn--primary" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span aria-hidden="true">📅</span>
+        Updated Weekly
+      </div>
+      <h1 id="hero-heading">Kenya Tech Events Roundup</h1>
+      <p class="hero__sub" id="hero-sub">A snapshot of confirmed digital marketing, innovation/startup and general tech events happening across Kenya over the next ~60 days.</p>
+    </div>
+  </div>
+</section>
+
+<!-- META BAR -->
+<div class="events-meta">
+  <div class="container" style="display:flex;flex-wrap:wrap;gap:0.75rem 2rem;justify-content:center;align-items:center;">
+    <div>🗓️ Roundup for <strong id="meta-date">28 September 2026</strong></div>
+    <div>📌 <strong id="meta-count">0</strong> events listed</div>
+    <div>📍 Mostly Nairobi</div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<section class="section" aria-labelledby="events-heading">
+  <div class="container" style="max-width:920px;">
+    <h2 id="events-heading" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Event listings</h2>
+
+    <p class="disclaimer">
+      This is an independent roundup compiled by <strong>Web Focus Solutions</strong> for the Kenyan tech community — we are not affiliated with, sponsoring, or endorsed by any of the organizers listed below, and details (dates, venues, tickets) can change, so please confirm on the official event page before making plans.
+    </p>
+
+    <!-- Category filter -->
+    <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter events by category"></div>
+
+    <!-- Rendered event groups -->
+    <div id="events-root"></div>
+
+    <!-- AI note -->
+    <p class="ai-note" id="ai-note">
+      Note: an AI-specific event search this week did not turn up a Kenya-based AI conference or meetup with a confirmed date in the next 60 days — several groups (AI Tinkerers Nairobi, AI Kenya Community) had no dated listings, and the FEWA AI Conference Nairobi is still at the "pre-register your interest" stage with no date set. This is a weekly snapshot, so a dated AI event may well appear in next week's roundup.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container" style="text-align:center;">
+    <p class="section-label" style="color:var(--accent);">From Web Focus Solutions</p>
+    <h2 id="cta-heading">Running a Tech or Travel Business?</h2>
+    <p>We set up Google Ads properly for Kenyan businesses — one fixed fee, no retainers. If you want enquiries from people already searching, let's talk.</p>
+    <div style="margin-top:2rem;">
+      <a href="index.html" class="btn btn--primary btn--lg">See What We Do</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo"><span style="color:var(--accent);">●</span> Web Focus Solutions</div>
+        <p>Google Ads set up properly for Kenyan businesses — plus a free weekly roundup of tech events for the community.</p>
+        <div class="footer__social" aria-label="Social media links">
+          <a href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+          <a href="#" aria-label="Facebook"><span aria-hidden="true">f</span></a>
+          <a href="#" aria-label="Instagram"><span aria-hidden="true">◎</span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="google-ads-setup.html">Google Ads Setup</a></li>
+          <li><a href="tech-events.html">Tech Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer__links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul class="footer__links">
+          <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">WhatsApp Me</a></li>
+          <li>Based in Nairobi, Kenya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Web Focus Solutions. All rights reserved.</p>
+      <div style="display:flex;gap:1.5rem;"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================================
+   ⚡ WEEKLY UPDATE — THIS IS THE ONLY PART YOU EDIT EACH WEEK
+   =========================================================================
+   1. Change ROUNDUP_DATE to this week's date.
+   2. Edit the EVENTS list below. To add an event, copy one { ... } block,
+      paste it, and change the fields. To remove one, delete its block.
+   3. AI_NOTE (optional) shows the italic note at the bottom. Set to "" to hide.
+
+   FIELDS for each event:
+     category    -> one of: "Digital Marketing", "Innovation & Startups", "General Tech"
+     name        -> event title
+     dateLabel   -> how the date reads on the page, e.g. "2–3 October 2026"
+     startDate   -> sortable date "YYYY-MM-DD" (used for the badge + ordering)
+     location    -> venue / city
+     url         -> official page (More info / Register)
+     description -> one short paragraph
+     free        -> true to show a green "Free" badge (optional, defaults false)
+   ========================================================================= */
+
+const ROUNDUP_DATE = "28 September 2026";
+
+const AI_NOTE = `Note: an AI-specific event search this week did not turn up a Kenya-based AI conference or meetup with a confirmed date in the next 60 days — several groups (AI Tinkerers Nairobi, AI Kenya Community) had no dated listings, and the FEWA AI Conference Nairobi is still at the "pre-register your interest" stage with no date set. This is a weekly snapshot, so a dated AI event may well appear in next week's roundup.`;
+
+const EVENTS = [
+  {
+    category: "Digital Marketing",
+    name: "Search AfriCon Kenya 2026",
+    dateLabel: "7 November 2026",
+    startDate: "2026-11-07",
+    location: "Nairobi",
+    url: "https://searchafricon.com/search-africon-kenya/",
+    description: `Search AfriCon bills itself as "the African SEO and digital marketing event," bringing together practitioners to cover search, SEO, and the shift toward AI-driven search (AIEO) in African markets. Aimed at marketers, agency owners, and in-house SEO/content teams who want practical, Africa-specific tactics. Tickets include a standard in-person pass, a virtual masterclass option, and an add-on networking outing.`
+  },
+  {
+    category: "Innovation & Startups",
+    name: "FinTech Festival Kenya 2026",
+    dateLabel: "14–16 October 2026",
+    startDate: "2026-10-14",
+    location: "Nairobi",
+    url: "https://fintechfestivalkenya.com/",
+    description: `A multi-day gathering of banks, mobile money players, regulators, and fintech startups focused on payments, financial inclusion, and digital finance innovation in East Africa. Relevant for founders building in fintech or SME-payments/automation, and anyone tracking Kenya's digital economy. Expect exhibitor booths, panel sessions, and an awards program.`
+  },
+  {
+    category: "General Tech",
+    name: "PyCon Kenya 2026",
+    dateLabel: "2–3 October 2026",
+    startDate: "2026-10-02",
+    location: "Nairobi (venue TBC)",
+    url: "https://www.pycon.ke/",
+    description: `Billed as Africa's largest Python conference, PyCon Kenya draws software developers, data practitioners, and students for talks, workshops, and networking around the Python ecosystem. Most relevant to technical teams and developers, but a good pulse-check on Kenya's broader tech talent pool. General admission and student tickets available.`
+  },
+  {
+    category: "General Tech",
+    name: "CYSEC Kenya 2026",
+    dateLabel: "7 October 2026",
+    startDate: "2026-10-07",
+    location: "Glee Nairobi, Nairobi",
+    url: "https://kenya.cysecglobal.com/",
+    description: `A one-day cybersecurity conference bringing together government officials, regulators, CISOs, and technology leaders to discuss digital security in Kenya and East Africa. Useful for business owners and IT/marketing teams who handle customer data, run e-commerce, or manage websites. Sessions cover policy, threat trends, and enterprise defence strategy.`
+  },
+  {
+    category: "General Tech",
+    name: "JengaSec 2026",
+    dateLabel: "14 October 2026",
+    startDate: "2026-10-14",
+    location: "Strathmore University, Nairobi",
+    url: "https://www.jengasec.com/",
+    free: true,
+    description: `A free, university- and community-driven cybersecurity simulation and capacity-building event open to students and tech communities across Kenya. Aimed primarily at students and early-career technologists building practical security skills, with limited slots and a registration requirement. Good for anyone mentoring young tech talent.`
+  },
+  {
+    category: "General Tech",
+    name: "GopherCon Africa 2026",
+    dateLabel: "15–17 October 2026",
+    startDate: "2026-10-15",
+    location: "PrideInn Azure Hotel, Westlands, Nairobi",
+    url: "https://gophercon.africa/",
+    description: `The premier Go (Golang) programming conference in Africa, with a workshop day followed by two days of sessions for backend and infrastructure developers. Most relevant to software engineering teams and technical co-founders, and a useful indicator of Nairobi's growing developer-conference scene.`
+  },
+  {
+    category: "General Tech",
+    name: "Droidcon Kenya 2026",
+    dateLabel: "5–6 November 2026",
+    startDate: "2026-11-05",
+    location: "PrideInn Azure Hotel, Westlands, Nairobi",
+    url: "https://bit.ly/dcKE2026Tickets",
+    description: `Described as Africa's largest mobile developer conference, this 7th edition runs alongside FlutterCon Kenya under one combined ticket, covering Android and Flutter app development. Aimed at mobile developers and product teams — useful context for any business planning a mobile app or hiring local mobile talent.`
+  },
+  {
+    category: "General Tech",
+    name: "DevFest Nairobi 2026",
+    dateLabel: "13–14 November 2026",
+    startDate: "2026-11-13",
+    location: "Nairobi (venue to be announced)",
+    url: "https://gdg.community.dev/gdg-nairobi/",
+    description: `GDG Nairobi's flagship developer festival, themed "Build, Secure, Scale: Developers & Builders in the Agentic Era" — a strong signal that AI agents and automation will feature heavily. Relevant for developers, product people, and non-technical founders curious about applied AI tooling. Ticket releases and venue were still being finalised at time of writing.`
+  },
+  {
+    category: "General Tech",
+    name: "Women in Tech Summit Kenya 2026",
+    dateLabel: "27–28 November 2026",
+    startDate: "2026-11-27",
+    location: "Nairobi",
+    url: "https://vabu.app/women-in-tech-summit-kenya-2026-20-edition",
+    description: `A two-day summit under the theme "Beyond Systems: Thrive. Build. Govern," with keynotes, panels, and workshops for women in technology, leadership, and governance. Open to students and professionals via tiered "Rising Builder," "LeadHER Architect," and team "Executive Circle" passes — accessible for individuals and small teams alike.`
+  }
+];
+
+/* ============ Rendering (no need to edit below) ============ */
+const CATEGORY_ORDER = ["Digital Marketing", "Innovation & Startups", "General Tech"];
+const CATEGORY_ICON = {
+  "Digital Marketing": "📈",
+  "Innovation & Startups": "🚀",
+  "General Tech": "💻"
+};
+const MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+
+function badge(startDate){
+  const p = (startDate || "").split("-");
+  if(p.length < 3) return {m:"", d:""};
+  return { m: MONTHS[parseInt(p[1],10)-1] || "", d: String(parseInt(p[2],10) || "") };
+}
+function esc(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+function render(filter){
+  const root = document.getElementById("events-root");
+  root.innerHTML = "";
+  const cats = filter && filter !== "all" ? [filter] : CATEGORY_ORDER;
+
+  cats.forEach(cat => {
+    const list = EVENTS.filter(e => e.category === cat)
+      .sort((a,b) => (a.startDate < b.startDate ? -1 : a.startDate > b.startDate ? 1 : 0));
+    if(!list.length) return;
+
+    const group = document.createElement("div");
+    group.className = "cat-group";
+    group.innerHTML = `<h3 class="cat-title"><span aria-hidden="true">${CATEGORY_ICON[cat]||"•"}</span> ${esc(cat)} <span class="count">${list.length}</span></h3>`;
+
+    const wrap = document.createElement("div");
+    wrap.className = "event-list";
+
+    list.forEach(e => {
+      const b = badge(e.startDate);
+      const card = document.createElement("article");
+      card.className = "event-card";
+      card.innerHTML =
+        `<div class="event-date" aria-hidden="true"><span class="m">${b.m}</span><span class="d">${b.d}</span></div>` +
+        `<div class="event-main">` +
+          `<h3>${esc(e.name)} ${e.free ? '<span class="badge-free">Free</span>' : ''}</h3>` +
+          `<div class="event-meta-row"><span>🗓️ ${esc(e.dateLabel)}</span><span>📍 ${esc(e.location)}</span></div>` +
+          `<p class="event-desc">${esc(e.description)}</p>` +
+        `</div>` +
+        `<div class="event-cta"><a href="${esc(e.url)}" class="btn btn--outline-dark btn--sm" target="_blank" rel="noopener noreferrer">More info / Register →</a></div>`;
+      wrap.appendChild(card);
+    });
+
+    group.appendChild(wrap);
+    root.appendChild(group);
+  });
+}
+
+function buildFilters(){
+  const bar = document.getElementById("filter-bar");
+  const present = CATEGORY_ORDER.filter(c => EVENTS.some(e => e.category === c));
+  const opts = [["all","All Events"]].concat(present.map(c => [c,c]));
+  bar.innerHTML = "";
+  opts.forEach(([val,label], i) => {
+    const btn = document.createElement("button");
+    btn.className = "filter-chip" + (i===0 ? " active" : "");
+    btn.textContent = label;
+    btn.setAttribute("aria-pressed", i===0 ? "true" : "false");
+    btn.addEventListener("click", () => {
+      bar.querySelectorAll(".filter-chip").forEach(b => { b.classList.remove("active"); b.setAttribute("aria-pressed","false"); });
+      btn.classList.add("active"); btn.setAttribute("aria-pressed","true");
+      render(val);
+    });
+    bar.appendChild(btn);
+  });
+}
+
+/* init */
+document.getElementById("meta-date").textContent = ROUNDUP_DATE;
+document.getElementById("meta-count").textContent = String(EVENTS.length);
+document.querySelectorAll("#hero-sub").forEach(()=>{});
+(function(){
+  const h = document.querySelector(".hero__badge");
+})();
+const aiEl = document.getElementById("ai-note");
+if(AI_NOTE && AI_NOTE.trim()){ aiEl.textContent = AI_NOTE; } else { aiEl.style.display = "none"; }
+buildFilters();
+render("all");
+</script>
+
+<script src="main.js" defer></script>
+</body>
+</html>
